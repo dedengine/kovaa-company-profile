@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useI18n } from '@/lib/i18n-provider'
 import { contact } from '@/data/contact'
 
@@ -16,17 +17,23 @@ export function Footer() {
 
   return (
     <footer className="bg-kovaa-navy text-white/70">
-      <div className="mx-auto grid max-w-page gap-10 px-4 py-14 md:grid-cols-3">
+      <div className="mx-auto grid max-w-page gap-8 px-4 py-10 md:grid-cols-3">
         <div>
-          <p className="font-heading text-2xl font-bold tracking-tight text-white">KOVAA</p>
-          <p className="mt-3 max-w-xs text-sm">{t('footer.tagline')}</p>
+          <Image
+            src="/assets/kovaa-logo.jpeg"
+            alt="Logo KOVAA"
+            width={150}
+            height={56}
+            className="rounded-lg bg-white"
+          />
+          <p className="mt-2 max-w-xs text-sm">{t('footer.tagline')}</p>
         </div>
 
         <nav aria-label={t('footer.quickLinks')}>
           <h3 className="font-heading text-sm font-semibold uppercase tracking-widest text-white">
             {t('footer.quickLinks')}
           </h3>
-          <ul className="mt-4 space-y-2">
+          <ul className="mt-3 space-y-1.5">
             {LINKS.map((l) => (
               <li key={l.id}>
                 <a
@@ -44,7 +51,7 @@ export function Footer() {
           <h3 className="font-heading text-sm font-semibold uppercase tracking-widest text-white">
             {t('contact.title')}
           </h3>
-          <ul className="mt-4 space-y-2 text-sm">
+          <ul className="mt-3 space-y-1.5 text-sm">
             <li>{contact.address}</li>
             <li>
               <a
@@ -66,8 +73,8 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-white/10 px-4 py-5">
-        <p className="mx-auto max-w-page text-xs text-white/50">
+      <div className="border-t border-white/10 px-4 py-4">
+        <p className="mx-auto max-w-page text-center text-xs text-white/50">
           © {contact.company}. {t('footer.rights')}
         </p>
       </div>
