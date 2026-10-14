@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { contact } from '@/data/contact'
@@ -28,13 +29,38 @@ export async function generateMetadata({
   }
 }
 
-export default async function ProductPage({
-  params,
-}: {
-  params: Promise<{ slug: string }>
-}) {
+async function ProductLoader({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const product = products.find((p) => p.slug === slug)
   if (!product) notFound()
   return <ProductDetail product={product} />
+}
+
+function ProductSkeleton() {
+  return (
+    <div className="mx-auto max-w-page animate-pulse px-4 py-10 md:py-14" aria-hidden="true">
+      <div className="h-4 w-64 rounded bg-neutral-200" />
+      <div className="mt-8 grid gap-10 md:grid-cols-2">
+        <div className="aspect-square rounded-2xl bg-neutral-200" />
+        <div className="space-y-4">
+          <div className="h-6 w-40 rounded bg-neutral-200" />
+          <div className="h-10 w-3/4 rounded bg-neutral-200" />
+          <div className="h-4 w-full rounded bg-neutral-200" />
+          <div className="h-4 w-5/6 rounded bg-neutral-200" />
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default function ProductPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}) {
+  return (
+    <Suspense fallback={<ProductSkeleton />}>
+      <ProductLoader params={params} />
+    </Suspense>
+  )
 }
