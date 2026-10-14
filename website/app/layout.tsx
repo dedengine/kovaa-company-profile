@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins, Roboto } from "next/font/google";
 import { I18nProvider } from "@/lib/i18n-provider";
+import { ThemeProvider } from "@/lib/theme-provider";
 import { contact } from "@/data/contact";
 import { organizationJsonLd } from "@/lib/seo";
 import "./globals.css";
@@ -56,6 +57,10 @@ export const metadata: Metadata = {
       "Peralatan ritel custom-made: rak supermarket, gondola, rak dinding, dan drawer kayu.",
     images: ["/assets/mockup-2.jpeg"],
   },
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
+  ],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -63,16 +68,28 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="id"
       data-scroll-behavior="smooth"
+      suppressHydrationWarning
       className={`${poppins.variable} ${roboto.variable} font-body antialiased`}
     >
-      <body className="min-h-screen bg-white text-neutral-900">
+      <head>
+        <meta name="color-scheme" content="light dark" />
+        {/* Set tema sebelum paint agar tidak ada flash; selaras dengan ThemeProvider */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('kovaa-theme');var d=t==='dark'||(t!=='light'&&window.matchMedia('(prefers-color-scheme: dark)').matches);if(d)document.documentElement.classList.add('dark')}catch(e){}})()`,
+          }}
+        />
+      </head>
+      <body className="min-h-screen bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organizationJsonLd(contact)),
           }}
         />
-        <I18nProvider>{children}</I18nProvider>
+        <I18nProvider>
+          <ThemeProvider>{children}</ThemeProvider>
+        </I18nProvider>
       </body>
     </html>
   );

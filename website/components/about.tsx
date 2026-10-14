@@ -44,13 +44,13 @@ export function About() {
         </div>
 
         <div data-reveal>
-          <p className="text-xs font-semibold uppercase tracking-widest text-kovaa-orange">
+          <p className="text-xs font-semibold uppercase tracking-widest text-kovaa-orange dark:text-orange-300">
             {t('about.eyebrow')}
           </p>
-          <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight text-neutral-900 md:text-4xl">
+          <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight text-neutral-900 dark:text-white md:text-4xl">
             {t('about.title')}
           </h2>
-          <div className="mt-6 space-y-4 text-lg text-neutral-700">
+          <div className="mt-6 space-y-4 text-lg text-neutral-700 dark:text-neutral-300">
             <p>{t('about.body1')}</p>
             <p>{t('about.body2')}</p>
           </div>

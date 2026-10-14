@@ -28,16 +28,16 @@ export function Contact() {
   ]
 
   return (
-    <section id="kontak" className="bg-neutral-50 py-16">
+    <section id="kontak" className="bg-neutral-50 py-16 dark:bg-neutral-900">
       <div className="mx-auto max-w-page px-4">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-widest text-kovaa-orange">
+          <p className="text-xs font-semibold uppercase tracking-widest text-kovaa-orange dark:text-orange-300">
             {t('contact.eyebrow')}
           </p>
-          <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight text-neutral-900 md:text-4xl">
+          <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight text-neutral-900 dark:text-white md:text-4xl">
             {t('contact.title')}
           </h2>
-          <p className="mt-4 text-neutral-700">{t('contact.subtitle')}</p>
+          <p className="mt-4 text-neutral-700 dark:text-neutral-300">{t('contact.subtitle')}</p>
         </div>
 
         <ul className="mx-auto mt-14 grid max-w-3xl gap-6 sm:grid-cols-3">
@@ -46,23 +46,23 @@ export function Contact() {
             return (
               <li
                 key={item.label}
-                className="flex h-full flex-col items-center rounded-2xl border border-neutral-200 bg-white p-6 text-center shadow-sm"
+                className="flex h-full flex-col items-center rounded-2xl border border-neutral-200 bg-white p-6 text-center shadow-sm dark:border-neutral-800 dark:bg-neutral-950"
               >
-                <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-kovaa-blue/10 text-kovaa-blue">
+                <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-kovaa-blue/10 text-kovaa-blue dark:bg-blue-500/15 dark:text-blue-300">
                   <Icon size={24} aria-hidden="true" />
                 </span>
-                <h3 className="mt-4 text-sm font-semibold text-neutral-900">{item.label}</h3>
+                <h3 className="mt-4 text-sm font-semibold text-neutral-900 dark:text-white">{item.label}</h3>
                 {item.href ? (
-                  <p className="mt-1 text-sm text-neutral-700">
+                  <p className="mt-1 text-sm text-neutral-700 dark:text-neutral-300">
                     <a
                       href={item.href}
-                      className="cursor-pointer hover:text-kovaa-blue focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue"
+                      className="cursor-pointer hover:text-kovaa-blue focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue dark:hover:text-blue-300"
                     >
                       {item.value}
                     </a>
                   </p>
                 ) : (
-                  <p className="mt-1 text-sm text-neutral-700">{item.value}</p>
+                  <p className="mt-1 text-sm text-neutral-700 dark:text-neutral-300">{item.value}</p>
                 )}
               </li>
             )

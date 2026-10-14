@@ -29,10 +29,10 @@ export function Hero() {
         />
       </div>
 
-      {/* Fade putih agar teks terbaca jelas; foto lebih samar */}
+      {/* Fade agar teks terbaca jelas; foto lebih samar */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-gradient-to-b from-white via-white to-white/30 md:bg-gradient-to-r md:from-white md:via-white/85 md:to-transparent"
+        className="absolute inset-0 bg-gradient-to-b from-white via-white to-white/30 dark:from-neutral-950 dark:via-neutral-950 dark:to-neutral-950/30 md:bg-gradient-to-r md:from-white md:via-white/85 md:to-transparent md:dark:from-neutral-950 md:dark:via-neutral-950/85 md:dark:to-transparent"
       />
 
       <div
@@ -41,18 +41,18 @@ export function Hero() {
       >
         <p
           data-reveal
-          className="inline-block rounded-full bg-kovaa-orange/10 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-kovaa-orange"
+          className="inline-block rounded-full bg-kovaa-orange/10 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-kovaa-orange dark:text-orange-300"
         >
-          Create • Build • Deliver
+            Create • Build • Deliver
         </p>
         <h1
           data-reveal
-          className="mt-4 font-heading text-4xl font-bold leading-tight tracking-tight text-kovaa-blue md:text-5xl lg:text-6xl"
+          className="mt-4 font-heading text-4xl font-bold leading-tight tracking-tight text-kovaa-blue dark:text-white md:text-5xl lg:text-6xl"
         >
-          {t('hero.title')}
+            {t('hero.title')}
         </h1>
-        <p data-reveal className="mt-5 max-w-prose text-lg text-neutral-700">
-          {t('hero.subtitle')}
+        <p data-reveal className="mt-5 max-w-prose text-lg text-neutral-700 dark:text-neutral-300">
+            {t('hero.subtitle')}
         </p>
         <div data-reveal className="mt-8 flex flex-wrap gap-3">
           <Link
@@ -65,13 +65,13 @@ export function Hero() {
             {t('hero.ctaProducts')}
             <PiArrowRight size={18} />
           </Link>
-          <Link
-            ref={ctaSecondary}
-            href="#kontak"
-            onMouseEnter={() => hover.lift(ctaSecondary.current)}
-            onMouseLeave={() => hover.drop(ctaSecondary.current)}
-            className="inline-flex cursor-pointer items-center rounded-full border-2 border-kovaa-blue bg-white/80 px-7 py-3.5 text-sm font-semibold tracking-wide text-kovaa-blue backdrop-blur transition-colors hover:bg-kovaa-blue hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue"
-          >
+            <Link
+              ref={ctaSecondary}
+              href="#kontak"
+              onMouseEnter={() => hover.lift(ctaSecondary.current)}
+              onMouseLeave={() => hover.drop(ctaSecondary.current)}
+              className="inline-flex cursor-pointer items-center rounded-full border-2 border-kovaa-blue bg-white/80 px-7 py-3.5 text-sm font-semibold tracking-wide text-kovaa-blue backdrop-blur transition-colors hover:bg-kovaa-blue hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue dark:border-neutral-400 dark:bg-transparent dark:text-white dark:hover:border-white dark:hover:bg-white dark:hover:text-neutral-950"
+            >
             {t('hero.ctaContact')}
           </Link>
         </div>

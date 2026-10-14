@@ -15,7 +15,7 @@ export function LanguageToggle() {
     <div
       role="group"
       aria-label={t('footer.language')}
-      className="inline-flex items-center gap-1 rounded-full border border-neutral-200 p-0.5"
+      className="inline-flex items-center gap-1 rounded-full border border-neutral-200 p-0.5 dark:border-neutral-700"
     >
       {LANGS.map((l) => (
         <button

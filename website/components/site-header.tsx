@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { PiList, PiX } from 'react-icons/pi'
 import { useI18n } from '@/lib/i18n-provider'
 import { LanguageToggle } from './language-toggle'
+import { ThemeToggle } from './theme-toggle'
 
 const NAV_IDS = ['tentang', 'produk', 'keunggulan', 'kontak'] as const
 
@@ -23,7 +24,7 @@ export function SiteHeader() {
   return (
     <header
       data-scrolled={scrolled}
-      className={`sticky top-0 z-50 bg-white/95 backdrop-blur ${
+      className={`sticky top-0 z-50 bg-white/95 backdrop-blur dark:bg-neutral-950/95 ${
         scrolled ? 'shadow-md' : 'shadow-sm'
       }`}
     >
@@ -40,13 +41,13 @@ export function SiteHeader() {
 
         <nav
           aria-label={t('nav.mainNav')}
-          className="hidden items-center gap-1 rounded-full bg-neutral-100 px-2 py-1.5 md:flex"
+          className="hidden items-center gap-1 rounded-full bg-neutral-100 px-2 py-1.5 dark:bg-neutral-800 md:flex"
         >
           {NAV_IDS.map((id) => (
             <a
               key={id}
               href={`#${id}`}
-              className="cursor-pointer rounded-full px-4 py-1.5 text-sm font-medium text-neutral-700 transition-colors hover:bg-kovaa-blue hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue"
+              className="cursor-pointer rounded-full px-4 py-1.5 text-sm font-medium text-neutral-700 transition-colors hover:bg-kovaa-blue hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue dark:text-neutral-200 dark:hover:bg-kovaa-blue dark:hover:text-white"
             >
               {t(`nav.${id}`)}
             </a>
@@ -54,10 +55,11 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <ThemeToggle />
           <LanguageToggle />
           <button
             type="button"
-            className="cursor-pointer rounded-md p-2 text-neutral-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue md:hidden"
+            className="cursor-pointer rounded-md p-2 text-neutral-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue dark:text-neutral-200 md:hidden"
             aria-expanded={open}
             aria-label={t(open ? 'nav.closeMenu' : 'nav.openMenu')}
             onClick={() => setOpen((v) => !v)}
@@ -70,7 +72,7 @@ export function SiteHeader() {
       {open && (
         <nav
           aria-label={t('nav.mobileNav')}
-          className="border-t border-neutral-200 bg-white md:hidden"
+          className="border-t border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-950 md:hidden"
         >
           <div className="mx-auto flex max-w-page flex-col px-4 py-2">
             {NAV_IDS.map((id) => (
@@ -78,7 +80,7 @@ export function SiteHeader() {
                 key={id}
                 href={`#${id}`}
                 onClick={() => setOpen(false)}
-                className="cursor-pointer py-2 text-sm font-medium text-neutral-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue"
+                className="cursor-pointer py-2 text-sm font-medium text-neutral-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue dark:text-neutral-200"
               >
                 {t(`nav.${id}`)}
               </a>

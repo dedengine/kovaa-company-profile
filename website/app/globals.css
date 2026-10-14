@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Dark mode mengikuti class .dark di <html> (diatur ThemeProvider + script pre-paint) */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   /* Brand KOVAA , di-sample dari assest/kovaa-logo-no-bg.png */
   /* oranye gelap dipilih agar teks putih lolos kontras 4.5:1 (spec §4) */

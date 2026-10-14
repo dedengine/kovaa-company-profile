@@ -34,3 +34,15 @@ describe('brand token contrast (spec §4: teks ≥ 4.5:1)', () => {
     expect(contrast('#ffffff', blue)).toBeGreaterThanOrEqual(4.5)
   })
 })
+
+describe('dark mode text colors on neutral-950 (spec §4: teks ≥ 4.5:1)', () => {
+  const bg = '#0a0a0a'
+  it.each([
+    ['blue-300 links', '#93c5fd'],
+    ['orange-300 eyebrows', '#fdba74'],
+    ['white headings', '#ffffff'],
+    ['neutral-300 body', '#d4d4d4'],
+  ])('%s passes 4.5:1', (_name, fg) => {
+    expect(contrast(fg, bg)).toBeGreaterThanOrEqual(4.5)
+  })
+})

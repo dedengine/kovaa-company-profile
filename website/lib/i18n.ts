@@ -15,9 +15,13 @@ export const dictionary = {
             openMenu: 'Buka menu',
             closeMenu: 'Tutup menu',
             skipToContent: 'Lewati ke konten',
-            mainNav: 'Navigasi utama',
-            mobileNav: 'Navigasi mobile',
-        },
+      mainNav: 'Navigasi utama',
+      mobileNav: 'Navigasi mobile',
+      themeLabel: 'Tema tampilan',
+      themeSystem: 'Sistem',
+      themeLight: 'Terang',
+      themeDark: 'Gelap',
+    },
         hero: {
             title: 'Create. Build. Deliver.',
             subtitle:
@@ -129,9 +133,13 @@ export const dictionary = {
             openMenu: 'Open menu',
             closeMenu: 'Close menu',
             skipToContent: 'Skip to content',
-            mainNav: 'Main navigation',
-            mobileNav: 'Mobile navigation',
-        },
+      mainNav: 'Main navigation',
+      mobileNav: 'Mobile navigation',
+      themeLabel: 'Appearance',
+      themeSystem: 'System',
+      themeLight: 'Light',
+      themeDark: 'Dark',
+    },
         hero: {
             title: 'Create. Build. Deliver.',
             subtitle:
