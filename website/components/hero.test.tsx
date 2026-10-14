@@ -1,0 +1,40 @@
+import { render, screen } from '@testing-library/react'
+import { describe, expect, it } from 'vitest'
+import { I18nProvider } from '@/lib/i18n-provider'
+import { SiteHeader } from './site-header'
+import { Hero } from './hero'
+
+function renderPage() {
+  return render(
+    <I18nProvider>
+      <SiteHeader />
+      <Hero />
+    </I18nProvider>,
+  )
+}
+
+describe('SiteHeader + Hero', () => {
+  it('renders the KOVAA logo with an alt text', () => {
+    renderPage()
+    expect(screen.getByRole('img', { name: 'KOVAA' })).toBeDefined()
+  })
+
+  it('renders exactly one h1 with the hero headline', () => {
+    renderPage()
+    const h1s = screen.getAllByRole('heading', { level: 1 })
+    expect(h1s).toHaveLength(1)
+    expect(h1s[0]).toHaveTextContent('Create. Build. Deliver.')
+  })
+
+  it('links to the product and contact sections', () => {
+    renderPage()
+    expect(document.querySelector('a[href="#produk"]')).not.toBeNull()
+    expect(document.querySelector('a[href="#kontak"]')).not.toBeNull()
+  })
+
+  it('shows the language toggle and a mobile menu button', () => {
+    renderPage()
+    expect(screen.getByRole('button', { name: /indonesia/i })).toBeDefined()
+    expect(screen.getByRole('button', { name: 'Buka menu' })).toBeDefined()
+  })
+})
