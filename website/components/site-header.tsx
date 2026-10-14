@@ -55,7 +55,9 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <ThemeToggle />
+          <span className="hidden md:block">
+            <ThemeToggle />
+          </span>
           <LanguageToggle />
           <button
             type="button"
@@ -85,6 +87,12 @@ export function SiteHeader() {
                 {t(`nav.${id}`)}
               </a>
             ))}
+            <div className="flex items-center gap-2 py-2 md:hidden">
+              <ThemeToggle />
+              <span className="text-sm font-medium text-neutral-700 dark:text-neutral-200">
+                {t('nav.themeLabel')}
+              </span>
+            </div>
           </div>
         </nav>
       )}

@@ -14,8 +14,6 @@ export type Theme = 'system' | 'light' | 'dark'
 export type ResolvedTheme = 'light' | 'dark'
 
 export const THEME_STORAGE_KEY = 'kovaa-theme'
-/** Urutan siklus tombol tema di header. */
-export const THEME_CYCLE: Theme[] = ['system', 'light', 'dark']
 
 export function resolveTheme(theme: Theme, systemDark: boolean): ResolvedTheme {
   return theme === 'system' ? (systemDark ? 'dark' : 'light') : theme
