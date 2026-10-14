@@ -40,7 +40,7 @@ export function Contact() {
           <p className="mt-4 text-neutral-700">{t('contact.subtitle')}</p>
         </div>
 
-        <ul className="mx-auto grid max-w-3xl gap-6 sm:grid-cols-3">
+        <ul className="mx-auto mt-14 grid max-w-3xl gap-6 sm:grid-cols-3">
           {items.map((item) => {
             const Icon = item.icon
             return (
