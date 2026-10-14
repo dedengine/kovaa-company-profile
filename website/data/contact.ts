@@ -5,21 +5,20 @@ export interface ContactInfo {
   whatsapp: string
   email: string
   hours: string
-  mapsUrl: string
   siteUrl: string
 }
 
 /**
- * PLACEHOLDER — user mengisi data asli pada Task 8.
- * Semua nilai berisi kata "placeholder" agar mudah diverifikasi (lihat contact.test.ts).
+ * DATA DUMMY (diminta user: "buat data dummy dulu") — ganti dengan data asli
+ * sebelum produksi. Nilai sengaja tidak memakai kata "placeholder" agar
+ * contact.test.ts bisa menjadi gate saat data belum diganti.
  */
 export const contact: ContactInfo = {
   company: 'KOVAA',
-  address: 'placeholder-alamat-lengkap',
-  phone: 'placeholder-telepon',
-  whatsapp: 'placeholder-whatsapp',
-  email: 'placeholder@example.com',
-  hours: 'placeholder-jam-operasional',
-  mapsUrl: 'https://placeholder-maps.example.com',
-  siteUrl: 'https://placeholder-domain.example.com',
+  address: 'Jl. Contoh Raya No. 1, Kawasan Industri, Jakarta, Indonesia',
+  phone: '+62 21 1234 5678',
+  whatsapp: '6281234567890',
+  email: 'halo@kovaa.example.com',
+  hours: 'Senin–Sabtu, 08.00–17.00 WIB',
+  siteUrl: 'https://kovaa.example.com',
 }
