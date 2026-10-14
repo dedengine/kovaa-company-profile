@@ -37,7 +37,7 @@ export function Hero() {
 
       <div
         ref={content}
-        className="relative mx-auto max-w-page px-4 py-24 md:py-32 lg:py-40"
+        className="relative mx-auto max-w-page px-4 pb-16 pt-8 md:py-32 lg:py-40"
       >
         <p
           data-reveal
