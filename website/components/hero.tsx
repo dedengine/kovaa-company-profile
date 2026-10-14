@@ -17,8 +17,8 @@ export function Hero() {
 
   return (
     <section id="top" className="relative overflow-hidden">
-      {/* Gambar hero full-width dari kiri ke kanan (statis) */}
-      <div className="absolute inset-0">
+      {/* Gambar hero full-width dari kiri ke kanan (desktop saja) */}
+      <div className="absolute inset-0 hidden md:block">
         <Image
           src="/assets/hero-banner.jpg"
           alt={t('hero.imageAlt')}
@@ -29,10 +29,10 @@ export function Hero() {
         />
       </div>
 
-      {/* Fade putih di kiri agar teks terbaca jelas */}
+      {/* Fade putih di kiri agar teks terbaca jelas (desktop saja) */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-transparent md:bg-gradient-to-r md:from-white md:via-white/85 md:to-transparent"
+        className="absolute inset-0 hidden bg-gradient-to-r from-white via-white/85 to-transparent md:block"
       />
 
       <div
@@ -73,9 +73,21 @@ export function Hero() {
             className="inline-flex cursor-pointer items-center rounded-full border-2 border-kovaa-blue bg-white/80 px-7 py-3.5 text-sm font-semibold tracking-wide text-kovaa-blue backdrop-blur transition-colors hover:bg-kovaa-blue hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue"
           >
             {t('hero.ctaContact')}
-          </Link>
+            </Link>
+          </div>
+
+          {/* Foto hero sebagai kartu terpisah di bawah teks (mobile saja) */}
+          <div className="relative mt-10 aspect-4/3 overflow-hidden rounded-3xl bg-neutral-100 shadow-xl md:hidden">
+            <Image
+              src="/assets/hero-banner.jpg"
+              alt={t('hero.imageAlt')}
+              fill
+              sizes="100vw"
+              className="object-cover"
+              priority
+            />
+          </div>
         </div>
-      </div>
     </section>
   )
 }
