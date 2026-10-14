@@ -6,3 +6,10 @@
 
 # referensi template pihak ketiga (bukan source project)
 insure-v1.0.0/
+
+# aset mentah (salinan pakai ada di website/public)
+assest/
+produk/
+
+# dokumentasi proses (spec & plan)
+docs/
