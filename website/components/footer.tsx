@@ -69,7 +69,7 @@ export function Footer() {
 
       <div className="border-t border-white/10 px-4 py-5">
         <p className="mx-auto max-w-page text-xs text-white/50">
-          © {contact.company} — {t('footer.rights')}
+          © {contact.company}. {t('footer.rights')}
         </p>
       </div>
     </footer>

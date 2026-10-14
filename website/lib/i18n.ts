@@ -21,7 +21,7 @@ export const dictionary = {
     hero: {
       title: 'Create. Build. Deliver.',
       subtitle:
-        'KOVAA menciptakan, membangun, dan mengirim peralatan ritel berkualitas — rak supermarket, gondola, rak dinding, dan drawer — siap memperkuat tampilan toko Anda.',
+        'KOVAA menciptakan, membangun, dan mengirim peralatan ritel berkualitas: rak supermarket, gondola, rak dinding, dan drawer. Semua siap memperkuat tampilan toko Anda.',
       ctaProducts: 'Lihat Produk',
       ctaContact: 'Hubungi Kami',
       imageAlt: 'Rak supermarket KOVAA tampil rapi dalam sebuah toko modern',
@@ -29,7 +29,7 @@ export const dictionary = {
     ctaBanner: {
       title: 'Siap Memperkuat Tampilan Toko Anda?',
       subtitle:
-        'Diskusikan kebutuhan rak Anda dengan tim KOVAA dan dapatkan penawaran terbaik — custom ukuran, material kokoh, siap pasang.',
+        'Diskusikan kebutuhan rak Anda dengan tim KOVAA dan dapatkan penawaran terbaik: custom ukuran, material kokoh, siap pasang.',
       cta: 'Hubungi via WhatsApp',
       imageAlt: 'Rak KOVAA terpasang di area toko',
     },
@@ -130,7 +130,7 @@ export const dictionary = {
     hero: {
       title: 'Create. Build. Deliver.',
       subtitle:
-        'KOVAA creates, builds, and delivers quality retail fixtures — supermarket shelves, gondolas, wall racks, and drawers — ready to strengthen your store display.',
+        'KOVAA creates, builds, and delivers quality retail fixtures: supermarket shelves, gondolas, wall racks, and drawers. Ready to strengthen your store display.',
       ctaProducts: 'View Products',
       ctaContact: 'Contact Us',
       imageAlt: 'KOVAA supermarket shelving neatly displayed in a modern store',
@@ -138,7 +138,7 @@ export const dictionary = {
     ctaBanner: {
       title: 'Ready to Strengthen Your Store Display?',
       subtitle:
-        'Discuss your shelving needs with the KOVAA team and get the best offer — custom dimensions, durable materials, ready to install.',
+        'Discuss your shelving needs with the KOVAA team and get the best offer: custom dimensions, durable materials, ready to install.',
       cta: 'Chat on WhatsApp',
       imageAlt: 'KOVAA shelving installed in a retail store',
     },
@@ -168,7 +168,7 @@ export const dictionary = {
         },
         {
           title: 'Factory-Direct Pricing',
-          desc: 'Buy straight from the maker — no middlemen, quality intact.',
+          desc: 'Buy straight from the maker, no middlemen, quality intact.',
         },
         {
           title: 'Delivery & Installation',

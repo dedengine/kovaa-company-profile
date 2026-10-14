@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand KOVAA — di-sample dari assest/kovaa-logo-no-bg.png */
+  /* Brand KOVAA , di-sample dari assest/kovaa-logo-no-bg.png */
   /* oranye gelap dipilih agar teks putih lolos kontras 4.5:1 (spec §4) */
   --color-kovaa-blue: #004bd4;
   --color-kovaa-orange: #c44a0e;

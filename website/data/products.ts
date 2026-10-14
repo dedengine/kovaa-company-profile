@@ -30,7 +30,7 @@ export const products: Product[] = [
     id: 'rak-display-supermarket-1',
     slug: 'rak-display-supermarket-1',
     category: 'rak-supermarket',
-    name: { id: 'Rak Display Supermarket — Model Grosir A', en: 'Supermarket Display Shelf — Wholesale Model A' },
+    name: { id: 'Rak Display Supermarket, Model Grosir A', en: 'Supermarket Display Shelf, Wholesale Model A' },
     description: {
       id: 'Rak display modern untuk toko grosir dan minimarket dengan susunan rak yang fleksibel.',
       en: 'Modern display shelving for wholesale stores and minimarkets with a flexible layout.',
@@ -45,7 +45,7 @@ export const products: Product[] = [
     id: 'rak-display-supermarket-2',
     slug: 'rak-display-supermarket-2',
     category: 'rak-supermarket',
-    name: { id: 'Rak Display Supermarket — Model Grosir B', en: 'Supermarket Display Shelf — Wholesale Model B' },
+    name: { id: 'Rak Display Supermarket, Model Grosir B', en: 'Supermarket Display Shelf, Wholesale Model B' },
     description: {
       id: 'Varian display supermarket dengan kapasitas susun lebih banyak dan struktur kokoh.',
       en: 'Supermarket display variant with a higher tier capacity and sturdy frame.',
@@ -60,7 +60,7 @@ export const products: Product[] = [
     id: 'rak-gondola-multilayer-1',
     slug: 'rak-gondola-multilayer-1',
     category: 'rak-supermarket',
-    name: { id: 'Rak Gondola Multilayer — Model 1', en: 'Multi-Layer Gondola Shelf — Model 1' },
+    name: { id: 'Rak Gondola Multilayer, Model 1', en: 'Multi-Layer Gondola Shelf, Model 1' },
     description: {
       id: 'Rak gondola kerangka besi multilayer untuk menampilkan produk dalam jumlah besar.',
       en: 'Steel-frame multi-layer gondola shelf for high-volume product display.',
@@ -75,7 +75,7 @@ export const products: Product[] = [
     id: 'rak-gondola-multilayer-2',
     slug: 'rak-gondola-multilayer-2',
     category: 'rak-supermarket',
-    name: { id: 'Rak Gondola Multilayer — Model 2', en: 'Multi-Layer Gondola Shelf — Model 2' },
+    name: { id: 'Rak Gondola Multilayer, Model 2', en: 'Multi-Layer Gondola Shelf, Model 2' },
     description: {
       id: 'Konfigurasi gondola multilayer kedua, cocok untuk lorong toko utama.',
       en: 'Second multi-layer gondola configuration, ideal for main store aisles.',
@@ -90,7 +90,7 @@ export const products: Product[] = [
     id: 'rak-gondola-multilayer-3',
     slug: 'rak-gondola-multilayer-3',
     category: 'rak-supermarket',
-    name: { id: 'Rak Gondola Multilayer — Model 3', en: 'Multi-Layer Gondola Shelf — Model 3' },
+    name: { id: 'Rak Gondola Multilayer, Model 3', en: 'Multi-Layer Gondola Shelf, Model 3' },
     description: {
       id: 'Gondola multilayer dengan kompartemen luas untuk produk beragam sekaligus.',
       en: 'Multi-layer gondola with wide compartments for mixed product ranges.',
@@ -105,7 +105,7 @@ export const products: Product[] = [
     id: 'rak-gondola-multilayer-4',
     slug: 'rak-gondola-multilayer-4',
     category: 'rak-supermarket',
-    name: { id: 'Rak Gondola Multilayer — Model 4', en: 'Multi-Layer Gondola Shelf — Model 4' },
+    name: { id: 'Rak Gondola Multilayer, Model 4', en: 'Multi-Layer Gondola Shelf, Model 4' },
     description: {
       id: 'Konfigurasi gondola multilayer terbesar, mendukung volume produk maksimal.',
       en: 'Largest multi-layer gondola configuration, supporting maximum product volume.',
@@ -153,7 +153,7 @@ export const products: Product[] = [
     name: { id: 'Drawer Rangka Natural', en: 'Natural Frame Drawer Unit' },
     description: {
       id: 'Drawer dengan rangka kayu natural, kuat dan estetik untuk area konter toko.',
-      en: 'Drawer unit with a natural wood frame — sturdy and aesthetic for retail counters.',
+      en: 'Drawer unit with a natural wood frame, sturdy and aesthetic for retail counters.',
     },
     image: '/products/drawer-rangka-natural.png',
     alt: {

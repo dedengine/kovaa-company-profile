@@ -22,7 +22,7 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   metadataBase: new URL(contact.siteUrl),
   title: {
-    default: "KOVAA — Rak Supermarket, Gondola, Rak Dinding & Drawer",
+    default: "KOVAA: Rak Supermarket, Gondola, Rak Dinding & Drawer",
     template: "%s | KOVAA",
   },
   description:
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     locale: "id_ID",
     alternateLocale: "en_US",
     siteName: "KOVAA",
-    title: "KOVAA — Create. Build. Deliver.",
+    title: "KOVAA: Create. Build. Deliver.",
     description:
       "Peralatan ritel custom-made: rak supermarket, gondola, rak dinding, dan drawer kayu. Dibuat, dibangun, dan dikirim langsung oleh tim KOVAA.",
     url: contact.siteUrl,
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "KOVAA — Create. Build. Deliver.",
+    title: "KOVAA: Create. Build. Deliver.",
     description:
       "Peralatan ritel custom-made: rak supermarket, gondola, rak dinding, dan drawer kayu.",
     images: ["/assets/mockup-2.jpeg"],

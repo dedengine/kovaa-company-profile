@@ -9,7 +9,7 @@ export interface ContactInfo {
 }
 
 /**
- * DATA DUMMY (diminta user: "buat data dummy dulu") — ganti dengan data asli
+ * DATA DUMMY (diminta user: "buat data dummy dulu") , ganti dengan data asli
  * sebelum produksi. Nilai sengaja tidak memakai kata "placeholder" agar
  * contact.test.ts bisa menjadi gate saat data belum diganti.
  */
