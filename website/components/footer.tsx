@@ -1,6 +1,5 @@
 'use client'
 
-import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { useI18n } from '@/lib/i18n-provider'
 import { contact } from '@/data/contact'
@@ -14,9 +13,6 @@ const LINKS = [
 
 export function Footer() {
   const { t } = useI18n()
-  // Next 16: new Date() saat render client component bikin prerender gagal → effect
-  const [year, setYear] = useState('')
-  useEffect(() => setYear(String(new Date().getFullYear())), [])
 
   return (
     <footer className="border-t border-neutral-200 bg-white">
@@ -50,8 +46,7 @@ export function Footer() {
       </div>
       <div className="border-t border-neutral-200 px-4 py-4">
         <p className="mx-auto max-w-page text-xs text-neutral-500">
-          © {year ? `${year} ` : ''}
-          {contact.company} — {t('footer.rights')}
+          © {contact.company} — {t('footer.rights')}
         </p>
       </div>
     </footer>

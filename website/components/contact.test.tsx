@@ -24,14 +24,13 @@ describe('Contact + Footer', () => {
     expect(document.getElementById('kontak')).not.toBeNull()
   })
 
-  it('renders a footer with the current year and brand', () => {
+  it('renders a footer with the brand', () => {
     const { container } = render(
       <I18nProvider>
         <Footer />
       </I18nProvider>,
     )
     const text = container.textContent ?? ''
-    expect(text).toContain(String(new Date().getFullYear()))
     expect(text).toContain('KOVAA')
   })
 })

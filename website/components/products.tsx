@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { categories } from '@/data/categories'
 import { products } from '@/data/products'
 import { useI18n } from '@/lib/i18n-provider'
+import { useGridStagger, useHoverLift } from '@/lib/gsap-animations'
 import { Lightbox } from './lightbox'
 
 export function Products() {
@@ -12,6 +13,9 @@ export function Products() {
   const [active, setActive] = useState<string>('all')
   const [openIndex, setOpenIndex] = useState<number | null>(null)
   const triggerRef = useRef<HTMLButtonElement | null>(null)
+  const grid = useRef<HTMLUListElement>(null)
+  useGridStagger(grid, 0.04)
+  const hover = useHoverLift()
 
   const visible = useMemo(
     () => (active === 'all' ? products : products.filter((p) => p.category === active)),
@@ -52,18 +56,20 @@ export function Products() {
         ))}
       </div>
 
-      <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {visible.map((p, i) => (
-          <li key={p.id}>
+      <ul ref={grid} className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        {visible.map((p) => (
+          <li key={p.id} data-stagger>
             <button
               type="button"
               data-testid="product-card"
               aria-label={p.name[lang]}
+              onMouseEnter={(e) => hover.lift(e.currentTarget)}
+              onMouseLeave={(e) => hover.drop(e.currentTarget)}
               onClick={(e) => {
                 triggerRef.current = e.currentTarget
                 setOpenIndex(products.indexOf(p))
               }}
-              className="group block w-full cursor-pointer overflow-hidden rounded-2xl border border-neutral-200 bg-white text-left transition-[transform,box-shadow] hover:-translate-y-1 hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue"
+              className="group block w-full cursor-pointer overflow-hidden rounded-2xl border border-neutral-200 bg-white text-left transition-[box-shadow] hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue"
             >
               <span className="relative block aspect-square bg-neutral-100">
                 <Image

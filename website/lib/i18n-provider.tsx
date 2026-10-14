@@ -44,7 +44,10 @@ export function I18nProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const fromUrl = readLangFromUrl()
-    if (fromUrl !== 'id') setLangState(fromUrl)
+    if (fromUrl !== 'id') {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setLangState(fromUrl)
+    }
   }, [])
 
   useEffect(() => {

@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
+import { gsap } from 'gsap'
+import { useGSAP } from '@gsap/react'
 import { PiCaretLeft, PiCaretRight, PiX } from 'react-icons/pi'
 import type { Product } from '@/data/products'
 import { useI18n } from '@/lib/i18n-provider'
@@ -22,6 +24,14 @@ export function Lightbox({
 
   useEffect(() => {
     dialogRef.current?.focus()
+  }, [])
+
+  useGSAP(() => {
+    const mm = gsap.matchMedia()
+    mm.add('(prefers-reduced-motion: reduce)', () => {})
+    mm.add('(prefers-reduced-motion: no-preference)', () => {
+      gsap.from(dialogRef.current, { opacity: 0, scale: 0.96, duration: 0.2, ease: 'power2.out' })
+    })
   }, [])
 
   useEffect(() => {
