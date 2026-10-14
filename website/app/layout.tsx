@@ -22,7 +22,7 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   metadataBase: new URL(contact.siteUrl),
   title: {
-    default: "KOVAA: Rak Supermarket, Gondola, Rak Dinding & Drawer",
+    default: "KOVAA",
     template: "%s | KOVAA",
   },
   description:

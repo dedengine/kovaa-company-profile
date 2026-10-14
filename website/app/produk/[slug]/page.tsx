@@ -18,7 +18,8 @@ export async function generateMetadata({
   const product = products.find((p) => p.slug === slug)
   if (!product) return { title: 'KOVAA' }
   return {
-    title: `${product.name.id} | KOVAA`,
+    // Judul polos: template layout "%s | KOVAA" yang menambahkan akhiran
+    title: product.name.id,
     description: product.description.id,
     openGraph: {
       title: `${product.name.id} | KOVAA`,
