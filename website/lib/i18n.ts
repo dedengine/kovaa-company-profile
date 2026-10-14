@@ -24,10 +24,20 @@ export const dictionary = {
         'KOVAA menciptakan, membangun, dan mengirim peralatan ritel berkualitas — rak supermarket, gondola, rak dinding, dan drawer — siap memperkuat tampilan toko Anda.',
       ctaProducts: 'Lihat Produk',
       ctaContact: 'Hubungi Kami',
-      imageAlt: 'Mockup rak supermarket KOVAA di dalam toko',
+      imageAlt: 'Rak supermarket KOVAA tampil rapi dalam sebuah toko modern',
+    },
+    ctaBanner: {
+      title: 'Siap Memperkuat Tampilan Toko Anda?',
+      subtitle:
+        'Diskusikan kebutuhan rak Anda dengan tim KOVAA dan dapatkan penawaran terbaik — custom ukuran, material kokoh, siap pasang.',
+      cta: 'Hubungi via WhatsApp',
+      imageAlt: 'Rak KOVAA terpasang di area toko',
     },
     about: {
       title: 'Tentang KOVAA',
+      eyebrow: 'Profil Perusahaan',
+      badge: 'Peralatan ritel untuk toko Anda',
+      imageAlt: 'Rak KOVAA terpasang di dalam toko',
       body1:
         'KOVAA adalah penyedia peralatan ritel untuk toko, minimarket, dan supermarket. Kami mengerjakan rak supermarket, rak gondola kerangka besi, rak dinding, rak sayur-buah, hingga drawer kayu solid.',
       body2:
@@ -35,6 +45,9 @@ export const dictionary = {
     },
     advantages: {
       title: 'Mengapa KOVAA',
+      eyebrow: 'Keunggulan Kami',
+      subtitle:
+        'Kami mengerjakan peralatan ritel yang awet, rapi, dan pas untuk ruang toko Anda.',
       items: [
         {
           title: 'Custom-Made',
@@ -56,6 +69,7 @@ export const dictionary = {
     },
     process: {
       title: 'Proses Kerja Kami',
+      eyebrow: 'Cara Kerja',
       steps: [
         {
           title: 'Create',
@@ -73,6 +87,7 @@ export const dictionary = {
     },
     products: {
       title: 'Produk Kami',
+      eyebrow: 'Katalog Produk',
       subtitle: 'Pilih kategori untuk melihat produk KOVAA.',
       filterAll: 'Semua',
       viewLarger: 'Lihat lebih besar',
@@ -83,6 +98,7 @@ export const dictionary = {
     },
     contact: {
       title: 'Hubungi Kami',
+      eyebrow: 'Kontak',
       subtitle: 'Diskusikan kebutuhan rak untuk toko Anda bersama tim KOVAA.',
       addressLabel: 'Alamat',
       phoneLabel: 'Telepon / WhatsApp',
@@ -117,10 +133,20 @@ export const dictionary = {
         'KOVAA creates, builds, and delivers quality retail fixtures — supermarket shelves, gondolas, wall racks, and drawers — ready to strengthen your store display.',
       ctaProducts: 'View Products',
       ctaContact: 'Contact Us',
-      imageAlt: 'KOVAA supermarket shelf mockup inside a store',
+      imageAlt: 'KOVAA supermarket shelving neatly displayed in a modern store',
+    },
+    ctaBanner: {
+      title: 'Ready to Strengthen Your Store Display?',
+      subtitle:
+        'Discuss your shelving needs with the KOVAA team and get the best offer — custom dimensions, durable materials, ready to install.',
+      cta: 'Chat on WhatsApp',
+      imageAlt: 'KOVAA shelving installed in a retail store',
     },
     about: {
       title: 'About KOVAA',
+      eyebrow: 'Company Profile',
+      badge: 'Retail fixtures for your store',
+      imageAlt: 'KOVAA shelving installed inside a store',
       body1:
         'KOVAA is a retail fixtures provider for stores, minimarkets, and supermarkets. We build supermarket shelves, steel-frame gondolas, wall racks, fruit and vegetable shelving, and solid wood drawers.',
       body2:
@@ -128,6 +154,9 @@ export const dictionary = {
     },
     advantages: {
       title: 'Why KOVAA',
+      eyebrow: 'Our Advantages',
+      subtitle:
+        'We build retail fixtures that last, look sharp, and fit your store space.',
       items: [
         {
           title: 'Custom-Made',
@@ -149,6 +178,7 @@ export const dictionary = {
     },
     process: {
       title: 'Our Process',
+      eyebrow: 'How We Work',
       steps: [
         {
           title: 'Create',
@@ -166,6 +196,7 @@ export const dictionary = {
     },
     products: {
       title: 'Our Products',
+      eyebrow: 'Product Catalog',
       subtitle: 'Choose a category to browse KOVAA products.',
       filterAll: 'All',
       viewLarger: 'View larger',
@@ -176,6 +207,7 @@ export const dictionary = {
     },
     contact: {
       title: 'Contact Us',
+      eyebrow: 'Contact',
       subtitle: 'Discuss your store shelving needs with the KOVAA team.',
       addressLabel: 'Address',
       phoneLabel: 'Phone / WhatsApp',

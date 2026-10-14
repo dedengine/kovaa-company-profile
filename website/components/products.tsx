@@ -29,12 +29,21 @@ export function Products() {
 
   return (
     <section id="produk" className="mx-auto max-w-page px-4 py-16">
-      <h2 className="font-heading text-3xl font-bold tracking-tight text-neutral-900 md:text-4xl">
-        {t('products.title')}
-      </h2>
-      <p className="mt-3 text-neutral-700">{t('products.subtitle')}</p>
+      <div data-reveal className="mx-auto max-w-2xl text-center">
+        <p className="text-xs font-semibold uppercase tracking-widest text-kovaa-orange">
+          {t('products.eyebrow')}
+        </p>
+        <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight text-neutral-900 md:text-4xl">
+          {t('products.title')}
+        </h2>
+        <p className="mt-4 text-neutral-700">{t('products.subtitle')}</p>
+      </div>
 
-      <div role="group" aria-label={t('products.title')} className="mt-6 flex flex-wrap gap-2">
+      <div
+        role="group"
+        aria-label={t('products.title')}
+        className="mt-8 flex flex-wrap justify-center gap-2"
+      >
         <button
           type="button"
           aria-pressed={active === 'all'}

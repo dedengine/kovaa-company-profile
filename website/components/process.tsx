@@ -13,12 +13,21 @@ export function Process() {
 
   return (
     <section ref={scope} id="proses" className="mx-auto max-w-page px-4 py-16">
-      <h2 data-reveal className="font-heading text-3xl font-bold tracking-tight text-neutral-900 md:text-4xl">
-        {t('process.title')}
-      </h2>
-      <ol data-reveal className="mt-8 grid gap-6 md:grid-cols-3">
+      <div data-reveal className="mx-auto max-w-2xl text-center">
+        <p className="text-xs font-semibold uppercase tracking-widest text-kovaa-orange">
+          {t('process.eyebrow')}
+        </p>
+        <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight text-neutral-900 md:text-4xl">
+          {t('process.title')}
+        </h2>
+      </div>
+
+      <ol data-reveal className="mt-10 grid gap-6 md:grid-cols-3">
         {steps.map((step, i) => (
-          <li key={step.title} className="rounded-2xl border border-neutral-200 p-6">
+          <li
+            key={step.title}
+            className="rounded-2xl border border-neutral-200 bg-white p-7 shadow-sm"
+          >
             <span className="font-heading text-4xl font-bold text-kovaa-orange">
               {String(i + 1).padStart(2, '0')}
             </span>

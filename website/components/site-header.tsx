@@ -14,7 +14,6 @@ export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
-    // class toggle ringan; animasi GSAP menyusul di task tersendiri
     const onScroll = () => setScrolled(window.scrollY > 8)
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
@@ -24,11 +23,11 @@ export function SiteHeader() {
   return (
     <header
       data-scrolled={scrolled}
-      className={`sticky top-0 z-50 border-b bg-white/90 backdrop-blur ${
-        scrolled ? 'border-neutral-200' : 'border-transparent'
+      className={`sticky top-0 z-50 bg-white/95 backdrop-blur ${
+        scrolled ? 'shadow-md' : 'shadow-sm'
       }`}
     >
-      <div className="mx-auto flex h-16 max-w-page items-center justify-between gap-4 px-4">
+      <div className="mx-auto flex h-16 max-w-page items-center justify-between gap-4 px-4 lg:h-20">
         <a href="#top" className="flex items-center" aria-label="KOVAA">
           <Image
             src="/assets/kovaa-logo-no-bg.png"
@@ -39,12 +38,15 @@ export function SiteHeader() {
           />
         </a>
 
-        <nav aria-label={t('nav.mainNav')} className="hidden items-center gap-6 md:flex">
+        <nav
+          aria-label={t('nav.mainNav')}
+          className="hidden items-center gap-1 rounded-full bg-neutral-100 px-2 py-1.5 md:flex"
+        >
           {NAV_IDS.map((id) => (
             <a
               key={id}
               href={`#${id}`}
-              className="cursor-pointer text-sm font-medium text-neutral-700 transition-colors hover:text-kovaa-blue focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue"
+              className="cursor-pointer rounded-full px-4 py-1.5 text-sm font-medium text-neutral-700 transition-colors hover:bg-kovaa-blue hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue"
             >
               {t(`nav.${id}`)}
             </a>
@@ -66,7 +68,10 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <nav aria-label={t('nav.mobileNav')} className="border-t border-neutral-200 bg-white md:hidden">
+        <nav
+          aria-label={t('nav.mobileNav')}
+          className="border-t border-neutral-200 bg-white md:hidden"
+        >
           <div className="mx-auto flex max-w-page flex-col px-4 py-2">
             {NAV_IDS.map((id) => (
               <a

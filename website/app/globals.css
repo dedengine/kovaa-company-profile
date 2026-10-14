@@ -6,9 +6,12 @@
   --color-kovaa-blue: #004bd4;
   --color-kovaa-orange: #c44a0e;
 
+  /* Navy gelap bergaya template Insure (#15233C) untuk topbar/banner/footer */
+  --color-kovaa-navy: #15233c;
+
   /* Tipografi (variabel dari next/font di layout.tsx) */
-  --font-heading: var(--font-lexend);
-  --font-body: var(--font-source-sans);
+  --font-heading: var(--font-poppins);
+  --font-body: var(--font-roboto);
 
   /* Max-width konten 1200px → utility `max-w-page` */
   --container-page: 1200px;

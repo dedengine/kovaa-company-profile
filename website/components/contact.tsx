@@ -7,79 +7,84 @@ import { useI18n } from '@/lib/i18n-provider'
 export function Contact() {
   const { t } = useI18n()
 
+  const items = [
+    {
+      icon: PiMapPin,
+      label: t('contact.addressLabel'),
+      value: contact.address,
+    },
+    {
+      icon: PiPhone,
+      label: t('contact.phoneLabel'),
+      value: contact.phone,
+      href: `tel:${contact.phone.replace(/\s/g, '')}`,
+    },
+    {
+      icon: PiEnvelope,
+      label: t('contact.emailLabel'),
+      value: contact.email,
+      href: `mailto:${contact.email}`,
+    },
+    {
+      icon: PiClock,
+      label: t('contact.hoursLabel'),
+      value: contact.hours,
+    },
+  ]
+
   return (
     <section id="kontak" className="bg-neutral-50 py-16">
       <div className="mx-auto max-w-page px-4">
-        <h2 className="font-heading text-3xl font-bold tracking-tight text-neutral-900 md:text-4xl">
-          {t('contact.title')}
-        </h2>
-        <p className="mt-3 text-neutral-700">{t('contact.subtitle')}</p>
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="text-xs font-semibold uppercase tracking-widest text-kovaa-orange">
+            {t('contact.eyebrow')}
+          </p>
+          <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight text-neutral-900 md:text-4xl">
+            {t('contact.title')}
+          </h2>
+          <p className="mt-4 text-neutral-700">{t('contact.subtitle')}</p>
+        </div>
 
-        <ul className="mt-8 grid gap-6 md:grid-cols-2">
-          <li className="flex gap-3">
-            <PiMapPin size={22} className="mt-0.5 shrink-0 text-kovaa-blue" aria-hidden="true" />
-            <div>
-              <h3 className="text-sm font-semibold text-neutral-900">
-                {t('contact.addressLabel')}
-              </h3>
-              <p className="mt-1 text-sm text-neutral-700">{contact.address}</p>
-            </div>
-          </li>
-
-          <li className="flex gap-3">
-            <PiPhone size={22} className="mt-0.5 shrink-0 text-kovaa-blue" aria-hidden="true" />
-            <div>
-              <h3 className="text-sm font-semibold text-neutral-900">
-                {t('contact.phoneLabel')}
-              </h3>
-              <p className="mt-1 text-sm text-neutral-700">
-                <a
-                  href={`tel:${contact.phone.replace(/\s/g, '')}`}
-                  className="cursor-pointer hover:text-kovaa-blue focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue"
-                >
-                  {contact.phone}
-                </a>
-              </p>
-            </div>
-          </li>
-
-          <li className="flex gap-3">
-            <PiEnvelope size={22} className="mt-0.5 shrink-0 text-kovaa-blue" aria-hidden="true" />
-            <div>
-              <h3 className="text-sm font-semibold text-neutral-900">
-                {t('contact.emailLabel')}
-              </h3>
-              <p className="mt-1 text-sm text-neutral-700">
-                <a
-                  href={`mailto:${contact.email}`}
-                  className="cursor-pointer hover:text-kovaa-blue focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue"
-                >
-                  {contact.email}
-                </a>
-              </p>
-            </div>
-          </li>
-
-          <li className="flex gap-3">
-            <PiClock size={22} className="mt-0.5 shrink-0 text-kovaa-blue" aria-hidden="true" />
-            <div>
-              <h3 className="text-sm font-semibold text-neutral-900">
-                {t('contact.hoursLabel')}
-              </h3>
-              <p className="mt-1 text-sm text-neutral-700">{contact.hours}</p>
-            </div>
-          </li>
+        <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {items.map((item) => {
+            const Icon = item.icon
+            return (
+              <li
+                key={item.label}
+                className="rounded-2xl border border-neutral-200 bg-white p-6 text-center shadow-sm"
+              >
+                <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-kovaa-blue/10 text-kovaa-blue">
+                  <Icon size={24} aria-hidden="true" />
+                </span>
+                <h3 className="mt-4 text-sm font-semibold text-neutral-900">{item.label}</h3>
+                {item.href ? (
+                  <p className="mt-1 text-sm text-neutral-700">
+                    <a
+                      href={item.href}
+                      className="cursor-pointer hover:text-kovaa-blue focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue"
+                    >
+                      {item.value}
+                    </a>
+                  </p>
+                ) : (
+                  <p className="mt-1 text-sm text-neutral-700">{item.value}</p>
+                )}
+              </li>
+            )
+          })}
         </ul>
 
-        <a
-          href={`https://wa.me/${contact.whatsapp.replace(/\D/g, '')}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-8 inline-flex cursor-pointer items-center gap-2 rounded-full bg-kovaa-orange px-6 py-3 text-sm font-semibold text-white transition-[transform,box-shadow] hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-orange motion-reduce:transition-none motion-reduce:hover:translate-y-0"
-        >
-          <PiWhatsappLogo size={18} />
-          {t('contact.whatsappCta')}
-        </a>
+        <div className="mt-10 text-center">
+          <a
+            href={`https://wa.me/${contact.whatsapp.replace(/\D/g, '')}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-kovaa-orange px-8 py-4 text-sm font-semibold tracking-wide text-white shadow-lg transition-[transform,box-shadow] hover:-translate-y-0.5 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-orange motion-reduce:transition-none motion-reduce:hover:translate-y-0"
+          >
+            <PiWhatsappLogo size={20} />
+            {t('contact.whatsappCta')}
+          </a>
+        </div>
       </div>
     </section>
   )

@@ -1,19 +1,21 @@
 import type { Metadata } from "next";
-import { Lexend, Source_Sans_3 } from "next/font/google";
+import { Poppins, Roboto } from "next/font/google";
 import { I18nProvider } from "@/lib/i18n-provider";
 import { contact } from "@/data/contact";
 import { organizationJsonLd } from "@/lib/seo";
 import "./globals.css";
 
-const lexend = Lexend({
+const poppins = Poppins({
   subsets: ["latin"],
-  variable: "--font-lexend",
+  weight: ["500", "600", "700"],
+  variable: "--font-poppins",
   display: "swap",
 });
 
-const sourceSans = Source_Sans_3({
+const roboto = Roboto({
   subsets: ["latin"],
-  variable: "--font-source-sans",
+  weight: ["400", "500"],
+  variable: "--font-roboto",
   display: "swap",
 });
 
@@ -60,7 +62,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="id"
-      className={`${lexend.variable} ${sourceSans.variable} font-body antialiased`}
+      className={`${poppins.variable} ${roboto.variable} font-body antialiased`}
     >
       <body className="min-h-screen bg-white text-neutral-900">
         <script

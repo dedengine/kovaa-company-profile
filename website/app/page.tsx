@@ -1,8 +1,10 @@
+import { Topbar } from '@/components/topbar'
 import { SiteHeader } from '@/components/site-header'
 import { Hero } from '@/components/hero'
 import { About } from '@/components/about'
-import { Products } from '@/components/products'
 import { Advantages } from '@/components/advantages'
+import { CtaBanner } from '@/components/cta-banner'
+import { Products } from '@/components/products'
 import { Process } from '@/components/process'
 import { Contact } from '@/components/contact'
 import { Footer } from '@/components/footer'
@@ -10,6 +12,7 @@ import { Footer } from '@/components/footer'
 export default function Home() {
   return (
     <>
+      <Topbar />
       <SiteHeader />
       <a
         href="#main"
@@ -20,8 +23,9 @@ export default function Home() {
       <main id="main">
         <Hero />
         <About />
-        <Products />
         <Advantages />
+        <CtaBanner />
+        <Products />
         <Process />
         <Contact />
       </main>
