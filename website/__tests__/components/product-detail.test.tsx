@@ -1,7 +1,7 @@
 import { render, screen, within } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 import { I18nProvider } from '@/lib/i18n-provider'
-import { ProductDetail } from './product-detail'
+import { ProductDetail } from '@/components/product-detail'
 import { products } from '@/data/products'
 import { contact } from '@/data/contact'
 

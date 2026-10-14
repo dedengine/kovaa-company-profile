@@ -2,8 +2,8 @@ import { render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 import { I18nProvider } from '@/lib/i18n-provider'
 import { ThemeProvider } from '@/lib/theme-provider'
-import { SiteHeader } from './site-header'
-import { Hero } from './hero'
+import { SiteHeader } from '@/components/site-header'
+import { Hero } from '@/components/hero'
 
 function renderPage() {
   return render(

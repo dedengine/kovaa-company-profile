@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { ThemeProvider, resolveTheme, useTheme } from './theme-provider'
+import { ThemeProvider, resolveTheme, useTheme } from '@/lib/theme-provider'
 
 function setSystemDark(dark: boolean) {
   window.matchMedia = ((query: string) => ({

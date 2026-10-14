@@ -1,9 +1,9 @@
 import { render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 import { I18nProvider } from '@/lib/i18n-provider'
-import { About } from './about'
-import { Advantages } from './advantages'
-import { Process } from './process'
+import { About } from '@/components/about'
+import { Advantages } from '@/components/advantages'
+import { Process } from '@/components/process'
 
 function renderSections() {
   return render(

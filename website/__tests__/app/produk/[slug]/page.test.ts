@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { generateMetadata, generateStaticParams } from './page'
+import { generateMetadata, generateStaticParams } from '@/app/produk/[slug]/page'
 import { products } from '@/data/products'
 
 describe('product detail routes', () => {

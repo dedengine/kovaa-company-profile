@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { describe, expect, it } from 'vitest'
 import { I18nProvider } from '@/lib/i18n-provider'
-import { Products } from './products'
+import { Products } from '@/components/products'
 import { products } from '@/data/products'
 
 function renderProducts() {

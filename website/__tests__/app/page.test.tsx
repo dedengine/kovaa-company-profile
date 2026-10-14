@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
-import Home from './page'
+import Home from '@/app/page'
 import { I18nProvider } from '@/lib/i18n-provider'
 import { ThemeProvider } from '@/lib/theme-provider'
 

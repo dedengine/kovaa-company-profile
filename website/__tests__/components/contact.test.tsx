@@ -2,8 +2,8 @@ import { render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 import { contact } from '@/data/contact'
 import { I18nProvider } from '@/lib/i18n-provider'
-import { Contact } from './contact'
-import { Footer } from './footer'
+import { Contact } from '@/components/contact'
+import { Footer } from '@/components/footer'
 
 describe('contact data', () => {
   it('has no placeholder values left', () => {

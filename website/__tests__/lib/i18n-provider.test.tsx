@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import { afterEach, describe, expect, it } from 'vitest'
-import { I18nProvider, useI18n } from './i18n-provider'
+import { I18nProvider, useI18n } from '@/lib/i18n-provider'
 import { LanguageToggle } from '@/components/language-toggle'
 
 function Probe() {

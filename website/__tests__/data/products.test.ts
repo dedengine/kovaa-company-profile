@@ -1,8 +1,8 @@
 import { existsSync } from 'node:fs'
 import { join } from 'node:path'
 import { describe, expect, it } from 'vitest'
-import { categories } from './categories'
-import { products } from './products'
+import { categories } from '@/data/categories'
+import { products } from '@/data/products'
 
 describe('products data', () => {
   it('has exactly 12 products', () => {

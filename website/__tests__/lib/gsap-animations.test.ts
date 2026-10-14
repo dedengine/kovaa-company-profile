@@ -24,8 +24,7 @@ vi.mock('@gsap/react', () => ({
   useGSAP: (fn: () => void) => fn(),
 }))
 
-const { useScrollReveal, useGridStagger, useHoverLift } = await import(
-  './gsap-animations'
+const { useScrollReveal, useGridStagger, useHoverLift } = await import('@/lib/gsap-animations'
 )
 
 const div = () => ({ current: document.createElement('div') })
