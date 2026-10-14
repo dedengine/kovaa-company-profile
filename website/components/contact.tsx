@@ -1,6 +1,6 @@
 'use client'
 
-import { PiClock, PiEnvelope, PiMapPin, PiPhone, PiWhatsappLogo } from 'react-icons/pi'
+import { PiEnvelope, PiMapPin, PiPhone, PiWhatsappLogo } from 'react-icons/pi'
 import { contact } from '@/data/contact'
 import { useI18n } from '@/lib/i18n-provider'
 
@@ -24,11 +24,6 @@ export function Contact() {
       label: t('contact.emailLabel'),
       value: contact.email,
       href: `mailto:${contact.email}`,
-    },
-    {
-      icon: PiClock,
-      label: t('contact.hoursLabel'),
-      value: contact.hours,
     },
   ]
 

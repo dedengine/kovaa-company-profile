@@ -11,7 +11,6 @@ export function organizationJsonLd(contact: ContactInfo) {
     address: contact.address,
     telephone: contact.phone,
     email: contact.email,
-    openingHours: contact.hours,
     url: contact.siteUrl,
     image: `${contact.siteUrl}/assets/mockup-1.jpeg`,
   }

@@ -62,7 +62,6 @@ export function Footer() {
                 {contact.email}
               </a>
             </li>
-            <li>{contact.hours}</li>
           </ul>
         </div>
       </div>

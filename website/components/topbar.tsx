@@ -1,6 +1,6 @@
 'use client'
 
-import { PiClock, PiEnvelope, PiPhone } from 'react-icons/pi'
+import { PiEnvelope, PiPhone } from 'react-icons/pi'
 import { contact } from '@/data/contact'
 
 export function Topbar() {
@@ -22,10 +22,6 @@ export function Topbar() {
             <PiEnvelope size={13} aria-hidden="true" />
             {contact.email}
           </a>
-          <span className="flex items-center gap-1.5">
-            <PiClock size={13} aria-hidden="true" />
-            {contact.hours}
-          </span>
         </div>
         <span className="font-heading font-semibold tracking-wide text-white/50">
           CREATE • BUILD • DELIVER

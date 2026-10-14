@@ -4,7 +4,6 @@ export interface ContactInfo {
   phone: string
   whatsapp: string
   email: string
-  hours: string
   siteUrl: string
 }
 
@@ -19,6 +18,5 @@ export const contact: ContactInfo = {
   phone: '+62 21 1234 5678',
   whatsapp: '6281234567890',
   email: 'halo@kovaa.example.com',
-  hours: 'Senin–Sabtu, 08.00–17.00 WIB',
   siteUrl: 'https://kovaa.example.com',
 }
