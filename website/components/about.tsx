@@ -13,19 +13,15 @@ export function About() {
   return (
     <section ref={scope} id="tentang" className="mx-auto max-w-page px-4 py-16">
       <div className="grid items-center gap-10 md:grid-cols-2">
-        <div data-reveal className="relative">
-          <div className="relative aspect-4/3 overflow-hidden rounded-3xl bg-neutral-100 shadow-xl">
+        <div data-reveal className="mx-auto w-full max-w-md">
+          <div className="relative aspect-square overflow-hidden rounded-full shadow-xl ring-1 ring-black/5">
             <Image
-              src="/assets/mockup-1.jpeg"
+              src="/assets/section-benner-about.png"
               alt={t('about.imageAlt')}
               fill
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 768px) 100vw, 448px"
               className="object-cover"
             />
-          </div>
-          <div className="absolute -bottom-6 -right-2 rounded-2xl bg-kovaa-blue px-6 py-4 text-white shadow-xl sm:-right-6">
-            <p className="font-heading text-lg font-bold">Create • Build • Deliver</p>
-            <p className="mt-0.5 text-xs text-white/80">{t('about.badge')}</p>
           </div>
         </div>
 

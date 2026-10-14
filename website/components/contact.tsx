@@ -40,15 +40,15 @@ export function Contact() {
           <p className="mt-4 text-neutral-700">{t('contact.subtitle')}</p>
         </div>
 
-        <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="mx-auto grid max-w-3xl gap-6 sm:grid-cols-3">
           {items.map((item) => {
             const Icon = item.icon
             return (
               <li
                 key={item.label}
-                className="rounded-2xl border border-neutral-200 bg-white p-6 text-center shadow-sm"
+                className="flex h-full flex-col items-center rounded-2xl border border-neutral-200 bg-white p-6 text-center shadow-sm"
               >
-                <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-kovaa-blue/10 text-kovaa-blue">
+                <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-kovaa-blue/10 text-kovaa-blue">
                   <Icon size={24} aria-hidden="true" />
                 </span>
                 <h3 className="mt-4 text-sm font-semibold text-neutral-900">{item.label}</h3>

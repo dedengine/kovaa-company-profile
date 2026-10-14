@@ -36,7 +36,6 @@ export const dictionary = {
     about: {
       title: 'Tentang KOVAA',
       eyebrow: 'Profil Perusahaan',
-      badge: 'Peralatan ritel untuk toko Anda',
       imageAlt: 'Rak KOVAA terpasang di dalam toko',
       body1:
         'KOVAA adalah penyedia peralatan ritel untuk toko, minimarket, dan supermarket. Kami mengerjakan rak supermarket, rak gondola kerangka besi, rak dinding, rak sayur-buah, hingga drawer kayu solid.',
@@ -144,7 +143,6 @@ export const dictionary = {
     about: {
       title: 'About KOVAA',
       eyebrow: 'Company Profile',
-      badge: 'Retail fixtures for your store',
       imageAlt: 'KOVAA shelving installed inside a store',
       body1:
         'KOVAA is a retail fixtures provider for stores, minimarkets, and supermarkets. We build supermarket shelves, steel-frame gondolas, wall racks, fruit and vegetable shelving, and solid wood drawers.',
