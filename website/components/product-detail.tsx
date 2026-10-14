@@ -78,22 +78,24 @@ export function ProductDetail({ product }: { product: Product }) {
             </tbody>
           </table>
 
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-8 flex items-center gap-3">
             <a
               href={`https://wa.me/${contact.whatsapp.replace(/\D/g, '')}?text=${waText}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-kovaa-orange px-6 py-3 text-sm font-semibold text-white shadow-lg transition-[transform,box-shadow] hover:-translate-y-0.5 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-orange motion-reduce:transition-none motion-reduce:hover:translate-y-0"
+              aria-label={t('detail.askViaWa')}
+              title={t('detail.askViaWa')}
+              className="inline-flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-kovaa-orange text-white shadow-lg transition-[transform,box-shadow] hover:-translate-y-0.5 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-orange motion-reduce:transition-none motion-reduce:hover:translate-y-0"
             >
-              <PiWhatsappLogo size={18} />
-              {t('detail.askViaWa')}
+              <PiWhatsappLogo size={22} />
             </a>
             <Link
               href="/#produk"
-              className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-neutral-300 px-6 py-3 text-sm font-semibold text-neutral-800 transition-colors hover:border-kovaa-blue hover:text-kovaa-blue focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue"
+              aria-label={t('detail.back')}
+              title={t('detail.back')}
+              className="inline-flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-neutral-300 text-neutral-800 transition-colors hover:border-kovaa-blue hover:text-kovaa-blue focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue"
             >
-              <PiArrowLeft size={16} />
-              {t('detail.back')}
+              <PiArrowLeft size={20} />
             </Link>
           </div>
         </div>
