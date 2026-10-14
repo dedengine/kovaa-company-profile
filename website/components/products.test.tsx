@@ -1,4 +1,4 @@
-import { render, screen, fireEvent, within } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { describe, expect, it } from 'vitest'
 import { I18nProvider } from '@/lib/i18n-provider'
@@ -17,8 +17,8 @@ function cards() {
   return document.querySelectorAll('[data-testid="product-card"]')
 }
 
-describe('Products grid + lightbox', () => {
-  it('shows all 12 products by default', () => {
+describe('Products row', () => {
+  it('shows all 12 products in one row', () => {
     renderProducts()
     expect(cards()).toHaveLength(12)
   })
@@ -35,67 +35,20 @@ describe('Products grid + lightbox', () => {
     )
   })
 
-  it('opens a lightbox with the product details when a card is clicked', async () => {
-    const user = userEvent.setup()
+  it('links every card to its detail page', () => {
     renderProducts()
-    await user.click(screen.getByRole('button', { name: products[0].name.id }))
-    const dialog = screen.getByRole('dialog')
-    expect(dialog).toHaveAttribute('aria-modal', 'true')
-    expect(dialog.textContent).toContain(products[0].name.id)
-    expect(dialog.textContent).toContain(products[0].description.id)
+    const first = screen.getByRole('link', { name: products[0].name.id })
+    expect(first).toHaveAttribute('href', `/produk/${products[0].slug}`)
   })
 
-  it('closes on Escape and returns focus to the card that opened it', async () => {
+  it('has scroll arrows that shift the row', async () => {
     const user = userEvent.setup()
     renderProducts()
-    const card = screen.getByRole('button', { name: products[0].name.id })
-    await user.click(card)
-    expect(screen.getByRole('dialog')).toBeDefined()
-    fireEvent.keyDown(document, { key: 'Escape' })
-    expect(screen.queryByRole('dialog')).toBeNull()
-    expect(card).toHaveFocus()
-  })
-
-  it('navigates between products with arrow keys', async () => {
-    const user = userEvent.setup()
-    renderProducts()
-    await user.click(screen.getByRole('button', { name: products[0].name.id }))
-    fireEvent.keyDown(document, { key: 'ArrowRight' })
-    const dialog = screen.getByRole('dialog')
-    expect(within(dialog).getByText(products[1].name.id)).toBeDefined()
-  })
-
-  it('browses only the active category inside the lightbox', async () => {
-    const user = userEvent.setup()
-    renderProducts()
-    await user.click(screen.getByRole('button', { name: 'Drawer' }))
-    const inCategory = products.filter((p) => p.category === 'drawer')
-    await user.click(screen.getByRole('button', { name: inCategory[0].name.id }))
-    const dialog = screen.getByRole('dialog')
-    expect(dialog.textContent).toContain(`Produk 1 dari ${inCategory.length}`)
-    fireEvent.keyDown(document, { key: 'ArrowRight' })
-    expect(within(dialog).getByText(inCategory[1].name.id)).toBeDefined()
-    expect(dialog.textContent).not.toContain('Gondola')
-  })
-
-  it('keeps Tab focus inside the lightbox dialog', async () => {
-    const user = userEvent.setup()
-    renderProducts()
-    await user.click(screen.getByRole('button', { name: products[0].name.id }))
-    const dialog = screen.getByRole('dialog')
-    const focusables = dialog.querySelectorAll('button')
-    const last = focusables[focusables.length - 1] as HTMLElement
-    last.focus()
-    fireEvent.keyDown(document, { key: 'Tab' })
-    expect(dialog.contains(document.activeElement)).toBe(true)
-  })
-
-  it('locks background scroll while the lightbox is open', async () => {
-    const user = userEvent.setup()
-    renderProducts()
-    await user.click(screen.getByRole('button', { name: products[0].name.id }))
-    expect(document.body.style.overflow).toBe('hidden')
-    fireEvent.keyDown(document, { key: 'Escape' })
-    expect(document.body.style.overflow).not.toBe('hidden')
+    const row = screen.getByTestId('product-row')
+    expect(row.scrollLeft).toBe(0)
+    await user.click(screen.getByRole('button', { name: 'Geser ke kanan' }))
+    expect(row.scrollLeft).toBeGreaterThan(0)
+    await user.click(screen.getByRole('button', { name: 'Geser ke kiri' }))
+    expect(row.scrollLeft).toBe(0)
   })
 })

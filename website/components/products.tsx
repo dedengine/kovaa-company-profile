@@ -2,19 +2,18 @@
 
 import { useMemo, useRef, useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
+import { PiArrowRight, PiCaretLeft, PiCaretRight } from 'react-icons/pi'
 import { categories, type CategoryId } from '@/data/categories'
 import { products } from '@/data/products'
 import { useI18n } from '@/lib/i18n-provider'
 import { useGridStagger, useHoverLift } from '@/lib/gsap-animations'
-import { Lightbox } from './lightbox'
 
 export function Products() {
   const { t, lang } = useI18n()
   const [active, setActive] = useState<CategoryId | 'all'>('all')
-  const [openIndex, setOpenIndex] = useState<number | null>(null)
-  const triggerRef = useRef<HTMLButtonElement | null>(null)
-  const grid = useRef<HTMLUListElement>(null)
-  useGridStagger(grid, 0.04)
+  const rowRef = useRef<HTMLDivElement>(null)
+  useGridStagger(rowRef, 0.04)
   const hover = useHoverLift()
 
   const visible = useMemo(
@@ -22,9 +21,12 @@ export function Products() {
     [active],
   )
 
-  function closeLightbox() {
-    setOpenIndex(null)
-    triggerRef.current?.focus()
+  function scrollRow(dir: 1 | -1) {
+    const row = rowRef.current
+    if (!row) return
+    const card = row.querySelector<HTMLElement>('[data-testid="product-card"]')
+    const step = card ? card.offsetWidth + 24 : 320
+    row.scrollLeft += dir * step
   }
 
   return (
@@ -65,27 +67,38 @@ export function Products() {
         ))}
       </div>
 
-      <ul ref={grid} className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {visible.map((p) => (
-          <li key={p.id} data-stagger>
-            <button
-              type="button"
+      <div className="relative mt-8">
+        <button
+          type="button"
+          aria-label={t('products.scrollPrev')}
+          onClick={() => scrollRow(-1)}
+          className="absolute -left-1 top-1/3 z-10 hidden cursor-pointer rounded-full border border-neutral-200 bg-white p-2.5 text-neutral-700 shadow-md transition-colors hover:border-kovaa-blue hover:text-kovaa-blue focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue md:block"
+        >
+          <PiCaretLeft size={22} />
+        </button>
+
+        <div
+          ref={rowRef}
+          data-testid="product-row"
+          className="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-2 motion-reduce:scroll-auto"
+        >
+          {visible.map((p) => (
+            <Link
+              key={p.id}
+              href={`/produk/${p.slug}`}
               data-testid="product-card"
               aria-label={p.name[lang]}
+              data-stagger
               onMouseEnter={(e) => hover.lift(e.currentTarget)}
               onMouseLeave={(e) => hover.drop(e.currentTarget)}
-              onClick={(e) => {
-                triggerRef.current = e.currentTarget
-                setOpenIndex(visible.indexOf(p))
-              }}
-              className="group block w-full cursor-pointer overflow-hidden rounded-2xl border border-neutral-200 bg-white text-left transition-[box-shadow] hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue"
+              className="group block w-72 shrink-0 snap-start overflow-hidden rounded-2xl border border-neutral-200 bg-white text-left transition-[box-shadow] hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue sm:w-80"
             >
               <span className="relative block aspect-square bg-neutral-100">
                 <Image
                   src={p.image}
                   alt={p.alt[lang]}
                   fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  sizes="(max-width: 640px) 72vw, 320px"
                   className="object-cover transition-transform duration-300 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:transform-none"
                 />
               </span>
@@ -93,16 +106,27 @@ export function Products() {
                 <h3 className="font-heading text-sm font-semibold text-neutral-900">
                   {p.name[lang]}
                 </h3>
-                <p className="mt-1 text-xs text-neutral-600">{p.description[lang]}</p>
+                <p className="mt-1 line-clamp-2 text-xs text-neutral-600">
+                  {p.description[lang]}
+                </p>
+                <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-kovaa-blue">
+                  {t('products.viewDetail')}
+                  <PiArrowRight size={14} />
+                </span>
               </span>
-            </button>
-          </li>
-        ))}
-      </ul>
+            </Link>
+          ))}
+        </div>
 
-      {openIndex !== null && (
-        <Lightbox items={visible} index={openIndex} onClose={closeLightbox} />
-      )}
+        <button
+          type="button"
+          aria-label={t('products.scrollNext')}
+          onClick={() => scrollRow(1)}
+          className="absolute -right-1 top-1/3 z-10 hidden cursor-pointer rounded-full border border-neutral-200 bg-white p-2.5 text-neutral-700 shadow-md transition-colors hover:border-kovaa-blue hover:text-kovaa-blue focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue md:block"
+        >
+          <PiCaretRight size={22} />
+        </button>
+      </div>
     </section>
   )
 }

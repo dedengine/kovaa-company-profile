@@ -37,6 +37,18 @@ describe('products data', () => {
     }
   })
 
+  it('gives every product at least 3 spec rows with localized label and value', () => {
+    for (const p of products) {
+      expect(p.specs.length, p.slug).toBeGreaterThanOrEqual(3)
+      for (const s of p.specs) {
+        for (const key of ['label', 'value'] as const) {
+          expect(s[key].id.trim().length, `${p.slug}.spec.${key}.id`).toBeGreaterThan(0)
+          expect(s[key].en.trim().length, `${p.slug}.spec.${key}.en`).toBeGreaterThan(0)
+        }
+      }
+    }
+  })
+
   it('fills name, description and alt in both languages', () => {
     for (const p of products) {
       for (const key of ['name', 'description', 'alt'] as const) {
