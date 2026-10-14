@@ -5,28 +5,26 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { PiArrowRight } from 'react-icons/pi'
 import { useI18n } from '@/lib/i18n-provider'
-import { useHeroParallax, useHoverLift, useScrollReveal } from '@/lib/gsap-animations'
+import { useHoverLift, useScrollReveal } from '@/lib/gsap-animations'
 
 export function Hero() {
   const { t } = useI18n()
-  const scope = useRef<HTMLElement>(null)
   const content = useRef<HTMLDivElement>(null)
   const ctaPrimary = useRef<HTMLAnchorElement>(null)
   const ctaSecondary = useRef<HTMLAnchorElement>(null)
-  useHeroParallax(scope)
   useScrollReveal(content)
   const hover = useHoverLift()
 
   return (
-    <section ref={scope} id="top" className="relative overflow-hidden">
-      {/* Gambar hero full-width dari kiri ke kanan */}
-      <div data-parallax className="absolute inset-0">
+    <section id="top" className="relative overflow-hidden">
+      {/* Gambar hero full-width dari kiri ke kanan (statis) */}
+      <div className="absolute inset-0">
         <Image
           src="/assets/hero-banner.jpg"
           alt={t('hero.imageAlt')}
           fill
           sizes="100vw"
-          className="scale-110 object-cover"
+          className="object-cover"
           priority
         />
       </div>

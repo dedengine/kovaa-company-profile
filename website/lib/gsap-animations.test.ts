@@ -24,7 +24,7 @@ vi.mock('@gsap/react', () => ({
   useGSAP: (fn: () => void) => fn(),
 }))
 
-const { useScrollReveal, useGridStagger, useHeroParallax, useHoverLift } = await import(
+const { useScrollReveal, useGridStagger, useHoverLift } = await import(
   './gsap-animations'
 )
 
@@ -60,14 +60,6 @@ describe('gsap animation hooks', () => {
     expect(from).toHaveBeenCalledWith(
       expect.anything(),
       expect.objectContaining({ stagger: expect.any(Number) }),
-    )
-  })
-
-  it('hero parallax animates transform only (yPercent)', () => {
-    renderHook(() => useHeroParallax(div()))
-    expect(to).toHaveBeenCalledWith(
-      expect.anything(),
-      expect.objectContaining({ ease: 'none' }),
     )
   })
 

@@ -3,7 +3,6 @@
 import type { RefObject } from 'react'
 import { useGSAP } from '@gsap/react'
 import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { registerGsap } from './gsap'
 
 const REDUCE = '(prefers-reduced-motion: reduce)'
@@ -58,31 +57,6 @@ export function useGridStagger<T extends HTMLElement>(scope: RefObject<T | null>
           scrollTrigger: { trigger: scope.current, start: 'top 85%' },
         })
       })
-    },
-    { scope },
-  )
-}
-
-/** Parallax tipis (transform saja) pada elemen [data-parallax]; refresh setelah load. */
-export function useHeroParallax<T extends HTMLElement>(scope: RefObject<T | null>) {
-  useGSAP(
-    () => {
-      if (!scope.current) return
-      registerGsap()
-      const mm = gsap.matchMedia()
-      mm.add(REDUCE, () => {
-        gsap.set('[data-parallax]', { yPercent: 0 })
-      })
-      mm.add(NORMAL, () => {
-        gsap.to('[data-parallax]', {
-          yPercent: 10,
-          ease: 'none',
-          scrollTrigger: { trigger: scope.current, start: 'top top', end: 'bottom top' },
-        })
-      })
-      const onLoad = () => ScrollTrigger.refresh()
-      window.addEventListener('load', onLoad)
-      return () => window.removeEventListener('load', onLoad)
     },
     { scope },
   )
