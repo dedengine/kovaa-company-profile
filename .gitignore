@@ -1,0 +1,5 @@
+# superpowers plan workspace (ledger scratch — git history is the record)
+.superpowers/
+
+# opencode project skills & config (reinstallable via: npx uipro init --ai opencode)
+.opencode/
