@@ -75,7 +75,7 @@ export function Contact() {
           href={`https://wa.me/${contact.whatsapp.replace(/\D/g, '')}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-8 inline-flex cursor-pointer items-center gap-2 rounded-full bg-kovaa-orange px-6 py-3 text-sm font-semibold text-white transition-[transform,box-shadow] hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-orange"
+          className="mt-8 inline-flex cursor-pointer items-center gap-2 rounded-full bg-kovaa-orange px-6 py-3 text-sm font-semibold text-white transition-[transform,box-shadow] hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-orange motion-reduce:transition-none motion-reduce:hover:translate-y-0"
         >
           <PiWhatsappLogo size={18} />
           {t('contact.whatsappCta')}

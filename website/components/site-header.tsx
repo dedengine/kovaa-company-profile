@@ -39,7 +39,7 @@ export function SiteHeader() {
           />
         </a>
 
-        <nav aria-label="Utama" className="hidden items-center gap-6 md:flex">
+        <nav aria-label={t('nav.mainNav')} className="hidden items-center gap-6 md:flex">
           {NAV_IDS.map((id) => (
             <a
               key={id}
@@ -66,7 +66,7 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <nav aria-label="Mobile" className="border-t border-neutral-200 bg-white md:hidden">
+        <nav aria-label={t('nav.mobileNav')} className="border-t border-neutral-200 bg-white md:hidden">
           <div className="mx-auto flex max-w-page flex-col px-4 py-2">
             {NAV_IDS.map((id) => (
               <a

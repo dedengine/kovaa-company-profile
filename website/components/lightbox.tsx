@@ -8,6 +8,8 @@ import { PiCaretLeft, PiCaretRight, PiX } from 'react-icons/pi'
 import type { Product } from '@/data/products'
 import { useI18n } from '@/lib/i18n-provider'
 
+const FOCUSABLE = 'button:not([disabled])'
+
 export function Lightbox({
   items,
   index,
@@ -26,6 +28,15 @@ export function Lightbox({
     dialogRef.current?.focus()
   }, [])
 
+  // Kunci scroll halaman belakang selama modal terbuka
+  useEffect(() => {
+    const previous = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = previous
+    }
+  }, [])
+
   useGSAP(() => {
     const mm = gsap.matchMedia()
     mm.add('(prefers-reduced-motion: reduce)', () => {})
@@ -39,6 +50,23 @@ export function Lightbox({
       if (e.key === 'Escape') onClose()
       if (e.key === 'ArrowRight') setCurrent((c) => Math.min(c + 1, items.length - 1))
       if (e.key === 'ArrowLeft') setCurrent((c) => Math.max(c - 1, 0))
+      if (e.key === 'Tab') {
+        // Jaga fokus tetap di dalam dialog (focus trap)
+        const nodes = Array.from(
+          dialogRef.current?.querySelectorAll<HTMLElement>(FOCUSABLE) ?? [],
+        )
+        if (nodes.length === 0) return
+        const first = nodes[0]
+        const last = nodes[nodes.length - 1]
+        const active = document.activeElement
+        if (e.shiftKey && (active === first || !dialogRef.current?.contains(active))) {
+          e.preventDefault()
+          last.focus()
+        } else if (!e.shiftKey && (active === last || !dialogRef.current?.contains(active))) {
+          e.preventDefault()
+          first.focus()
+        }
+      }
     }
     window.addEventListener('keydown', onKeyDown)
     return () => window.removeEventListener('keydown', onKeyDown)
@@ -63,7 +91,7 @@ export function Lightbox({
         className="relative w-full max-w-3xl rounded-2xl bg-white p-4 outline-none"
       >
         <div className="flex items-start justify-between gap-4">
-          <div>
+          <div aria-live="polite">
             <h3 className="font-heading text-lg font-semibold text-neutral-900">
               {product.name[lang]}
             </h3>

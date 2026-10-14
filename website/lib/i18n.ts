@@ -15,6 +15,8 @@ export const dictionary = {
       openMenu: 'Buka menu',
       closeMenu: 'Tutup menu',
       skipToContent: 'Lewati ke konten',
+      mainNav: 'Navigasi utama',
+      mobileNav: 'Navigasi mobile',
     },
     hero: {
       title: 'Create. Build. Deliver.',
@@ -106,6 +108,8 @@ export const dictionary = {
       openMenu: 'Open menu',
       closeMenu: 'Close menu',
       skipToContent: 'Skip to content',
+      mainNav: 'Main navigation',
+      mobileNav: 'Mobile navigation',
     },
     hero: {
       title: 'Create. Build. Deliver.',

@@ -2,8 +2,9 @@
 
 @theme {
   /* Brand KOVAA — di-sample dari assest/kovaa-logo-no-bg.png */
+  /* oranye gelap dipilih agar teks putih lolos kontras 4.5:1 (spec §4) */
   --color-kovaa-blue: #004bd4;
-  --color-kovaa-orange: #ee5c13;
+  --color-kovaa-orange: #c44a0e;
 
   /* Tipografi (variabel dari next/font di layout.tsx) */
   --font-heading: var(--font-lexend);
@@ -11,4 +12,15 @@
 
   /* Max-width konten 1200px → utility `max-w-page` */
   --container-page: 1200px;
+}
+
+html {
+  /* Kompensasi header sticky saat navigasi anchor */
+  scroll-padding-top: 5rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }

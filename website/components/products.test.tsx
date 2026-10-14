@@ -64,4 +64,38 @@ describe('Products grid + lightbox', () => {
     const dialog = screen.getByRole('dialog')
     expect(within(dialog).getByText(products[1].name.id)).toBeDefined()
   })
+
+  it('browses only the active category inside the lightbox', async () => {
+    const user = userEvent.setup()
+    renderProducts()
+    await user.click(screen.getByRole('button', { name: 'Drawer' }))
+    const inCategory = products.filter((p) => p.category === 'drawer')
+    await user.click(screen.getByRole('button', { name: inCategory[0].name.id }))
+    const dialog = screen.getByRole('dialog')
+    expect(dialog.textContent).toContain(`Produk 1 dari ${inCategory.length}`)
+    fireEvent.keyDown(document, { key: 'ArrowRight' })
+    expect(within(dialog).getByText(inCategory[1].name.id)).toBeDefined()
+    expect(dialog.textContent).not.toContain('Gondola')
+  })
+
+  it('keeps Tab focus inside the lightbox dialog', async () => {
+    const user = userEvent.setup()
+    renderProducts()
+    await user.click(screen.getByRole('button', { name: products[0].name.id }))
+    const dialog = screen.getByRole('dialog')
+    const focusables = dialog.querySelectorAll('button')
+    const last = focusables[focusables.length - 1] as HTMLElement
+    last.focus()
+    fireEvent.keyDown(document, { key: 'Tab' })
+    expect(dialog.contains(document.activeElement)).toBe(true)
+  })
+
+  it('locks background scroll while the lightbox is open', async () => {
+    const user = userEvent.setup()
+    renderProducts()
+    await user.click(screen.getByRole('button', { name: products[0].name.id }))
+    expect(document.body.style.overflow).toBe('hidden')
+    fireEvent.keyDown(document, { key: 'Escape' })
+    expect(document.body.style.overflow).not.toBe('hidden')
+  })
 })

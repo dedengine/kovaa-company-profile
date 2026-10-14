@@ -91,8 +91,11 @@ export function useHeroParallax<T extends HTMLElement>(scope: RefObject<T | null
 /** Hover lift tombol/kartu: quickTo transform y, dengan reverse saat pointer keluar. */
 export function useHoverLift() {
   const cache = new WeakMap<Element, (value: number) => void>()
+  const reduced = () =>
+    typeof window !== 'undefined' &&
+    window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
   const tween = (el: Element | null, value: number) => {
-    if (!el) return
+    if (!el || reduced()) return
     let to = cache.get(el)
     if (!to) {
       to = gsap.quickTo(el, 'y', { duration: 0.25, ease: 'power2.out' })

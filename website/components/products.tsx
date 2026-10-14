@@ -2,7 +2,7 @@
 
 import { useMemo, useRef, useState } from 'react'
 import Image from 'next/image'
-import { categories } from '@/data/categories'
+import { categories, type CategoryId } from '@/data/categories'
 import { products } from '@/data/products'
 import { useI18n } from '@/lib/i18n-provider'
 import { useGridStagger, useHoverLift } from '@/lib/gsap-animations'
@@ -10,7 +10,7 @@ import { Lightbox } from './lightbox'
 
 export function Products() {
   const { t, lang } = useI18n()
-  const [active, setActive] = useState<string>('all')
+  const [active, setActive] = useState<CategoryId | 'all'>('all')
   const [openIndex, setOpenIndex] = useState<number | null>(null)
   const triggerRef = useRef<HTMLButtonElement | null>(null)
   const grid = useRef<HTMLUListElement>(null)
@@ -67,7 +67,7 @@ export function Products() {
               onMouseLeave={(e) => hover.drop(e.currentTarget)}
               onClick={(e) => {
                 triggerRef.current = e.currentTarget
-                setOpenIndex(products.indexOf(p))
+                setOpenIndex(visible.indexOf(p))
               }}
               className="group block w-full cursor-pointer overflow-hidden rounded-2xl border border-neutral-200 bg-white text-left transition-[box-shadow] hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue"
             >
@@ -77,7 +77,7 @@ export function Products() {
                   alt={p.alt[lang]}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="object-cover transition-transform duration-300 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:transform-none"
                 />
               </span>
               <span className="block border-t border-neutral-200 p-4">
@@ -92,7 +92,7 @@ export function Products() {
       </ul>
 
       {openIndex !== null && (
-        <Lightbox items={products} index={openIndex} onClose={closeLightbox} />
+        <Lightbox items={visible} index={openIndex} onClose={closeLightbox} />
       )}
     </section>
   )
