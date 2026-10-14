@@ -62,6 +62,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="id"
+      data-scroll-behavior="smooth"
       className={`${poppins.variable} ${roboto.variable} font-body antialiased`}
     >
       <body className="min-h-screen bg-white text-neutral-900">
