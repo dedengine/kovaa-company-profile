@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Poppins, Roboto } from "next/font/google";
 import { I18nProvider } from "@/lib/i18n-provider";
 import { ThemeProvider } from "@/lib/theme-provider";
@@ -57,6 +57,9 @@ export const metadata: Metadata = {
       "Peralatan ritel custom-made: rak supermarket, gondola, rak dinding, dan drawer kayu.",
     images: ["/assets/mockup-2.jpeg"],
   },
+};
+
+export const viewport: Viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
     { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
