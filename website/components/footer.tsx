@@ -20,13 +20,13 @@ export function Footer() {
       <div className="mx-auto grid max-w-page gap-8 px-4 py-10 md:grid-cols-3">
         <div>
           <Image
-            src="/assets/kovaa-logo.jpeg"
+            src="/assets/kovaa-logo-footer.png"
             alt="Logo KOVAA"
-            width={150}
-            height={56}
+            width={160}
+            height={44}
             className="rounded-lg bg-white"
           />
-          <p className="mt-2 max-w-xs text-sm">{t('footer.tagline')}</p>
+          <p className="mt-2 max-w-[160px] text-sm">{t('footer.tagline')}</p>
         </div>
 
         <nav aria-label={t('footer.quickLinks')}>
