@@ -72,7 +72,7 @@ export function Products() {
           type="button"
           aria-label={t('products.scrollPrev')}
           onClick={() => scrollRow(-1)}
-          className="absolute -left-1 top-1/3 z-10 hidden cursor-pointer rounded-full border border-neutral-200 bg-white p-2.5 text-neutral-700 shadow-md transition-colors hover:border-kovaa-blue hover:text-kovaa-blue focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue md:block"
+          className="absolute -left-1 top-1/3 z-10 cursor-pointer rounded-full border border-neutral-200 bg-white p-2 text-neutral-700 shadow-md transition-colors hover:border-kovaa-blue hover:text-kovaa-blue focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue md:p-2.5"
         >
           <PiCaretLeft size={22} />
         </button>
@@ -119,7 +119,7 @@ export function Products() {
           type="button"
           aria-label={t('products.scrollNext')}
           onClick={() => scrollRow(1)}
-          className="absolute -right-1 top-1/3 z-10 hidden cursor-pointer rounded-full border border-neutral-200 bg-white p-2.5 text-neutral-700 shadow-md transition-colors hover:border-kovaa-blue hover:text-kovaa-blue focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue md:block"
+          className="absolute -right-1 top-1/3 z-10 cursor-pointer rounded-full border border-neutral-200 bg-white p-2 text-neutral-700 shadow-md transition-colors hover:border-kovaa-blue hover:text-kovaa-blue focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue md:p-2.5"
         >
           <PiCaretRight size={22} />
         </button>
