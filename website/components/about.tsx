@@ -14,7 +14,7 @@ export function About() {
     <section ref={scope} id="tentang" className="mx-auto max-w-page px-4 py-16">
       <div className="grid items-center gap-10 md:grid-cols-2">
         <div data-reveal className="mx-auto w-full max-w-md">
-          <div className="relative aspect-square overflow-hidden rounded-full shadow-xl ring-1 ring-black/5">
+          <div className="relative aspect-square overflow-hidden rounded-[58%_34%_56%_38%/50%_58%_42%_50%] shadow-xl ring-1 ring-black/5">
             <Image
               src="/assets/section-benner-about.png"
               alt={t('about.imageAlt')}
