@@ -3,3 +3,6 @@
 
 # opencode project skills & config (reinstallable via: npx uipro init --ai opencode)
 .opencode/
+
+# referensi template pihak ketiga (bukan source project)
+insure-v1.0.0/
