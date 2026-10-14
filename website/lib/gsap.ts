@@ -1,4 +1,5 @@
-import { gsap, ScrollTrigger } from 'gsap'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 let registered = false
 

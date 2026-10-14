@@ -2,6 +2,9 @@ import { describe, expect, it, vi } from 'vitest'
 
 vi.mock('gsap', () => ({
   gsap: { registerPlugin: vi.fn() },
+}))
+
+vi.mock('gsap/ScrollTrigger', () => ({
   ScrollTrigger: {},
 }))
 
