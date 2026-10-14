@@ -91,7 +91,7 @@ export function Products() {
               data-stagger
               onMouseEnter={(e) => hover.lift(e.currentTarget)}
               onMouseLeave={(e) => hover.drop(e.currentTarget)}
-              className="group block w-72 shrink-0 snap-start overflow-hidden rounded-2xl border border-neutral-200 bg-white text-left transition-[box-shadow] hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue sm:w-80"
+              className="group block w-full shrink-0 snap-center overflow-hidden rounded-2xl border border-neutral-200 bg-white text-left transition-[box-shadow] hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue sm:w-80 sm:snap-start"
             >
               <span className="relative block aspect-square bg-neutral-100">
                 <Image
