@@ -29,10 +29,10 @@ export function Hero() {
         />
       </div>
 
-      {/* Fade putih di kiri agar teks terbaca jelas */}
+      {/* Fade putih agar teks terbaca jelas; foto lebih samar */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-transparent md:bg-gradient-to-r md:from-white md:via-white/85 md:to-transparent"
+        className="absolute inset-0 bg-gradient-to-b from-white via-white to-white/30 md:bg-gradient-to-r md:from-white md:via-white/85 md:to-transparent"
       />
 
       <div
