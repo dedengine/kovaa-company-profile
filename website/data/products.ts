@@ -36,7 +36,7 @@ export const products: Product[] = [
     id: 'rak-display-supermarket-1',
     slug: 'rak-display-supermarket-1',
     category: 'rak-supermarket',
-    name: { id: 'Rak Display Supermarket, Model Grosir A', en: 'Supermarket Display Shelf, Wholesale Model A' },
+    name: { id: 'Rak Display A', en: 'Display Shelf A' },
     description: {
       id: 'Rak display modern untuk toko grosir dan minimarket dengan susunan rak yang fleksibel.',
       en: 'Modern display shelving for wholesale stores and minimarkets with a flexible layout.',
@@ -57,7 +57,7 @@ export const products: Product[] = [
     id: 'rak-display-supermarket-2',
     slug: 'rak-display-supermarket-2',
     category: 'rak-supermarket',
-    name: { id: 'Rak Display Supermarket, Model Grosir B', en: 'Supermarket Display Shelf, Wholesale Model B' },
+    name: { id: 'Rak Display B', en: 'Display Shelf B' },
     description: {
       id: 'Varian display supermarket dengan kapasitas susun lebih banyak dan struktur kokoh.',
       en: 'Supermarket display variant with a higher tier capacity and sturdy frame.',
@@ -78,7 +78,7 @@ export const products: Product[] = [
     id: 'rak-gondola-multilayer-1',
     slug: 'rak-gondola-multilayer-1',
     category: 'rak-supermarket',
-    name: { id: 'Rak Gondola Multilayer, Model 1', en: 'Multi-Layer Gondola Shelf, Model 1' },
+    name: { id: 'Rak Gondola 1', en: 'Gondola Shelf 1' },
     description: {
       id: 'Rak gondola kerangka besi multilayer untuk menampilkan produk dalam jumlah besar.',
       en: 'Steel-frame multi-layer gondola shelf for high-volume product display.',
@@ -99,7 +99,7 @@ export const products: Product[] = [
     id: 'rak-gondola-multilayer-2',
     slug: 'rak-gondola-multilayer-2',
     category: 'rak-supermarket',
-    name: { id: 'Rak Gondola Multilayer, Model 2', en: 'Multi-Layer Gondola Shelf, Model 2' },
+    name: { id: 'Rak Gondola 2', en: 'Gondola Shelf 2' },
     description: {
       id: 'Konfigurasi gondola multilayer kedua, cocok untuk lorong toko utama.',
       en: 'Second multi-layer gondola configuration, ideal for main store aisles.',
@@ -120,7 +120,7 @@ export const products: Product[] = [
     id: 'rak-gondola-multilayer-3',
     slug: 'rak-gondola-multilayer-3',
     category: 'rak-supermarket',
-    name: { id: 'Rak Gondola Multilayer, Model 3', en: 'Multi-Layer Gondola Shelf, Model 3' },
+    name: { id: 'Rak Gondola 3', en: 'Gondola Shelf 3' },
     description: {
       id: 'Gondola multilayer dengan kompartemen luas untuk produk beragam sekaligus.',
       en: 'Multi-layer gondola with wide compartments for mixed product ranges.',
@@ -141,7 +141,7 @@ export const products: Product[] = [
     id: 'rak-gondola-multilayer-4',
     slug: 'rak-gondola-multilayer-4',
     category: 'rak-supermarket',
-    name: { id: 'Rak Gondola Multilayer, Model 4', en: 'Multi-Layer Gondola Shelf, Model 4' },
+    name: { id: 'Rak Gondola 4', en: 'Gondola Shelf 4' },
     description: {
       id: 'Konfigurasi gondola multilayer terbesar, mendukung volume produk maksimal.',
       en: 'Largest multi-layer gondola configuration, supporting maximum product volume.',
@@ -162,7 +162,7 @@ export const products: Product[] = [
     id: 'rak-dinding-minimi',
     slug: 'rak-dinding-minimi',
     category: 'rak-dinding-serbaguna',
-    name: { id: 'Rak Dinding Minimalis', en: 'Minimalist Wall Shelf' },
+    name: { id: 'Rak Dinding', en: 'Wall Shelf' },
     description: {
       id: 'Rak dinding minimalis untuk memaksimalkan ruang toko dan menampilkan produk di area terbatas.',
       en: 'Minimalist wall-mounted shelf that maximizes retail space in tight areas.',
@@ -183,7 +183,7 @@ export const products: Product[] = [
     id: 'rak-serbaguna-minimalis',
     slug: 'rak-serbaguna-minimalis',
     category: 'rak-dinding-serbaguna',
-    name: { id: 'Rak Serbaguna Minimalis', en: 'Minimalist Multipurpose Shelf' },
+    name: { id: 'Rak Serbaguna', en: 'Multipurpose Shelf' },
     description: {
       id: 'Rak serbaguna untuk aneka kebutuhan toko, dari sembako hingga alat tulis.',
       en: 'Multipurpose shelving suited for groceries, stationery, and general retail.',
@@ -204,7 +204,7 @@ export const products: Product[] = [
     id: 'drawer-rangka-natural',
     slug: 'drawer-rangka-natural',
     category: 'drawer',
-    name: { id: 'Drawer Rangka Natural', en: 'Natural Frame Drawer Unit' },
+    name: { id: 'Drawer Rangka', en: 'Frame Drawer' },
     description: {
       id: 'Drawer dengan rangka kayu natural, kuat dan estetik untuk area konter toko.',
       en: 'Drawer unit with a natural wood frame, sturdy and aesthetic for retail counters.',
@@ -225,7 +225,7 @@ export const products: Product[] = [
     id: 'drawer-solid-natural',
     slug: 'drawer-solid-natural',
     category: 'drawer',
-    name: { id: 'Drawer Solid Natural', en: 'Solid Natural Drawer Unit' },
+    name: { id: 'Drawer Solid', en: 'Solid Drawer' },
     description: {
       id: 'Drawer solid wood natural dengan kapasitas besar untuk penyimpanan rapi.',
       en: 'Solid natural wood drawers with generous capacity for tidy storage.',
@@ -246,7 +246,7 @@ export const products: Product[] = [
     id: 'salami-multidrawer',
     slug: 'salami-multidrawer',
     category: 'drawer',
-    name: { id: 'Salami Multidrawer', en: 'Salami Multi-Drawer Cabinet' },
+    name: { id: 'Salami', en: 'Salami Cabinet' },
     description: {
       id: 'Kabinet multi-drawer untuk menyimpan barang kecil seperti aksesoris dan spare part.',
       en: 'Multi-drawer cabinet for small items like accessories and spare parts.',
@@ -267,7 +267,7 @@ export const products: Product[] = [
     id: 'rak-display-sayur-buah',
     slug: 'rak-display-sayur-buah',
     category: 'rak-sayur-buah',
-    name: { id: 'Rak Display Sayur & Buah Kayu', en: 'Wooden Fruit & Vegetable Display Shelf' },
+    name: { id: 'Rak Sayur & Buah', en: 'Fruit & Veg Shelf' },
     description: {
       id: 'Rak display kayu khusus sayur dan buah, tampilan segar dan mudah dijangkau pembeli.',
       en: 'Wooden display shelf designed for fresh fruit and vegetable presentation.',

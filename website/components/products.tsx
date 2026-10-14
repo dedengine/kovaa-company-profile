@@ -106,9 +106,6 @@ export function Products() {
                 <h3 className="font-heading text-sm font-semibold text-neutral-900">
                   {p.name[lang]}
                 </h3>
-                <p className="mt-1 line-clamp-2 text-xs text-neutral-600">
-                  {p.description[lang]}
-                </p>
                 <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-kovaa-blue">
                   {t('products.viewDetail')}
                   <PiArrowRight size={14} />
