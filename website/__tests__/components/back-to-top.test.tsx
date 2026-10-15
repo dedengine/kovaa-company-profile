@@ -21,11 +21,13 @@ afterEach(() => {
 describe('BackToTop', () => {
   it('is hidden near the top and appears after scrolling down', () => {
     renderButton()
-    const button = screen.getByRole('button', { name: 'Kembali ke atas', hidden: true })
+    // aria-hidden elements have no accessible name: assert via test id
+    const button = screen.getByTestId('back-to-top')
     expect(button).toHaveAttribute('aria-hidden', 'true')
     Object.defineProperty(window, 'scrollY', { value: 500, configurable: true })
     fireEvent.scroll(window)
     expect(button).not.toHaveAttribute('aria-hidden')
+    expect(screen.getByRole('button', { name: 'Kembali ke atas' })).toBe(button)
   })
 
   it('scrolls smoothly to the top on click', () => {

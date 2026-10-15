@@ -27,6 +27,7 @@ export function BackToTop() {
   return (
     <button
       type="button"
+      data-testid="back-to-top"
       onClick={scrollTop}
       aria-label={t('nav.backToTop')}
       {...(!visible ? { 'aria-hidden': true as const } : {})}
