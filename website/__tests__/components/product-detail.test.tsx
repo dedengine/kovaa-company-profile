@@ -35,18 +35,35 @@ describe('ProductDetail', () => {
 
   it('links back to the products section and home', () => {
     renderDetail()
-    expect(screen.getByRole('link', { name: 'Kembali ke Semua Produk' })).toHaveAttribute(
-      'href',
-      '/#produk',
-    )
+    const backs = screen.getAllByRole('link', { name: 'Kembali ke Semua Produk' })
+    expect(backs.length).toBeGreaterThanOrEqual(1)
+    for (const back of backs) {
+      expect(back).toHaveAttribute('href', '/#produk')
+    }
     expect(screen.getByRole('link', { name: 'Beranda' })).toHaveAttribute('href', '/')
   })
 
   it('opens WhatsApp with the product name prefilled', () => {
     renderDetail()
-    const wa = screen.getByRole('link', { name: 'Tanya Produk Ini' })
-    const href = wa.getAttribute('href') ?? ''
-    expect(href.startsWith(`https://wa.me/${contact.whatsapp}`)).toBe(true)
-    expect(decodeURIComponent(href)).toContain(product.name.id)
+    const links = screen.getAllByRole('link', { name: 'Tanya Produk Ini' })
+    expect(links.length).toBeGreaterThanOrEqual(1)
+    for (const wa of links) {
+      const href = wa.getAttribute('href') ?? ''
+      expect(href.startsWith(`https://wa.me/${contact.whatsapp}`)).toBe(true)
+      expect(decodeURIComponent(href)).toContain(product.name.id)
+    }
+  })
+
+  it('has a sticky bottom action bar for mobile', () => {
+    renderDetail()
+    const bar = screen.getByTestId('sticky-cta')
+    expect(within(bar).getByRole('link', { name: 'Tanya Produk Ini' })).toHaveAttribute(
+      'href',
+      expect.stringContaining('https://wa.me/'),
+    )
+    expect(within(bar).getByRole('link', { name: 'Kembali ke Semua Produk' })).toHaveAttribute(
+      'href',
+      '/#produk',
+    )
   })
 })

@@ -43,10 +43,10 @@ export const products: Product[] = [
     },
     image: '/products/rak-display-supermarket-1.png',
     specs: [
-      { label: { id: 'Dimensi (P × L × T)', en: 'Dimensions (W × D × H)' }, value: { id: '200 × 55 × 220 cm', en: '200 × 55 × 220 cm' } },
+      { label: { id: 'Dimensi', en: 'Dimensions' }, value: { id: '200 × 55 × 220 cm', en: '200 × 55 × 220 cm' } },
       { label: { id: 'Material', en: 'Material' }, value: { id: 'Rangka besi, rak plat baja powder coating', en: 'Steel frame with powder-coated steel shelves' } },
-      { label: { id: 'Jumlah Tingkat', en: 'Number of Tiers' }, value: { id: '5 tingkat', en: '5 tiers' } },
-      { label: { id: 'Kapasitas per Tingkat', en: 'Capacity per Tier' }, value: { id: '±50 kg', en: '±50 kg' } },
+      { label: { id: 'Tingkat', en: 'Tiers' }, value: { id: '5 tingkat', en: '5 tiers' } },
+      { label: { id: 'Kapasitas', en: 'Capacity' }, value: { id: '±50 kg', en: '±50 kg' } },
     ],
     alt: {
       id: 'Rak display supermarket modern model grosir A di area toko',
@@ -64,10 +64,10 @@ export const products: Product[] = [
     },
     image: '/products/rak-display-supermarket-2.png',
     specs: [
-      { label: { id: 'Dimensi (P × L × T)', en: 'Dimensions (W × D × H)' }, value: { id: '220 × 55 × 220 cm', en: '220 × 55 × 220 cm' } },
+      { label: { id: 'Dimensi', en: 'Dimensions' }, value: { id: '220 × 55 × 220 cm', en: '220 × 55 × 220 cm' } },
       { label: { id: 'Material', en: 'Material' }, value: { id: 'Rangka besi heavy-duty, rak plat baja', en: 'Heavy-duty steel frame with steel shelves' } },
-      { label: { id: 'Jumlah Tingkat', en: 'Number of Tiers' }, value: { id: '6 tingkat', en: '6 tiers' } },
-      { label: { id: 'Kapasitas per Tingkat', en: 'Capacity per Tier' }, value: { id: '±60 kg', en: '±60 kg' } },
+      { label: { id: 'Tingkat', en: 'Tiers' }, value: { id: '6 tingkat', en: '6 tiers' } },
+      { label: { id: 'Kapasitas', en: 'Capacity' }, value: { id: '±60 kg', en: '±60 kg' } },
     ],
     alt: {
       id: 'Rak display supermarket model grosir B dengan banyak tingkat rak',
@@ -85,10 +85,10 @@ export const products: Product[] = [
     },
     image: '/products/rak-gondola-multilayer-1.png',
     specs: [
-      { label: { id: 'Dimensi (P × L × T)', en: 'Dimensions (W × D × H)' }, value: { id: '135 × 90 × 210 cm', en: '135 × 90 × 210 cm' } },
+      { label: { id: 'Dimensi', en: 'Dimensions' }, value: { id: '135 × 90 × 210 cm', en: '135 × 90 × 210 cm' } },
       { label: { id: 'Material', en: 'Material' }, value: { id: 'Rangka besi gondola, panel belakang perforasi', en: 'Steel gondola frame with perforated back panels' } },
-      { label: { id: 'Jumlah Tingkat', en: 'Number of Tiers' }, value: { id: '5 tingkat', en: '5 tiers' } },
-      { label: { id: 'Kapasitas per Tingkat', en: 'Capacity per Tier' }, value: { id: '±50 kg', en: '±50 kg' } },
+      { label: { id: 'Tingkat', en: 'Tiers' }, value: { id: '5 tingkat', en: '5 tiers' } },
+      { label: { id: 'Kapasitas', en: 'Capacity' }, value: { id: '±50 kg', en: '±50 kg' } },
     ],
     alt: {
       id: 'Rak gondola multilayer kerangka besi model 1',
@@ -106,10 +106,10 @@ export const products: Product[] = [
     },
     image: '/products/rak-gondola-multilayer-2.png',
     specs: [
-      { label: { id: 'Dimensi (P × L × T)', en: 'Dimensions (W × D × H)' }, value: { id: '135 × 90 × 225 cm', en: '135 × 90 × 225 cm' } },
+      { label: { id: 'Dimensi', en: 'Dimensions' }, value: { id: '135 × 90 × 225 cm', en: '135 × 90 × 225 cm' } },
       { label: { id: 'Material', en: 'Material' }, value: { id: 'Rangka besi gondola, panel belakang perforasi', en: 'Steel gondola frame with perforated back panels' } },
-      { label: { id: 'Jumlah Tingkat', en: 'Number of Tiers' }, value: { id: '6 tingkat', en: '6 tiers' } },
-      { label: { id: 'Kapasitas per Tingkat', en: 'Capacity per Tier' }, value: { id: '±50 kg', en: '±50 kg' } },
+      { label: { id: 'Tingkat', en: 'Tiers' }, value: { id: '6 tingkat', en: '6 tiers' } },
+      { label: { id: 'Kapasitas', en: 'Capacity' }, value: { id: '±50 kg', en: '±50 kg' } },
     ],
     alt: {
       id: 'Rak gondola multilayer model 2 di lorong toko',
@@ -127,10 +127,10 @@ export const products: Product[] = [
     },
     image: '/products/rak-gondola-multilayer-3.png',
     specs: [
-      { label: { id: 'Dimensi (P × L × T)', en: 'Dimensions (W × D × H)' }, value: { id: '160 × 100 × 225 cm', en: '160 × 100 × 225 cm' } },
+      { label: { id: 'Dimensi', en: 'Dimensions' }, value: { id: '160 × 100 × 225 cm', en: '160 × 100 × 225 cm' } },
       { label: { id: 'Material', en: 'Material' }, value: { id: 'Rangka besi gondola, panel belakang perforasi', en: 'Steel gondola frame with perforated back panels' } },
-      { label: { id: 'Jumlah Tingkat', en: 'Number of Tiers' }, value: { id: '6 tingkat', en: '6 tiers' } },
-      { label: { id: 'Kapasitas per Tingkat', en: 'Capacity per Tier' }, value: { id: '±60 kg', en: '±60 kg' } },
+      { label: { id: 'Tingkat', en: 'Tiers' }, value: { id: '6 tingkat', en: '6 tiers' } },
+      { label: { id: 'Kapasitas', en: 'Capacity' }, value: { id: '±60 kg', en: '±60 kg' } },
     ],
     alt: {
       id: 'Rak gondola multilayer model 3 dengan kompartemen luas',
@@ -148,10 +148,10 @@ export const products: Product[] = [
     },
     image: '/products/rak-gondola-multilayer-4.png',
     specs: [
-      { label: { id: 'Dimensi (P × L × T)', en: 'Dimensions (W × D × H)' }, value: { id: '180 × 110 × 240 cm', en: '180 × 110 × 240 cm' } },
+      { label: { id: 'Dimensi', en: 'Dimensions' }, value: { id: '180 × 110 × 240 cm', en: '180 × 110 × 240 cm' } },
       { label: { id: 'Material', en: 'Material' }, value: { id: 'Rangka besi gondola, panel belakang perforasi', en: 'Steel gondola frame with perforated back panels' } },
-      { label: { id: 'Jumlah Tingkat', en: 'Number of Tiers' }, value: { id: '7 tingkat', en: '7 tiers' } },
-      { label: { id: 'Kapasitas per Tingkat', en: 'Capacity per Tier' }, value: { id: '±60 kg', en: '±60 kg' } },
+      { label: { id: 'Tingkat', en: 'Tiers' }, value: { id: '7 tingkat', en: '7 tiers' } },
+      { label: { id: 'Kapasitas', en: 'Capacity' }, value: { id: '±60 kg', en: '±60 kg' } },
     ],
     alt: {
       id: 'Rak gondola multilayer model 4 dengan volume tampung terbesar',
@@ -169,10 +169,10 @@ export const products: Product[] = [
     },
     image: '/products/rak-dinding-minimi.png',
     specs: [
-      { label: { id: 'Dimensi (P × L × T)', en: 'Dimensions (W × D × H)' }, value: { id: '120 × 30 × 200 cm', en: '120 × 30 × 200 cm' } },
+      { label: { id: 'Dimensi', en: 'Dimensions' }, value: { id: '120 × 30 × 200 cm', en: '120 × 30 × 200 cm' } },
       { label: { id: 'Material', en: 'Material' }, value: { id: 'Braket besi dinding, rak plat baja', en: 'Steel wall brackets with steel shelves' } },
-      { label: { id: 'Jumlah Tingkat', en: 'Number of Tiers' }, value: { id: '4 tingkat', en: '4 tiers' } },
-      { label: { id: 'Kapasitas per Tingkat', en: 'Capacity per Tier' }, value: { id: '±30 kg', en: '±30 kg' } },
+      { label: { id: 'Tingkat', en: 'Tiers' }, value: { id: '4 tingkat', en: '4 tiers' } },
+      { label: { id: 'Kapasitas', en: 'Capacity' }, value: { id: '±30 kg', en: '±30 kg' } },
     ],
     alt: {
       id: 'Rak dinding minimalis terpasang di dinding toko',
@@ -190,10 +190,10 @@ export const products: Product[] = [
     },
     image: '/products/rak-serbaguna-minimalis.png',
     specs: [
-      { label: { id: 'Dimensi (P × L × T)', en: 'Dimensions (W × D × H)' }, value: { id: '120 × 40 × 200 cm', en: '120 × 40 × 200 cm' } },
+      { label: { id: 'Dimensi', en: 'Dimensions' }, value: { id: '120 × 40 × 200 cm', en: '120 × 40 × 200 cm' } },
       { label: { id: 'Material', en: 'Material' }, value: { id: 'Rangka besi, rak plat baja', en: 'Steel frame with steel shelves' } },
-      { label: { id: 'Jumlah Tingkat', en: 'Number of Tiers' }, value: { id: '5 tingkat', en: '5 tiers' } },
-      { label: { id: 'Kapasitas per Tingkat', en: 'Capacity per Tier' }, value: { id: '±40 kg', en: '±40 kg' } },
+      { label: { id: 'Tingkat', en: 'Tiers' }, value: { id: '5 tingkat', en: '5 tiers' } },
+      { label: { id: 'Kapasitas', en: 'Capacity' }, value: { id: '±40 kg', en: '±40 kg' } },
     ],
     alt: {
       id: 'Rak serbaguna minimalis dengan berbagai jenis produk',
@@ -211,10 +211,10 @@ export const products: Product[] = [
     },
     image: '/products/drawer-rangka-natural.png',
     specs: [
-      { label: { id: 'Dimensi (P × L × T)', en: 'Dimensions (W × D × H)' }, value: { id: '90 × 60 × 90 cm', en: '90 × 60 × 90 cm' } },
+      { label: { id: 'Dimensi', en: 'Dimensions' }, value: { id: '90 × 60 × 90 cm', en: '90 × 60 × 90 cm' } },
       { label: { id: 'Material', en: 'Material' }, value: { id: 'Rangka kayu, laci kayu', en: 'Wooden frame with wooden drawers' } },
-      { label: { id: 'Jumlah Laci', en: 'Number of Drawers' }, value: { id: '4 laci', en: '4 drawers' } },
-      { label: { id: 'Kapasitas per Laci', en: 'Capacity per Drawer' }, value: { id: '±15 kg', en: '±15 kg' } },
+      { label: { id: 'Laci', en: 'Drawers' }, value: { id: '4 laci', en: '4 drawers' } },
+      { label: { id: 'Kapasitas', en: 'Capacity' }, value: { id: '±15 kg', en: '±15 kg' } },
     ],
     alt: {
       id: 'Drawer dengan rangka kayu natural di konter toko',
@@ -232,10 +232,10 @@ export const products: Product[] = [
     },
     image: '/products/drawer-solid-natural.png',
     specs: [
-      { label: { id: 'Dimensi (P × L × T)', en: 'Dimensions (W × D × H)' }, value: { id: '100 × 60 × 100 cm', en: '100 × 60 × 100 cm' } },
+      { label: { id: 'Dimensi', en: 'Dimensions' }, value: { id: '100 × 60 × 100 cm', en: '100 × 60 × 100 cm' } },
       { label: { id: 'Material', en: 'Material' }, value: { id: 'Kayu solid', en: 'Solid wood' } },
-      { label: { id: 'Jumlah Laci', en: 'Number of Drawers' }, value: { id: '5 laci', en: '5 drawers' } },
-      { label: { id: 'Kapasitas per Laci', en: 'Capacity per Drawer' }, value: { id: '±20 kg', en: '±20 kg' } },
+      { label: { id: 'Laci', en: 'Drawers' }, value: { id: '5 laci', en: '5 drawers' } },
+      { label: { id: 'Kapasitas', en: 'Capacity' }, value: { id: '±20 kg', en: '±20 kg' } },
     ],
     alt: {
       id: 'Drawer solid wood natural bertumpuk rapi',
@@ -253,10 +253,10 @@ export const products: Product[] = [
     },
     image: '/products/salami-multidrawer.png',
     specs: [
-      { label: { id: 'Dimensi (P × L × T)', en: 'Dimensions (W × D × H)' }, value: { id: '100 × 50 × 180 cm', en: '100 × 50 × 180 cm' } },
+      { label: { id: 'Dimensi', en: 'Dimensions' }, value: { id: '100 × 50 × 180 cm', en: '100 × 50 × 180 cm' } },
       { label: { id: 'Material', en: 'Material' }, value: { id: 'Rangka besi, laci kecil', en: 'Steel frame with small drawers' } },
-      { label: { id: 'Jumlah Laci', en: 'Number of Drawers' }, value: { id: '12 laci', en: '12 drawers' } },
-      { label: { id: 'Kapasitas per Laci', en: 'Capacity per Drawer' }, value: { id: '±5 kg', en: '±5 kg' } },
+      { label: { id: 'Laci', en: 'Drawers' }, value: { id: '12 laci', en: '12 drawers' } },
+      { label: { id: 'Kapasitas', en: 'Capacity' }, value: { id: '±5 kg', en: '±5 kg' } },
     ],
     alt: {
       id: 'Kabinet multi-drawer Salami dengan banyak laci kecil',
@@ -274,10 +274,10 @@ export const products: Product[] = [
     },
     image: '/products/rak-display-sayur-buah.png',
     specs: [
-      { label: { id: 'Dimensi (P × L × T)', en: 'Dimensions (W × D × H)' }, value: { id: '150 × 80 × 180 cm', en: '150 × 80 × 180 cm' } },
+      { label: { id: 'Dimensi', en: 'Dimensions' }, value: { id: '150 × 80 × 180 cm', en: '150 × 80 × 180 cm' } },
       { label: { id: 'Material', en: 'Material' }, value: { id: 'Rangka besi, rak kayu', en: 'Steel frame with wooden shelves' } },
-      { label: { id: 'Jumlah Tingkat', en: 'Number of Tiers' }, value: { id: '3 tingkat', en: '3 tiers' } },
-      { label: { id: 'Kapasitas per Tingkat', en: 'Capacity per Tier' }, value: { id: '±40 kg', en: '±40 kg' } },
+      { label: { id: 'Tingkat', en: 'Tiers' }, value: { id: '3 tingkat', en: '3 tiers' } },
+      { label: { id: 'Kapasitas', en: 'Capacity' }, value: { id: '±40 kg', en: '±40 kg' } },
     ],
     alt: {
       id: 'Rak display kayu untuk sayur dan buah',

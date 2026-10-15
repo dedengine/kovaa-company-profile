@@ -23,7 +23,8 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   metadataBase: new URL(contact.siteUrl),
   title: {
-    default: "KOVAA",
+    // absolute: judul beranda tidak ditempeli template (hindari "KOVAA | KOVAA")
+    absolute: "KOVAA",
     template: "%s | KOVAA",
   },
   description:

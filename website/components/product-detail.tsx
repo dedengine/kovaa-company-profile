@@ -12,9 +12,9 @@ export function ProductDetail({ product }: { product: Product }) {
   const { t, lang } = useI18n()
   const categoryLabel =
     categories.find((c) => c.id === product.category)?.label[lang] ?? ''
-  const waText = encodeURIComponent(
+  const waHref = `https://wa.me/${contact.whatsapp.replace(/\D/g, '')}?text=${encodeURIComponent(
     t('detail.waMessage').replace('{product}', product.name[lang]),
-  )
+  )}`
 
   return (
     <div className="mx-auto max-w-page px-4 py-10 md:py-14">
@@ -39,7 +39,7 @@ export function ProductDetail({ product }: { product: Product }) {
       </nav>
 
       <div className="mt-8 grid gap-10 md:grid-cols-2">
-        <div className="relative aspect-square overflow-hidden rounded-2xl bg-neutral-100 shadow-sm dark:bg-neutral-800">
+        <div className="relative -mx-4 aspect-[4/3] bg-white dark:mx-0 dark:rounded-2xl dark:bg-neutral-800 md:mx-0 md:aspect-square md:overflow-hidden md:rounded-2xl md:shadow-sm">
           <Image
             src={product.image}
             alt={product.alt[lang]}
@@ -78,9 +78,9 @@ export function ProductDetail({ product }: { product: Product }) {
             </tbody>
           </table>
 
-          <div className="mt-8 flex items-center gap-3">
+          <div className="mt-8 hidden items-center gap-3 md:flex">
             <a
-              href={`https://wa.me/${contact.whatsapp.replace(/\D/g, '')}?text=${waText}`}
+              href={waHref}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={t('detail.askViaWa')}
@@ -99,6 +99,29 @@ export function ProductDetail({ product }: { product: Product }) {
             </Link>
           </div>
         </div>
+      </div>
+
+      {/* Bar aksi sticky khusus mobile */}
+      <div
+        data-testid="sticky-cta"
+        className="sticky bottom-0 -mx-4 mt-10 flex items-center gap-3 border-t border-neutral-200 bg-white/95 px-4 py-3 backdrop-blur dark:border-neutral-800 dark:bg-neutral-950/95 md:hidden"
+      >
+        <Link
+          href="/#produk"
+          aria-label={t('detail.back')}
+          className="inline-flex h-12 w-12 shrink-0 cursor-pointer items-center justify-center rounded-full border border-neutral-300 text-neutral-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue dark:border-neutral-600 dark:text-neutral-100"
+        >
+          <PiArrowLeft size={20} />
+        </Link>
+        <a
+          href={waHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex h-12 flex-1 cursor-pointer items-center justify-center gap-2 rounded-full bg-kovaa-orange text-sm font-semibold text-white shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-orange"
+        >
+          <PiWhatsappLogo size={20} />
+          {t('detail.askViaWa')}
+        </a>
       </div>
     </div>
   )
