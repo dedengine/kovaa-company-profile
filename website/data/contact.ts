@@ -14,7 +14,7 @@ export interface ContactInfo {
  */
 export const contact: ContactInfo = {
   company: 'KOVAA',
-  address: 'Jl. Contoh Raya No. 1, Kawasan Industri, Jakarta, Indonesia',
+  address: 'Family barbershop, RT.001/RW.003, Mustikasari, Kec. Mustika Jaya, Kota Bekasi, Jawa Barat 17157',
   phone: '+62 21 1234 5678',
   whatsapp: '6281234567890',
   email: 'halo@kovaa.example.com',
