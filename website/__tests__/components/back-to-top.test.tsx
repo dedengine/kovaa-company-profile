@@ -21,7 +21,7 @@ afterEach(() => {
 describe('BackToTop', () => {
   it('is hidden near the top and appears after scrolling down', () => {
     renderButton()
-    const button = screen.getByRole('button', { name: 'Kembali ke atas' })
+    const button = screen.getByRole('button', { name: 'Kembali ke atas', hidden: true })
     expect(button).toHaveAttribute('aria-hidden', 'true')
     Object.defineProperty(window, 'scrollY', { value: 500, configurable: true })
     fireEvent.scroll(window)
