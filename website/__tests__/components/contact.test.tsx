@@ -24,6 +24,21 @@ describe('Contact + Footer', () => {
     expect(document.getElementById('kontak')).not.toBeNull()
   })
 
+  it('embeds a lazy-loaded Google Map of the contact address', () => {
+    render(
+      <I18nProvider>
+        <Contact />
+      </I18nProvider>,
+    )
+    const frame = screen.getByTitle('Peta lokasi KOVAA')
+    expect(frame.tagName).toBe('IFRAME')
+    const src = frame.getAttribute('src') ?? ''
+    expect(src).toContain('maps.google.com')
+    expect(src).toContain('output=embed')
+    expect(decodeURIComponent(src)).toContain(contact.address)
+    expect(frame).toHaveAttribute('loading', 'lazy')
+  })
+
   it('renders a footer with the brand', () => {
     const { container } = render(
       <I18nProvider>

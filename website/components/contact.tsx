@@ -69,6 +69,16 @@ export function Contact() {
           })}
         </ul>
 
+        <div className="mx-auto mt-10 max-w-page overflow-hidden rounded-2xl border border-neutral-200 shadow-sm dark:border-neutral-800">
+          <iframe
+            title={t('contact.mapTitle')}
+            src={`https://maps.google.com/maps?q=${encodeURIComponent(contact.address)}&z=15&output=embed`}
+            className="h-80 w-full"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+
         <div className="mt-10 text-center">
           <a
             href={`https://wa.me/${contact.whatsapp.replace(/\D/g, '')}`}
