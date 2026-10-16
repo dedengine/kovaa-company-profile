@@ -63,6 +63,7 @@ export function SiteHeader() {
             type="button"
             className="cursor-pointer rounded-md p-2 text-neutral-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue dark:text-neutral-200 md:hidden"
             aria-expanded={open}
+            aria-controls="mobile-nav"
             aria-label={t(open ? 'nav.closeMenu' : 'nav.openMenu')}
             onClick={() => setOpen((v) => !v)}
           >
@@ -73,8 +74,9 @@ export function SiteHeader() {
 
       {open && (
         <nav
+          id="mobile-nav"
           aria-label={t('nav.mobileNav')}
-          className="border-t border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-950 md:hidden"
+          className="absolute inset-x-0 top-full z-40 border-t border-neutral-200 bg-white shadow-lg dark:border-neutral-800 dark:bg-neutral-950 md:hidden"
         >
           <div className="mx-auto flex max-w-page flex-col px-4 py-2">
             {NAV_IDS.map((id) => (
