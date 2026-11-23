@@ -32,11 +32,11 @@ export function BackToTop() {
       aria-label={t('nav.backToTop')}
       {...(!visible ? { 'aria-hidden': true as const } : {})}
       tabIndex={visible ? 0 : -1}
-      className={`fixed bottom-6 right-6 z-40 cursor-pointer rounded-full bg-kovaa-blue p-3 text-white shadow-lg transition-all duration-300 hover:bg-kovaa-navy focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue ${
+      className={`fixed bottom-[4.6rem] right-8 z-40 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-kovaa-orange text-white shadow-lg ring-4 ring-white transition-all duration-300 hover:bg-kovaa-navy focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-orange dark:ring-neutral-950 ${
         visible ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-4 opacity-0'
       }`}
     >
-      <PiArrowUp size={20} />
+      <PiArrowUp size={18} />
     </button>
   )
 }
