@@ -4,7 +4,6 @@ import { contact } from '@/data/contact'
 import { dictionary } from '@/lib/i18n'
 import { I18nProvider } from '@/lib/i18n-provider'
 import { Contact } from '@/components/contact'
-import { WhatsAppFloat } from '@/components/whatsapp-float'
 
 function renderContact() {
   return render(
@@ -67,19 +66,5 @@ describe('Contact project form', () => {
     for (const value of ['Budi', 'PT Contoh', '08123456789', 'Butuh booth pameran', 'Rp 50 - 100 juta']) {
       expect(text).toContain(value)
     }
-  })
-})
-
-describe('WhatsAppFloat', () => {
-  it('links directly to the KOVAA WhatsApp number', () => {
-    render(
-      <I18nProvider>
-        <WhatsAppFloat />
-      </I18nProvider>,
-    )
-    expect(screen.getByRole('link', { name: 'Chat via WhatsApp' })).toHaveAttribute(
-      'href',
-      `https://wa.me/${contact.whatsapp.replace(/\D/g, '')}`,
-    )
   })
 })

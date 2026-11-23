@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import { Poppins, Roboto } from "next/font/google";
 import { I18nProvider } from "@/lib/i18n-provider";
 import { ThemeProvider } from "@/lib/theme-provider";
-import { WhatsAppFloat } from "@/components/whatsapp-float";
 import { contact } from "@/data/contact";
 import { organizationJsonLd } from "@/lib/seo";
 import "./globals.css";
@@ -93,10 +92,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           }}
         />
         <I18nProvider>
-          <ThemeProvider>
-            {children}
-            <WhatsAppFloat />
-          </ThemeProvider>
+          <ThemeProvider>{children}</ThemeProvider>
         </I18nProvider>
       </body>
     </html>

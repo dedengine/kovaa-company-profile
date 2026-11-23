@@ -8,6 +8,7 @@ import { Products } from '@/components/products'
 import { Process } from '@/components/process'
 import { Contact } from '@/components/contact'
 import { Footer } from '@/components/footer'
+import { BackToTop } from '@/components/back-to-top'
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <BackToTop />
     </>
   )
 }
