@@ -16,6 +16,7 @@ describe('Services', () => {
   it('renders the four service pillars with an anchor id', () => {
     renderServices()
     expect(document.getElementById('layanan')).not.toBeNull()
+    expect(screen.getByText('Layanan Kami')).toBeDefined()
     expect(screen.getByRole('heading', { level: 2 })).toHaveTextContent('Empat pilar layanan')
     const items = dictionary.id.services.items
     expect(screen.getAllByRole('heading', { level: 3 })).toHaveLength(items.length)

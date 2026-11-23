@@ -46,6 +46,7 @@ export const dictionary = {
             body2: 'KOVAA mendukung proses mulai dari pemahaman kebutuhan, survei dan validasi lapangan, perencanaan teknis, produksi, hingga pengiriman dan instalasi sesuai lingkup pekerjaan yang disepakati.',
         },
         services: {
+            eyebrow: 'Layanan Kami',
             title: 'Empat pilar layanan',
             subtitle: 'Empat area layanan yang dapat saling terhubung dalam satu kebutuhan proyek.',
             items: [
@@ -206,6 +207,7 @@ export const dictionary = {
             body2: 'KOVAA supports the process from understanding your needs, on-site surveys and validation, technical planning, and production through delivery and installation according to the agreed scope of work.',
         },
         services: {
+            eyebrow: 'Our Services',
             title: 'Four service pillars',
             subtitle: 'Four service areas that can connect within a single project need.',
             items: [

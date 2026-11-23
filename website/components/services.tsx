@@ -16,7 +16,10 @@ export function Services() {
   return (
     <section ref={scope} id="layanan" className="mx-auto max-w-page px-4 py-16">
       <div data-reveal className="mx-auto max-w-2xl text-center">
-        <h2 className="font-heading text-3xl font-bold tracking-tight text-neutral-900 dark:text-white md:text-4xl">
+        <p className="text-xs font-semibold uppercase tracking-widest text-kovaa-orange dark:text-orange-300">
+          {t('services.eyebrow')}
+        </p>
+        <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight text-neutral-900 dark:text-white md:text-4xl">
           {t('services.title')}
         </h2>
         <p className="mt-4 text-neutral-700 dark:text-neutral-300">{t('services.subtitle')}</p>
@@ -27,7 +30,7 @@ export function Services() {
           <li
             key={item.title}
             data-stagger
-            className="rounded-2xl border border-l-4 border-l-kovaa-orange border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-900"
+            className="rounded-2xl border border-l-4 border-l-kovaa-orange border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:border-l-orange-300 dark:bg-neutral-900"
           >
             <div className="flex items-baseline gap-3">
               <span className="font-heading text-base font-bold text-kovaa-blue dark:text-blue-300">
