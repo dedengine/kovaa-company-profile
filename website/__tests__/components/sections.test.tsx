@@ -20,7 +20,7 @@ describe('about, advantages, process sections', () => {
     renderSections()
     const text = document.body.textContent ?? ''
     expect(text).toContain('Tentang KOVAA')
-    expect(text).toContain('rak dinding')
+    expect(text).toContain('interior komersial')
     expect(text).toContain('Mengapa KOVAA')
     expect(text).toContain('Custom-Made')
     expect(text).toContain('Proses Kerja Kami')

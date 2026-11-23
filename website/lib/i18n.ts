@@ -40,9 +40,9 @@ export const dictionary = {
         about: {
             title: 'Tentang KOVAA',
             eyebrow: 'Profil Perusahaan',
-            imageAlt: 'Rak KOVAA terpasang di dalam toko',
-            body1: 'KOVAA adalah penyedia peralatan ritel untuk toko, minimarket, dan supermarket. Kami mengerjakan rak supermarket, rak gondola kerangka besi, rak dinding, rak sayur-buah, hingga drawer kayu solid.',
-            body2: 'Setiap produk kami buat sesuai kebutuhan toko Anda: ukuran, tingkat, dan material menyesuaikan ruang serta karakter merchandise. Dari pembuatan hingga pengiriman, satu tim menangani semuanya.',
+            imageAlt: 'Foto tim KOVAA bersama di lokasi proyek',
+            body1: 'KOVAA adalah partner pengerjaan kebutuhan interior komersial, furniture custom, booth, serta media promosi fisik untuk mendukung kebutuhan bisnis dan branding perusahaan.',
+            body2: 'KOVAA mendukung proses mulai dari pemahaman kebutuhan, survei dan validasi lapangan, perencanaan teknis, produksi, hingga pengiriman dan instalasi sesuai lingkup pekerjaan yang disepakati.',
         },
         advantages: {
             title: 'Mengapa KOVAA',
@@ -161,9 +161,9 @@ export const dictionary = {
         about: {
             title: 'About KOVAA',
             eyebrow: 'Company Profile',
-            imageAlt: 'KOVAA shelving installed inside a store',
-            body1: 'KOVAA is a retail fixtures provider for stores, minimarkets, and supermarkets. We build supermarket shelves, steel-frame gondolas, wall racks, fruit and vegetable shelving, and solid wood drawers.',
-            body2: 'Every product is made to fit your store: dimensions, tiers, and materials adapt to your space and merchandise. From manufacturing to delivery, one team handles it all.',
+            imageAlt: 'The KOVAA team photographed together at a project site',
+            body1: 'KOVAA is your partner for commercial interior projects, custom furniture, booths, and physical promotional media that support business needs and corporate branding.',
+            body2: 'KOVAA supports the process from understanding your needs, on-site surveys and validation, technical planning, and production through delivery and installation according to the agreed scope of work.',
         },
         advantages: {
             title: 'Why KOVAA',
