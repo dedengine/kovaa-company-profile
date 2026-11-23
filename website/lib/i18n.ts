@@ -8,6 +8,7 @@ export const dictionary = {
     id: {
         nav: {
             tentang: 'Tentang',
+            layanan: 'Layanan',
             produk: 'Produk',
             keunggulan: 'Keunggulan',
             proses: 'Proses',
@@ -43,6 +44,44 @@ export const dictionary = {
             imageAlt: 'Foto tim KOVAA bersama di lokasi proyek',
             body1: 'KOVAA adalah partner pengerjaan kebutuhan interior komersial, furniture custom, booth, serta media promosi fisik untuk mendukung kebutuhan bisnis dan branding perusahaan.',
             body2: 'KOVAA mendukung proses mulai dari pemahaman kebutuhan, survei dan validasi lapangan, perencanaan teknis, produksi, hingga pengiriman dan instalasi sesuai lingkup pekerjaan yang disepakati.',
+        },
+        services: {
+            title: 'Four service pillars.',
+            subtitle: 'Empat area layanan yang dapat saling terhubung dalam satu kebutuhan proyek.',
+            items: [
+                {
+                    title: 'Custom Furniture & Interior Elements',
+                    bullets: [
+                        'Backwall, kabinet, meja kasir, built-in & meja custom',
+                        'Rak display, backdrop & elemen interior khusus',
+                        'Bongkar pasang furniture custom',
+                    ],
+                },
+                {
+                    title: 'Commercial Interior & Fit-Out',
+                    bullets: [
+                        'Retail, minimarket, toko, coffee shop, F&B, kantor, ruang komersial',
+                        'Wall panel, vinyl floor, partisi, plafon, HPL/WPC & finishing',
+                        'Bongkar pasang, relayout, renovasi & penyesuaian',
+                    ],
+                },
+                {
+                    title: 'Booth, Exhibition & Event Setup',
+                    bullets: [
+                        'Photobooth, photobox, booth pameran & promosi',
+                        'Backdrop, activation counter & display custom',
+                        'Pengiriman, instalasi, pembongkaran & relokasi',
+                    ],
+                },
+                {
+                    title: 'Promotional Media & Brand Display',
+                    bullets: [
+                        'Stiker kaca/lift/cutting sticker & surface branding',
+                        'Signage, neon box, lightbox, papan nama & logo timbul',
+                        'Floor display, rak promosi & product display custom',
+                    ],
+                },
+            ],
         },
         advantages: {
             title: 'Mengapa KOVAA',
@@ -128,6 +167,7 @@ export const dictionary = {
     en: {
         nav: {
             tentang: 'About',
+            layanan: 'Services',
             produk: 'Products',
             keunggulan: 'Why Us',
             proses: 'Process',
@@ -164,6 +204,44 @@ export const dictionary = {
             imageAlt: 'The KOVAA team photographed together at a project site',
             body1: 'KOVAA is your partner for commercial interior projects, custom furniture, booths, and physical promotional media that support business needs and corporate branding.',
             body2: 'KOVAA supports the process from understanding your needs, on-site surveys and validation, technical planning, and production through delivery and installation according to the agreed scope of work.',
+        },
+        services: {
+            title: 'Four service pillars.',
+            subtitle: 'Four service areas that can connect within a single project need.',
+            items: [
+                {
+                    title: 'Custom Furniture & Interior Elements',
+                    bullets: [
+                        'Backwalls, cabinets, cashier counters, built-in and custom tables',
+                        'Display shelves, backdrops and custom interior elements',
+                        'Custom furniture dismantling and reassembly',
+                    ],
+                },
+                {
+                    title: 'Commercial Interior & Fit-Out',
+                    bullets: [
+                        'Retail, minimarkets, shops, coffee shops, F&B, offices, commercial spaces',
+                        'Wall panels, vinyl flooring, partitions, ceilings, HPL/WPC and finishing',
+                        'Dismantling, re-layout, renovation and adjustments',
+                    ],
+                },
+                {
+                    title: 'Booth, Exhibition & Event Setup',
+                    bullets: [
+                        'Photo booths, photo boxes, exhibition and promotional booths',
+                        'Backdrops, activation counters and custom displays',
+                        'Delivery, installation, dismantling and relocation',
+                    ],
+                },
+                {
+                    title: 'Promotional Media & Brand Display',
+                    bullets: [
+                        'Glass and lift stickers, cutting stickers and surface branding',
+                        'Signage, neon boxes, lightboxes, nameplates and raised logos',
+                        'Floor displays, promotional racks and custom product displays',
+                    ],
+                },
+            ],
         },
         advantages: {
             title: 'Why KOVAA',

@@ -1,6 +1,7 @@
 import { SiteHeader } from '@/components/site-header'
 import { Hero } from '@/components/hero'
 import { About } from '@/components/about'
+import { Services } from '@/components/services'
 import { Advantages } from '@/components/advantages'
 import { CtaBanner } from '@/components/cta-banner'
 import { Products } from '@/components/products'
@@ -22,6 +23,7 @@ export default function Home() {
       <main id="main">
         <Hero />
         <About />
+        <Services />
         <Advantages />
         <CtaBanner />
         <Products />

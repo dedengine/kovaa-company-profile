@@ -7,7 +7,7 @@ import { useI18n } from '@/lib/i18n-provider'
 import { LanguageToggle } from './language-toggle'
 import { ThemeToggle } from './theme-toggle'
 
-const NAV_IDS = ['tentang', 'produk', 'keunggulan', 'kontak'] as const
+const NAV_IDS = ['tentang', 'layanan', 'produk', 'keunggulan', 'kontak'] as const
 
 export function SiteHeader() {
   const { t } = useI18n()

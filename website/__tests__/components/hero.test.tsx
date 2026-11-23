@@ -35,6 +35,16 @@ describe('SiteHeader + Hero', () => {
     expect(document.querySelector('a[href="#kontak"]')).not.toBeNull()
   })
 
+  it('includes the services menu item after About', () => {
+    renderPage()
+    const about = document.querySelector('a[href="#tentang"]')
+    const services = document.querySelector('a[href="#layanan"]')
+    expect(services).not.toBeNull()
+    expect(about!.compareDocumentPosition(services!) & Node.DOCUMENT_POSITION_FOLLOWING).toBe(
+      Node.DOCUMENT_POSITION_FOLLOWING,
+    )
+  })
+
   it('shows the language toggle and a mobile menu button', () => {
     renderPage()
     expect(screen.getByRole('button', { name: /indonesia/i })).toBeDefined()

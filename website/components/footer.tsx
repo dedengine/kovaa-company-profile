@@ -6,6 +6,7 @@ import { contact } from '@/data/contact';
 
 const LINKS = [
     { id: 'tentang', key: 'nav.tentang' },
+    { id: 'layanan', key: 'nav.layanan' },
     { id: 'produk', key: 'nav.produk' },
     { id: 'keunggulan', key: 'nav.keunggulan' },
     { id: 'proses', key: 'nav.proses' },
