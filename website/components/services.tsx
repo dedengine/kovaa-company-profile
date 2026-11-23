@@ -38,8 +38,8 @@ export function Services() {
               data-stagger
               className={`rounded-2xl border border-l-4 border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-900 ${accent.border}`}
             >
-              <div className="flex items-start gap-3">
-                <span className={`font-heading text-xl font-bold ${accent.number}`}>
+              <div className="flex items-baseline gap-3">
+                <span className={`font-heading text-base font-bold ${accent.number}`}>
                   {String(i + 1).padStart(2, '0')}
                 </span>
                 <h3 className="font-heading text-base font-semibold text-kovaa-blue dark:text-blue-300">
