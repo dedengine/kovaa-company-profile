@@ -40,7 +40,7 @@ export function Footer() {
                 </nav>
 
                 <div>
-                    <h3 className="font-heading text-sm font-semibold uppercase tracking-widest text-white">{t('contact.title')}</h3>
+                    <h3 className="font-heading text-sm font-semibold uppercase tracking-widest text-white">{t('contact.footerTitle')}</h3>
                     <ul className="mt-3 space-y-1.5 text-sm">
                         <li>{contact.address}</li>
                         <li>

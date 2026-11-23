@@ -149,6 +149,7 @@ export const dictionary = {
         },
         contact: {
             eyebrow: 'START A PROJECT',
+            footerTitle: 'Hubungi Kami',
             title: 'Butuh Interior Fit-Out, Custom Furniture, Booth, atau Media Promosi?',
             subtitle: 'Ceritakan kebutuhannya, sisanya biar kami yang pikirkan. Diskusikan kebutuhan pengerjaan interior komersial, furniture custom, booth exhibition, media promosi, serta bongkar pasang dan relayout furniture outlet bersama KOVAA.',
             nameLabel: 'Nama Lengkap',
@@ -313,6 +314,7 @@ export const dictionary = {
         },
         contact: {
             eyebrow: 'START A PROJECT',
+            footerTitle: 'Contact Us',
             title: 'Need Interior Fit-Out, Custom Furniture, Booths, or Promotional Media?',
             subtitle: 'Tell us what you need, leave the rest to us. Discuss commercial interiors, custom furniture, exhibition booths, promotional media, and furniture outlet dismantling or re-layout with the KOVAA team.',
             nameLabel: 'Full Name',
