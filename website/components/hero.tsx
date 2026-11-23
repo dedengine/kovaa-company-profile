@@ -43,7 +43,7 @@ export function Hero() {
           data-reveal
           className="inline-block rounded-full bg-kovaa-orange/10 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-kovaa-orange dark:text-orange-300"
         >
-            Create • Build • Deliver
+            {t('hero.badge')}
         </p>
         <h1
           data-reveal

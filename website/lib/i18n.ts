@@ -24,8 +24,9 @@ export const dictionary = {
         },
         hero: {
             title: 'Create. Build. Deliver.',
+            badge: 'SOLUSI KREATIF, EKSEKUSI ADAPTIF',
             subtitle:
-                'KOVAA menciptakan, membangun, dan mengirim peralatan ritel berkualitas: rak supermarket, gondola, rak dinding, dan drawer. Semua siap memperkuat tampilan toko Anda.',
+                'KOVAA bergerak di bidang interior komersial, furniture custom, booth, serta media promosi fisik untuk kebutuhan bisnis dan branding perusahaan.',
             ctaProducts: 'Lihat Produk',
             ctaContact: 'Hubungi Kami',
             imageAlt: 'Rak supermarket KOVAA tampil rapi dalam sebuah toko modern',
@@ -143,8 +144,9 @@ export const dictionary = {
         },
         hero: {
             title: 'Create. Build. Deliver.',
+            badge: 'CREATIVE SOLUTIONS, ADAPTIVE EXECUTION',
             subtitle:
-                'KOVAA creates, builds, and delivers quality retail fixtures: supermarket shelves, gondolas, wall racks, and drawers. Ready to strengthen your store display.',
+                'KOVAA operates in commercial interiors, custom furniture, booths, and physical promotional media for business needs and corporate branding.',
             ctaProducts: 'View Products',
             ctaContact: 'Contact Us',
             imageAlt: 'KOVAA supermarket shelving neatly displayed in a modern store',
