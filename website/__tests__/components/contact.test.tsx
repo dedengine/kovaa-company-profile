@@ -40,6 +40,17 @@ describe('Contact project form', () => {
     expect(screen.getByText('Rp 50 - 100 juta')).toBeDefined()
   })
 
+  it('embeds a Google Map of the contact address', () => {
+    renderContact()
+    const frame = screen.getByTitle('Peta lokasi KOVAA')
+    expect(frame.tagName).toBe('IFRAME')
+    const src = frame.getAttribute('src') ?? ''
+    expect(src).toContain('maps.google.com')
+    expect(src).toContain('output=embed')
+    expect(decodeURIComponent(src)).toContain(contact.address)
+    expect(frame).toHaveAttribute('loading', 'lazy')
+  })
+
   it('opens WhatsApp with the submitted details prefilled', () => {
     const open = vi.spyOn(window, 'open').mockImplementation(() => null)
     renderContact()

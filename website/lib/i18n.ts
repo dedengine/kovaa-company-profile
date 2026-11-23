@@ -160,6 +160,7 @@ export const dictionary = {
             budgetOptions: ['< Rp 50 juta', 'Rp 50 - 100 juta', 'Rp 100 - 250 juta', '> Rp 250 juta', 'Belum pasti'],
             submit: 'Kirim & Dapatkan Respon Prioritas',
             privacy: 'Data Anda aman dan hanya dipakai untuk merespon kebutuhan project.',
+            mapTitle: 'Peta lokasi KOVAA',
             waFloating: 'Chat via WhatsApp',
         },
         footer: {
@@ -325,6 +326,7 @@ export const dictionary = {
             budgetOptions: ['< Rp 50 million', 'Rp 50 - 100 million', 'Rp 100 - 250 million', '> Rp 250 million', 'Not sure yet'],
             submit: 'Send & Get Priority Response',
             privacy: 'Your data is safe and used only to respond to your project needs.',
+            mapTitle: 'KOVAA location map',
             waFloating: 'Chat on WhatsApp',
         },
         footer: {

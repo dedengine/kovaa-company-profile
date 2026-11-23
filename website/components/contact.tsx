@@ -124,6 +124,18 @@ export function Contact() {
           </p>
         </form>
       </div>
+
+      <div className="mx-auto mt-10 max-w-page px-4">
+        <div className="overflow-hidden rounded-2xl border border-neutral-200 shadow-sm dark:border-neutral-800">
+          <iframe
+            title={t('contact.mapTitle')}
+            src={`https://maps.google.com/maps?q=${encodeURIComponent(contact.address)}&z=15&output=embed`}
+            className="h-80 w-full"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+      </div>
     </section>
   )
 }
