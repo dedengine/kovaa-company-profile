@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { PiArrowUp } from 'react-icons/pi';
 import { useI18n } from '@/lib/i18n-provider';
 import { contact } from '@/data/contact';
 
@@ -15,6 +16,11 @@ const LINKS = [
 
 export function Footer() {
     const { t } = useI18n();
+
+    function scrollTop() {
+        const reduced = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
+    }
 
     return (
         <footer className="bg-kovaa-navy text-white/70">
@@ -62,9 +68,19 @@ export function Footer() {
             </div>
 
             <div className="border-t border-white/10 px-4 py-4">
-                <p className="mx-auto max-w-page text-center text-xs text-white/50">
-                    Copyright © 2026 {contact.company} {t('footer.rights')}
-                </p>
+                <div className="mx-auto flex max-w-page flex-col items-center justify-between gap-3 sm:flex-row">
+                    <p className="text-center text-xs text-white/50">
+                        Copyright © 2026 {contact.company} {t('footer.rights')}
+                    </p>
+                    <button
+                        type="button"
+                        onClick={scrollTop}
+                        className="inline-flex cursor-pointer items-center gap-1.5 text-xs font-medium text-white/70 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                    >
+                        <PiArrowUp size={14} aria-hidden="true" />
+                        {t('nav.backToTop')}
+                    </button>
+                </div>
             </div>
         </footer>
     );
