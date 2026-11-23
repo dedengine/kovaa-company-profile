@@ -84,25 +84,25 @@ export const dictionary = {
             ],
         },
         advantages: {
-            title: 'Mengapa KOVAA',
+            title: 'Mengapa Memilih KOVAA',
             eyebrow: 'Keunggulan Kami',
-            subtitle: 'Kami mengerjakan peralatan ritel yang awet, rapi, dan pas untuk ruang toko Anda.',
+            subtitle: 'Kami mengerjakan kebutuhan interior komersial, furniture custom, booth, dan media promosi dengan perencanaan matang dan hasil yang rapi.',
             items: [
                 {
-                    title: 'Custom-Made',
-                    desc: 'Ukuran, tingkat, dan warna disesuaikan dengan ruang dan kebutuhan toko Anda.',
+                    title: 'Berpengalaman',
+                    desc: 'Memiliki pengalaman dalam pengerjaan interior, furniture custom, booth, dan kebutuhan display sesuai lingkup proyek.',
                 },
                 {
-                    title: 'Material Kokoh',
-                    desc: 'Kerangka besi dan kayu pilihan untuk daya tahan jangka panjang di area ramai.',
+                    title: 'Solusi Terintegrasi',
+                    desc: 'Menghubungkan kebutuhan interior komersial, furniture custom, booth, dan media promosi dalam satu cakupan layanan.',
                 },
                 {
-                    title: 'Harga Langsung Pabrik',
-                    desc: 'Beli langsung dari pembuat, tanpa perantara, dengan kualitas yang terjaga.',
+                    title: 'Perencanaan Berbasis Data',
+                    desc: 'Menggunakan ukuran aktual, spesifikasi teknis, dan perhitungan biaya sebagai dasar perencanaan.',
                 },
                 {
-                    title: 'Pengiriman & Pemasangan',
-                    desc: 'Kami antar dan pasang di lokasi Anda, siap digunakan.',
+                    title: 'Fleksibel & Bertanggung Jawab',
+                    desc: 'Menyesuaikan pendekatan dengan kebutuhan proyek serta menjalankan pekerjaan berdasarkan kesepakatan yang jelas.',
                 },
             ],
         },
@@ -244,25 +244,25 @@ export const dictionary = {
             ],
         },
         advantages: {
-            title: 'Why KOVAA',
+            title: 'Why Choose KOVAA',
             eyebrow: 'Our Advantages',
-            subtitle: 'We build retail fixtures that last, look sharp, and fit your store space.',
+            subtitle: 'We handle commercial interiors, custom furniture, booths, and promotional media with careful planning and clean results.',
             items: [
                 {
-                    title: 'Custom-Made',
-                    desc: 'Dimensions, tiers, and finishes tailored to your store space and needs.',
+                    title: 'Experienced',
+                    desc: 'Experienced in commercial interiors, custom furniture, booths, and display needs according to project scope.',
                 },
                 {
-                    title: 'Durable Materials',
-                    desc: 'Steel frames and selected woods built to last in high-traffic areas.',
+                    title: 'Integrated Solutions',
+                    desc: 'Connecting commercial interior, custom furniture, booth, and promotional media needs within one service scope.',
                 },
                 {
-                    title: 'Factory-Direct Pricing',
-                    desc: 'Buy straight from the maker, no middlemen, quality intact.',
+                    title: 'Data-Driven Planning',
+                    desc: 'Using actual measurements, technical specifications, and cost calculations as the basis for planning.',
                 },
                 {
-                    title: 'Delivery & Installation',
-                    desc: 'We deliver and install on site, ready for use.',
+                    title: 'Flexible & Accountable',
+                    desc: 'Adapting the approach to project needs and carrying out work based on clear agreements.',
                 },
             ],
         },

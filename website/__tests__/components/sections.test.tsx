@@ -21,8 +21,8 @@ describe('about, advantages, process sections', () => {
     const text = document.body.textContent ?? ''
     expect(text).toContain('Tentang KOVAA')
     expect(text).toContain('interior komersial')
-    expect(text).toContain('Mengapa KOVAA')
-    expect(text).toContain('Custom-Made')
+    expect(text).toContain('Mengapa Memilih KOVAA')
+    expect(text).toContain('Berpengalaman')
     expect(text).toContain('Proses Kerja Kami')
   })
 
