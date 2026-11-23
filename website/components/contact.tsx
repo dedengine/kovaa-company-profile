@@ -46,6 +46,18 @@ export function Contact() {
           <p className="mt-4 max-w-xl text-neutral-700 dark:text-neutral-300">{t('contact.subtitle')}</p>
         </div>
 
+        <div className="overflow-hidden rounded-2xl border border-neutral-200 shadow-sm dark:border-neutral-800">
+          <iframe
+            title={t('contact.mapTitle')}
+            src={`https://maps.google.com/maps?q=${encodeURIComponent(contact.address)}&z=15&output=embed`}
+            className="h-80 w-full"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+      </div>
+
+      <div className="mx-auto mt-10 max-w-3xl px-4">
         <form
           onSubmit={handleSubmit}
           className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-950 md:p-8"
@@ -123,18 +135,6 @@ export function Contact() {
             {t('contact.privacy')}
           </p>
         </form>
-      </div>
-
-      <div className="mx-auto mt-10 max-w-page px-4">
-        <div className="overflow-hidden rounded-2xl border border-neutral-200 shadow-sm dark:border-neutral-800">
-          <iframe
-            title={t('contact.mapTitle')}
-            src={`https://maps.google.com/maps?q=${encodeURIComponent(contact.address)}&z=15&output=embed`}
-            className="h-80 w-full"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
-        </div>
       </div>
     </section>
   )
