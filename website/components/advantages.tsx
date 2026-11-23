@@ -1,12 +1,12 @@
 'use client'
 
 import { useRef } from 'react'
-import { PiFactory, PiShieldCheck, PiTruck, PiWrench } from 'react-icons/pi'
+import { PiChartBar, PiHandshake, PiMedal, PiPlugsConnected } from 'react-icons/pi'
 import { useI18n } from '@/lib/i18n-provider'
 import { dictionary } from '@/lib/i18n'
 import { useGridStagger, useScrollReveal } from '@/lib/gsap-animations'
 
-const ICONS = [PiWrench, PiShieldCheck, PiFactory, PiTruck]
+const ICONS = [PiMedal, PiPlugsConnected, PiChartBar, PiHandshake]
 
 export function Advantages() {
   const { t, lang } = useI18n()
@@ -29,19 +29,19 @@ export function Advantages() {
           <p className="mt-4 text-neutral-700 dark:text-neutral-300">{t('advantages.subtitle')}</p>
         </div>
 
-        <ul ref={grid} className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <ul ref={grid} className="mt-10 grid gap-6 sm:grid-cols-2">
           {items.map((item, i) => {
             const Icon = ICONS[i]
             return (
               <li
                 key={item.title}
                 data-stagger
-                className="group rounded-2xl border border-neutral-200 bg-white p-7 text-center shadow-sm transition-[box-shadow,transform] hover:-translate-y-1 hover:shadow-xl motion-reduce:transition-none motion-reduce:hover:translate-y-0 dark:border-neutral-800 dark:bg-neutral-950"
+                className="group rounded-2xl border border-neutral-200 bg-white p-8 text-center shadow-sm transition-[box-shadow,transform] hover:-translate-y-1 hover:shadow-xl motion-reduce:transition-none motion-reduce:hover:translate-y-0 dark:border-neutral-800 dark:bg-neutral-950"
               >
                 <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-kovaa-blue/10 text-kovaa-blue transition-colors group-hover:bg-kovaa-blue group-hover:text-white dark:bg-blue-500/15 dark:text-blue-300 dark:group-hover:bg-blue-600 dark:group-hover:text-white">
                   <Icon size={30} aria-hidden="true" />
                 </span>
-                <h3 className="mt-5 font-heading text-lg font-semibold text-neutral-900 dark:text-white">
+                <h3 className="mt-5 font-heading text-base font-semibold text-neutral-900 dark:text-white md:text-lg">
                   {item.title}
                 </h3>
                 <p className="mt-2 text-sm text-neutral-700 dark:text-neutral-300">{item.desc}</p>
