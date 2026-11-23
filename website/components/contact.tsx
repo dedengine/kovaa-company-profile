@@ -36,14 +36,7 @@ export function Contact() {
   return (
     <section id="kontak" className="bg-neutral-50 py-16 dark:bg-neutral-900">
       <div className="mx-auto max-w-page px-4">
-        <p className="text-xs font-semibold uppercase tracking-widest text-kovaa-orange dark:text-orange-300">
-          {t('contact.eyebrow')}
-        </p>
-        <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight text-neutral-900 dark:text-white md:text-4xl">
-          {t('contact.title')}
-        </h2>
-
-        <div className="mt-8 overflow-hidden rounded-2xl border border-neutral-200 shadow-sm dark:border-neutral-800">
+        <div className="overflow-hidden rounded-2xl border border-neutral-200 shadow-sm dark:border-neutral-800">
           <iframe
             title={t('contact.mapTitle')}
             src={`https://maps.google.com/maps?q=${encodeURIComponent(contact.address)}&z=15&output=embed`}
@@ -53,8 +46,17 @@ export function Contact() {
           />
         </div>
 
-        <div className="mx-auto mt-10 max-w-3xl">
-          <p className="mb-6 text-neutral-700 dark:text-neutral-300">{t('contact.subtitle')}</p>
+        <div className="mt-10 grid gap-10 lg:grid-cols-2 lg:items-center">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-widest text-kovaa-orange dark:text-orange-300">
+              {t('contact.eyebrow')}
+            </p>
+            <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight text-neutral-900 dark:text-white md:text-4xl">
+              {t('contact.title')}
+            </h2>
+            <p className="mt-4 text-neutral-700 dark:text-neutral-300">{t('contact.subtitle')}</p>
+          </div>
+
           <form
             onSubmit={handleSubmit}
             className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-950 md:p-8"
