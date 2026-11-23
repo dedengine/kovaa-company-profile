@@ -27,7 +27,7 @@ export function Services() {
           <li
             key={item.title}
             data-stagger
-            className="rounded-2xl border border-l-4 border-l-kovaa-blue border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-900"
+            className="rounded-2xl border border-l-4 border-l-kovaa-orange border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-900"
           >
             <div className="flex items-baseline gap-3">
               <span className="font-heading text-base font-bold text-kovaa-blue dark:text-blue-300">
