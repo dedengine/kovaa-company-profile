@@ -1,35 +1,93 @@
 'use client'
 
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { PiArrowRight } from 'react-icons/pi'
+import { PiArrowRight, PiCaretLeft, PiCaretRight } from 'react-icons/pi'
 import { useI18n } from '@/lib/i18n-provider'
 import { useHoverLift, useScrollReveal } from '@/lib/gsap-animations'
+
+const SLIDES = [
+  '/assets/hero-1.jpeg',
+  '/assets/hero-2.jpeg',
+  '/assets/hero-3.jpeg',
+  '/assets/hero-4.jpeg',
+  '/assets/hero-5.png',
+] as const
+
+const SLIDE_INTERVAL = 5000
 
 export function Hero() {
   const { t } = useI18n()
   const content = useRef<HTMLDivElement>(null)
   const ctaPrimary = useRef<HTMLAnchorElement>(null)
   const ctaSecondary = useRef<HTMLAnchorElement>(null)
+  const [index, setIndex] = useState(0)
+  const [paused, setPaused] = useState(false)
+  const [reduced, setReduced] = useState(
+    () => typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+  )
   useScrollReveal(content)
   const hover = useHoverLift()
 
+  useEffect(() => {
+    const query = window.matchMedia('(prefers-reduced-motion: reduce)')
+    const onChange = (event: MediaQueryListEvent) => setReduced(event.matches)
+    query.addEventListener('change', onChange)
+    return () => query.removeEventListener('change', onChange)
+  }, [])
+
+  useEffect(() => {
+    if (paused || reduced) return
+    const timer = window.setInterval(
+      () => setIndex((current) => (current + 1) % SLIDES.length),
+      SLIDE_INTERVAL,
+    )
+    return () => window.clearInterval(timer)
+  }, [paused, reduced])
+
+  function step(direction: 1 | -1) {
+    setIndex((current) => (current + direction + SLIDES.length) % SLIDES.length)
+  }
+
   return (
-    <section id="top" className="relative overflow-hidden">
-      {/* Gambar hero full-width dari kiri ke kanan (statis) */}
+    <section
+      id="top"
+      className="relative overflow-hidden"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      onFocusCapture={() => setPaused(true)}
+      onBlurCapture={() => setPaused(false)}
+    >
       <div className="absolute inset-0">
         <Image
-          src="/assets/hero-banner.jpg"
+          key={SLIDES[index]}
+          src={SLIDES[index]}
           alt={t('hero.imageAlt')}
           fill
           sizes="100vw"
           className="object-cover"
-          priority
+          priority={index === 0}
         />
       </div>
 
-      {/* Fade agar teks terbaca jelas; foto lebih samar */}
+      <button
+        type="button"
+        onClick={() => step(-1)}
+        aria-label={t('hero.previousImage')}
+        className="absolute left-2 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white/80 text-kovaa-blue shadow-md transition-colors hover:bg-white hover:text-kovaa-navy focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue dark:bg-neutral-950/70 dark:text-blue-300 dark:hover:bg-neutral-950 md:left-4 md:h-12 md:w-12"
+      >
+        <PiCaretLeft size={22} aria-hidden="true" />
+      </button>
+      <button
+        type="button"
+        onClick={() => step(1)}
+        aria-label={t('hero.nextImage')}
+        className="absolute right-2 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white/80 text-kovaa-blue shadow-md transition-colors hover:bg-white hover:text-kovaa-navy focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue dark:bg-neutral-950/70 dark:text-blue-300 dark:hover:bg-neutral-950 md:right-4 md:h-12 md:w-12"
+      >
+        <PiCaretRight size={22} aria-hidden="true" />
+      </button>
+
       <div
         aria-hidden="true"
         className="absolute inset-0 bg-gradient-to-b from-white via-white to-white/30 dark:from-neutral-950 dark:via-neutral-950 dark:to-neutral-950/30 md:bg-gradient-to-r md:from-white md:via-white/85 md:to-transparent md:dark:from-neutral-950 md:dark:via-neutral-950/85 md:dark:to-transparent"

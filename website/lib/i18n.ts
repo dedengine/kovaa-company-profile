@@ -26,6 +26,8 @@ export const dictionary = {
         hero: {
             title: 'Create. Build. Deliver.',
             badge: 'SOLUSI KREATIF • EKSEKUSI ADAPTIF',
+            previousImage: 'Gambar sebelumnya',
+            nextImage: 'Gambar berikutnya',
             subtitle:
                 'KOVAA bergerak di bidang interior komersial, furniture custom, booth, serta media promosi fisik untuk kebutuhan bisnis dan branding perusahaan.',
             ctaProducts: 'Lihat Produk',
@@ -191,6 +193,8 @@ export const dictionary = {
         hero: {
             title: 'Create. Build. Deliver.',
             badge: 'CREATIVE SOLUTIONS • ADAPTIVE EXECUTION',
+            previousImage: 'Previous image',
+            nextImage: 'Next image',
             subtitle:
                 'KOVAA operates in commercial interiors, custom furniture, booths, and physical promotional media for business needs and corporate branding.',
             ctaProducts: 'View Products',

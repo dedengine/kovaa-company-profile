@@ -1,5 +1,6 @@
-import { render, screen } from '@testing-library/react'
-import { describe, expect, it } from 'vitest'
+import { act, render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
+import { describe, expect, it, vi } from 'vitest'
 import { I18nProvider } from '@/lib/i18n-provider'
 import { ThemeProvider } from '@/lib/theme-provider'
 import { SiteHeader } from '@/components/site-header'
@@ -49,5 +50,44 @@ describe('SiteHeader + Hero', () => {
     renderPage()
     expect(screen.getByRole('button', { name: /indonesia/i })).toBeDefined()
     expect(screen.getByRole('button', { name: 'Buka menu' })).toBeDefined()
+  })
+})
+
+function heroImageSrc() {
+  return (
+    screen.getByRole('img', {
+      name: 'Rak supermarket KOVAA tampil rapi dalam sebuah toko modern',
+    }).getAttribute('src') ?? ''
+  )
+}
+
+describe('Hero carousel', () => {
+  it('cycles the five images with the arrow buttons', async () => {
+    const user = userEvent.setup()
+    renderPage()
+    expect(heroImageSrc()).toContain('hero-1.jpeg')
+
+    await user.click(screen.getByRole('button', { name: 'Gambar berikutnya' }))
+    expect(heroImageSrc()).toContain('hero-2.jpeg')
+
+    await user.click(screen.getByRole('button', { name: 'Gambar sebelumnya' }))
+    expect(heroImageSrc()).toContain('hero-1.jpeg')
+
+    await user.click(screen.getByRole('button', { name: 'Gambar sebelumnya' }))
+    expect(heroImageSrc()).toContain('hero-5.png')
+  })
+
+  it('advances to the next image every five seconds', () => {
+    vi.useFakeTimers()
+    try {
+      renderPage()
+      expect(heroImageSrc()).toContain('hero-1.jpeg')
+      act(() => {
+        vi.advanceTimersByTime(5000)
+      })
+      expect(heroImageSrc()).toContain('hero-2.jpeg')
+    } finally {
+      vi.useRealTimers()
+    }
   })
 })
