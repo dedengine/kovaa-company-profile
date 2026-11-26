@@ -53,7 +53,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden"
+      className="group relative overflow-hidden"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onFocusCapture={() => setPaused(true)}
@@ -75,7 +75,7 @@ export function Hero() {
         type="button"
         onClick={() => step(-1)}
         aria-label={t('hero.previousImage')}
-        className="absolute left-2 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white/80 text-kovaa-blue shadow-md transition-colors hover:bg-white hover:text-kovaa-navy focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue dark:bg-neutral-950/70 dark:text-blue-300 dark:hover:bg-neutral-950 md:left-4 md:h-12 md:w-12"
+        className="absolute left-2 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white/80 text-kovaa-blue shadow-md transition-[opacity,background-color] hover:bg-white hover:text-kovaa-navy focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue dark:bg-neutral-950/70 dark:text-blue-300 dark:hover:bg-neutral-950 md:left-4 md:h-12 md:w-12 md:pointer-events-none md:opacity-0 md:group-hover:pointer-events-auto md:group-hover:opacity-100 md:group-focus-within:pointer-events-auto md:group-focus-within:opacity-100"
       >
         <PiCaretLeft size={22} aria-hidden="true" />
       </button>
@@ -83,7 +83,7 @@ export function Hero() {
         type="button"
         onClick={() => step(1)}
         aria-label={t('hero.nextImage')}
-        className="absolute right-2 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white/80 text-kovaa-blue shadow-md transition-colors hover:bg-white hover:text-kovaa-navy focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue dark:bg-neutral-950/70 dark:text-blue-300 dark:hover:bg-neutral-950 md:right-4 md:h-12 md:w-12"
+        className="absolute right-2 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white/80 text-kovaa-blue shadow-md transition-[opacity,background-color] hover:bg-white hover:text-kovaa-navy focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kovaa-blue dark:bg-neutral-950/70 dark:text-blue-300 dark:hover:bg-neutral-950 md:right-4 md:h-12 md:w-12 md:pointer-events-none md:opacity-0 md:group-hover:pointer-events-auto md:group-hover:opacity-100 md:group-focus-within:pointer-events-auto md:group-focus-within:opacity-100"
       >
         <PiCaretRight size={22} aria-hidden="true" />
       </button>
