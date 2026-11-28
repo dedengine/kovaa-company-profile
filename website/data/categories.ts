@@ -11,18 +11,30 @@ export type Category = { id: CategoryId; label: Localized }
 export const categories: Category[] = [
   {
     id: 'rak-supermarket',
-    label: { id: 'Rak Supermarket & Gondola', en: 'Supermarket & Gondola Shelving' },
+    label: {
+      id: 'Commercial Interior & Fit-Out',
+      en: 'Commercial Interior & Fit-Out',
+    },
   },
   {
     id: 'rak-dinding-serbaguna',
-    label: { id: 'Rak Dinding & Serbaguna', en: 'Wall & Multipurpose Shelving' },
+    label: {
+      id: 'Custom Furniture & Backwall',
+      en: 'Custom Furniture & Backwall',
+    },
   },
   {
     id: 'drawer',
-    label: { id: 'Drawer', en: 'Drawer Units' },
+    label: {
+      id: 'Booth Exhibition & Event Setup',
+      en: 'Booth Exhibition & Event Setup',
+    },
   },
   {
     id: 'rak-sayur-buah',
-    label: { id: 'Rak Sayur & Buah', en: 'Fruit & Vegetable Shelving' },
+    label: {
+      id: 'Retail Furniture Installation & Relocation',
+      en: 'Retail Furniture Installation & Relocation',
+    },
   },
 ]

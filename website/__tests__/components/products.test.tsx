@@ -26,10 +26,10 @@ describe('Products row', () => {
   it('filters products by category', async () => {
     const user = userEvent.setup()
     renderProducts()
-    await user.click(screen.getByRole('button', { name: 'Drawer' }))
+    await user.click(screen.getByRole('button', { name: 'Booth Exhibition & Event Setup' }))
     const expected = products.filter((p) => p.category === 'drawer').length
     expect(cards()).toHaveLength(expected)
-    expect(screen.getByRole('button', { name: 'Drawer' })).toHaveAttribute(
+    expect(screen.getByRole('button', { name: 'Booth Exhibition & Event Setup' })).toHaveAttribute(
       'aria-pressed',
       'true',
     )
