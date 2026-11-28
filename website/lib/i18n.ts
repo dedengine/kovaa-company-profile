@@ -144,6 +144,7 @@ export const dictionary = {
         detail: {
             home: 'Beranda',
             productsCrumb: 'Produk',
+            descriptionTitle: 'Deskripsi',
             specsTitle: 'Spesifikasi',
             askViaWa: 'Tanya Produk Ini',
             back: 'Kembali ke Semua Produk',
@@ -312,6 +313,7 @@ export const dictionary = {
         detail: {
             home: 'Home',
             productsCrumb: 'Products',
+            descriptionTitle: 'Description',
             specsTitle: 'Specifications',
             askViaWa: 'Ask About This Product',
             back: 'Back to All Products',

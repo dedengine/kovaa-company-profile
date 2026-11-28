@@ -57,7 +57,10 @@ export function ProductDetail({ product }: { product: Product }) {
           <h1 className="mt-3 font-heading text-3xl font-bold tracking-tight text-neutral-900 dark:text-white md:text-4xl">
             {product.name[lang]}
           </h1>
-          <p className="mt-4 text-neutral-700 dark:text-neutral-300">{product.description[lang]}</p>
+          <h2 className="mt-6 font-heading text-xl font-bold text-neutral-900 dark:text-white">
+            {t('detail.descriptionTitle')}
+          </h2>
+          <p className="mt-2 text-neutral-700 dark:text-neutral-300">{product.description[lang]}</p>
 
 
           <div className="mt-8 hidden items-center gap-3 md:flex">

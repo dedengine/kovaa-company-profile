@@ -21,6 +21,7 @@ describe('ProductDetail', () => {
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
       product.name.id,
     )
+    expect(screen.getByRole('heading', { level: 2, name: 'Deskripsi' })).toBeDefined()
     expect(screen.getByText(product.description.id)).toBeDefined()
   })
 
