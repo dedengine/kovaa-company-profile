@@ -18,9 +18,9 @@ function cards() {
 }
 
 describe('Products row', () => {
-  it('shows all 12 products in one row', () => {
+  it('shows all 13 products in one row', () => {
     renderProducts()
-    expect(cards()).toHaveLength(12)
+    expect(cards()).toHaveLength(13)
   })
 
   it('filters products by category', async () => {

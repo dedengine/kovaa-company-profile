@@ -3,11 +3,6 @@ import type { CategoryId } from './categories'
 export type Lang = 'id' | 'en'
 export type Localized = Record<Lang, string>
 
-export interface SpecRow {
-  label: Localized
-  value: Localized
-}
-
 export interface Product {
   id: string
   slug: string
@@ -17,145 +12,112 @@ export interface Product {
   /** Relative path under public/ */
   image: string
   alt: Localized
-  specs: SpecRow[]
 }
-
-// Peta slug → nama file asli di produk/ (referensi source of truth):
-// rak-display-supermarket-1 → "Rak Display Rak Supermarket Modern untuk Toko Grosir-1.png"
-// rak-display-supermarket-2 → "Rak Display Rak Supermarket Modern untuk Toko Grosir-2.png"
-// rak-gondola-multilayer-1..4 → "Rak Supermarket Kerangka Besi Gondola Multilayer-1..4.png"
-// rak-display-sayur-buah → "Rak Display Sayur dan Buah Kayu Supermarket.png"
-// rak-dinding-minimi → "Rak Dinding Minimi.png"
-// rak-serbaguna-minimalis → "Rak Serbaguna Minimalis.png"
-// drawer-rangka-natural → "Drawer Rangka Natural.png"
-// drawer-solid-natural → "Drawer Solid Natural.png"
-// salami-multidrawer → "Salami Multidrawer.png"
 
 export const products: Product[] = [
   {
-    id: 'rak-display-supermarket-1',
-    slug: 'rak-display-supermarket-1',
+    id: 'commercial-interior-fit-out-1',
+    slug: 'commercial-interior-fit-out-1',
     category: 'rak-supermarket',
-    name: { id: 'Rak Display A', en: 'Display Shelf A' },
+    name: { id: 'Commercial Interior & Fit-Out 1', en: 'Commercial Interior & Fit-Out 1' },
     description: {
-      id: 'Rak display modern untuk toko grosir dan minimarket dengan susunan rak yang fleksibel.',
-      en: 'Modern display shelving for wholesale stores and minimarkets with a flexible layout.',
+      id: 'Portofolio pengerjaan interior komersial dan fit-out oleh KOVAA.',
+      en: 'Commercial interior and fit-out project portfolio by KOVAA.',
     },
-    image: '/products/rak-display-supermarket-1.png',
-    specs: [
-      { label: { id: 'Dimensi', en: 'Dimensions' }, value: { id: '200 × 55 × 220 cm', en: '200 × 55 × 220 cm' } },
-      { label: { id: 'Material', en: 'Material' }, value: { id: 'Rangka besi, rak plat baja powder coating', en: 'Steel frame with powder-coated steel shelves' } },
-      { label: { id: 'Tingkat', en: 'Tiers' }, value: { id: '5 tingkat', en: '5 tiers' } },
-      { label: { id: 'Kapasitas', en: 'Capacity' }, value: { id: '±50 kg', en: '±50 kg' } },
-    ],
+    image: '/products/commercial-interior-fit-out-1.webp',
     alt: {
-      id: 'Rak display supermarket modern model grosir A di area toko',
-      en: 'Modern supermarket display shelf, wholesale model A, in a retail floor',
+      id: 'Dokumentasi proyek Commercial Interior & Fit-Out KOVAA 1',
+      en: 'KOVAA Commercial Interior & Fit-Out project documentation 1',
     },
   },
   {
-    id: 'rak-display-supermarket-2',
-    slug: 'rak-display-supermarket-2',
+    id: 'commercial-interior-fit-out-2',
+    slug: 'commercial-interior-fit-out-2',
     category: 'rak-supermarket',
-    name: { id: 'Rak Display B', en: 'Display Shelf B' },
+    name: { id: 'Commercial Interior & Fit-Out 2', en: 'Commercial Interior & Fit-Out 2' },
     description: {
-      id: 'Varian display supermarket dengan kapasitas susun lebih banyak dan struktur kokoh.',
-      en: 'Supermarket display variant with a higher tier capacity and sturdy frame.',
+      id: 'Portofolio pengerjaan interior komersial dan fit-out oleh KOVAA.',
+      en: 'Commercial interior and fit-out project portfolio by KOVAA.',
     },
-    image: '/products/rak-display-supermarket-2.png',
-    specs: [
-      { label: { id: 'Dimensi', en: 'Dimensions' }, value: { id: '220 × 55 × 220 cm', en: '220 × 55 × 220 cm' } },
-      { label: { id: 'Material', en: 'Material' }, value: { id: 'Rangka besi heavy-duty, rak plat baja', en: 'Heavy-duty steel frame with steel shelves' } },
-      { label: { id: 'Tingkat', en: 'Tiers' }, value: { id: '6 tingkat', en: '6 tiers' } },
-      { label: { id: 'Kapasitas', en: 'Capacity' }, value: { id: '±60 kg', en: '±60 kg' } },
-    ],
+    image: '/products/commercial-interior-fit-out-2.webp',
     alt: {
-      id: 'Rak display supermarket model grosir B dengan banyak tingkat rak',
-      en: 'Supermarket display shelf, wholesale model B, with multiple tiers',
+      id: 'Dokumentasi proyek Commercial Interior & Fit-Out KOVAA 2',
+      en: 'KOVAA Commercial Interior & Fit-Out project documentation 2',
     },
   },
   {
-    id: 'rak-gondola-multilayer-1',
-    slug: 'rak-gondola-multilayer-1',
+    id: 'commercial-interior-fit-out-3',
+    slug: 'commercial-interior-fit-out-3',
     category: 'rak-supermarket',
-    name: { id: 'Rak Gondola 1', en: 'Gondola Shelf 1' },
+    name: { id: 'Commercial Interior & Fit-Out 3', en: 'Commercial Interior & Fit-Out 3' },
     description: {
-      id: 'Rak gondola kerangka besi multilayer untuk menampilkan produk dalam jumlah besar.',
-      en: 'Steel-frame multi-layer gondola shelf for high-volume product display.',
+      id: 'Portofolio pengerjaan interior komersial dan fit-out oleh KOVAA.',
+      en: 'Commercial interior and fit-out project portfolio by KOVAA.',
     },
-    image: '/products/rak-gondola-multilayer-1.png',
-    specs: [
-      { label: { id: 'Dimensi', en: 'Dimensions' }, value: { id: '135 × 90 × 210 cm', en: '135 × 90 × 210 cm' } },
-      { label: { id: 'Material', en: 'Material' }, value: { id: 'Rangka besi gondola, panel belakang perforasi', en: 'Steel gondola frame with perforated back panels' } },
-      { label: { id: 'Tingkat', en: 'Tiers' }, value: { id: '5 tingkat', en: '5 tiers' } },
-      { label: { id: 'Kapasitas', en: 'Capacity' }, value: { id: '±50 kg', en: '±50 kg' } },
-    ],
+    image: '/products/commercial-interior-fit-out-3.webp',
     alt: {
-      id: 'Rak gondola multilayer kerangka besi model 1',
-      en: 'Steel-frame multi-layer gondola shelf, model 1',
+      id: 'Dokumentasi proyek Commercial Interior & Fit-Out KOVAA 3',
+      en: 'KOVAA Commercial Interior & Fit-Out project documentation 3',
     },
   },
   {
-    id: 'rak-gondola-multilayer-2',
-    slug: 'rak-gondola-multilayer-2',
+    id: 'commercial-interior-fit-out-4',
+    slug: 'commercial-interior-fit-out-4',
     category: 'rak-supermarket',
-    name: { id: 'Rak Gondola 2', en: 'Gondola Shelf 2' },
+    name: { id: 'Commercial Interior & Fit-Out 4', en: 'Commercial Interior & Fit-Out 4' },
     description: {
-      id: 'Konfigurasi gondola multilayer kedua, cocok untuk lorong toko utama.',
-      en: 'Second multi-layer gondola configuration, ideal for main store aisles.',
+      id: 'Portofolio pengerjaan interior komersial dan fit-out oleh KOVAA.',
+      en: 'Commercial interior and fit-out project portfolio by KOVAA.',
     },
-    image: '/products/rak-gondola-multilayer-2.png',
-    specs: [
-      { label: { id: 'Dimensi', en: 'Dimensions' }, value: { id: '135 × 90 × 225 cm', en: '135 × 90 × 225 cm' } },
-      { label: { id: 'Material', en: 'Material' }, value: { id: 'Rangka besi gondola, panel belakang perforasi', en: 'Steel gondola frame with perforated back panels' } },
-      { label: { id: 'Tingkat', en: 'Tiers' }, value: { id: '6 tingkat', en: '6 tiers' } },
-      { label: { id: 'Kapasitas', en: 'Capacity' }, value: { id: '±50 kg', en: '±50 kg' } },
-    ],
+    image: '/products/commercial-interior-fit-out-4.webp',
     alt: {
-      id: 'Rak gondola multilayer model 2 di lorong toko',
-      en: 'Multi-layer gondola shelf, model 2, in a store aisle',
+      id: 'Dokumentasi proyek Commercial Interior & Fit-Out KOVAA 4',
+      en: 'KOVAA Commercial Interior & Fit-Out project documentation 4',
     },
   },
   {
-    id: 'rak-gondola-multilayer-3',
-    slug: 'rak-gondola-multilayer-3',
+    id: 'commercial-interior-fit-out-5',
+    slug: 'commercial-interior-fit-out-5',
     category: 'rak-supermarket',
-    name: { id: 'Rak Gondola 3', en: 'Gondola Shelf 3' },
+    name: { id: 'Commercial Interior & Fit-Out 5', en: 'Commercial Interior & Fit-Out 5' },
     description: {
-      id: 'Gondola multilayer dengan kompartemen luas untuk produk beragam sekaligus.',
-      en: 'Multi-layer gondola with wide compartments for mixed product ranges.',
+      id: 'Portofolio pengerjaan interior komersial dan fit-out oleh KOVAA.',
+      en: 'Commercial interior and fit-out project portfolio by KOVAA.',
     },
-    image: '/products/rak-gondola-multilayer-3.png',
-    specs: [
-      { label: { id: 'Dimensi', en: 'Dimensions' }, value: { id: '160 × 100 × 225 cm', en: '160 × 100 × 225 cm' } },
-      { label: { id: 'Material', en: 'Material' }, value: { id: 'Rangka besi gondola, panel belakang perforasi', en: 'Steel gondola frame with perforated back panels' } },
-      { label: { id: 'Tingkat', en: 'Tiers' }, value: { id: '6 tingkat', en: '6 tiers' } },
-      { label: { id: 'Kapasitas', en: 'Capacity' }, value: { id: '±60 kg', en: '±60 kg' } },
-    ],
+    image: '/products/commercial-interior-fit-out-5.webp',
     alt: {
-      id: 'Rak gondola multilayer model 3 dengan kompartemen luas',
-      en: 'Multi-layer gondola shelf, model 3, with wide compartments',
+      id: 'Dokumentasi proyek Commercial Interior & Fit-Out KOVAA 5',
+      en: 'KOVAA Commercial Interior & Fit-Out project documentation 5',
     },
   },
   {
-    id: 'rak-gondola-multilayer-4',
-    slug: 'rak-gondola-multilayer-4',
+    id: 'commercial-interior-fit-out-6',
+    slug: 'commercial-interior-fit-out-6',
     category: 'rak-supermarket',
-    name: { id: 'Rak Gondola 4', en: 'Gondola Shelf 4' },
+    name: { id: 'Commercial Interior & Fit-Out 6', en: 'Commercial Interior & Fit-Out 6' },
     description: {
-      id: 'Konfigurasi gondola multilayer terbesar, mendukung volume produk maksimal.',
-      en: 'Largest multi-layer gondola configuration, supporting maximum product volume.',
+      id: 'Portofolio pengerjaan interior komersial dan fit-out oleh KOVAA.',
+      en: 'Commercial interior and fit-out project portfolio by KOVAA.',
     },
-    image: '/products/rak-gondola-multilayer-4.png',
-    specs: [
-      { label: { id: 'Dimensi', en: 'Dimensions' }, value: { id: '180 × 110 × 240 cm', en: '180 × 110 × 240 cm' } },
-      { label: { id: 'Material', en: 'Material' }, value: { id: 'Rangka besi gondola, panel belakang perforasi', en: 'Steel gondola frame with perforated back panels' } },
-      { label: { id: 'Tingkat', en: 'Tiers' }, value: { id: '7 tingkat', en: '7 tiers' } },
-      { label: { id: 'Kapasitas', en: 'Capacity' }, value: { id: '±60 kg', en: '±60 kg' } },
-    ],
+    image: '/products/commercial-interior-fit-out-6.webp',
     alt: {
-      id: 'Rak gondola multilayer model 4 dengan volume tampung terbesar',
-      en: 'Multi-layer gondola shelf, model 4, with maximum capacity',
+      id: 'Dokumentasi proyek Commercial Interior & Fit-Out KOVAA 6',
+      en: 'KOVAA Commercial Interior & Fit-Out project documentation 6',
+    },
+  },
+  {
+    id: 'commercial-interior-fit-out-7',
+    slug: 'commercial-interior-fit-out-7',
+    category: 'rak-supermarket',
+    name: { id: 'Commercial Interior & Fit-Out 7', en: 'Commercial Interior & Fit-Out 7' },
+    description: {
+      id: 'Portofolio pengerjaan interior komersial dan fit-out oleh KOVAA.',
+      en: 'Commercial interior and fit-out project portfolio by KOVAA.',
+    },
+    image: '/products/commercial-interior-fit-out-7.webp',
+    alt: {
+      id: 'Dokumentasi proyek Commercial Interior & Fit-Out KOVAA 7',
+      en: 'KOVAA Commercial Interior & Fit-Out project documentation 7',
     },
   },
   {
@@ -168,12 +130,6 @@ export const products: Product[] = [
       en: 'Minimalist wall-mounted shelf that maximizes retail space in tight areas.',
     },
     image: '/products/rak-dinding-minimi.png',
-    specs: [
-      { label: { id: 'Dimensi', en: 'Dimensions' }, value: { id: '120 × 30 × 200 cm', en: '120 × 30 × 200 cm' } },
-      { label: { id: 'Material', en: 'Material' }, value: { id: 'Braket besi dinding, rak plat baja', en: 'Steel wall brackets with steel shelves' } },
-      { label: { id: 'Tingkat', en: 'Tiers' }, value: { id: '4 tingkat', en: '4 tiers' } },
-      { label: { id: 'Kapasitas', en: 'Capacity' }, value: { id: '±30 kg', en: '±30 kg' } },
-    ],
     alt: {
       id: 'Rak dinding minimalis terpasang di dinding toko',
       en: 'Minimalist wall shelf mounted on a store wall',
@@ -189,12 +145,6 @@ export const products: Product[] = [
       en: 'Multipurpose shelving suited for groceries, stationery, and general retail.',
     },
     image: '/products/rak-serbaguna-minimalis.png',
-    specs: [
-      { label: { id: 'Dimensi', en: 'Dimensions' }, value: { id: '120 × 40 × 200 cm', en: '120 × 40 × 200 cm' } },
-      { label: { id: 'Material', en: 'Material' }, value: { id: 'Rangka besi, rak plat baja', en: 'Steel frame with steel shelves' } },
-      { label: { id: 'Tingkat', en: 'Tiers' }, value: { id: '5 tingkat', en: '5 tiers' } },
-      { label: { id: 'Kapasitas', en: 'Capacity' }, value: { id: '±40 kg', en: '±40 kg' } },
-    ],
     alt: {
       id: 'Rak serbaguna minimalis dengan berbagai jenis produk',
       en: 'Minimalist multipurpose shelf holding assorted products',
@@ -210,12 +160,6 @@ export const products: Product[] = [
       en: 'Drawer unit with a natural wood frame, sturdy and aesthetic for retail counters.',
     },
     image: '/products/drawer-rangka-natural.png',
-    specs: [
-      { label: { id: 'Dimensi', en: 'Dimensions' }, value: { id: '90 × 60 × 90 cm', en: '90 × 60 × 90 cm' } },
-      { label: { id: 'Material', en: 'Material' }, value: { id: 'Rangka kayu, laci kayu', en: 'Wooden frame with wooden drawers' } },
-      { label: { id: 'Laci', en: 'Drawers' }, value: { id: '4 laci', en: '4 drawers' } },
-      { label: { id: 'Kapasitas', en: 'Capacity' }, value: { id: '±15 kg', en: '±15 kg' } },
-    ],
     alt: {
       id: 'Drawer dengan rangka kayu natural di konter toko',
       en: 'Drawer unit with natural wood frame at a retail counter',
@@ -231,12 +175,6 @@ export const products: Product[] = [
       en: 'Solid natural wood drawers with generous capacity for tidy storage.',
     },
     image: '/products/drawer-solid-natural.png',
-    specs: [
-      { label: { id: 'Dimensi', en: 'Dimensions' }, value: { id: '100 × 60 × 100 cm', en: '100 × 60 × 100 cm' } },
-      { label: { id: 'Material', en: 'Material' }, value: { id: 'Kayu solid', en: 'Solid wood' } },
-      { label: { id: 'Laci', en: 'Drawers' }, value: { id: '5 laci', en: '5 drawers' } },
-      { label: { id: 'Kapasitas', en: 'Capacity' }, value: { id: '±20 kg', en: '±20 kg' } },
-    ],
     alt: {
       id: 'Drawer solid wood natural bertumpuk rapi',
       en: 'Solid natural wood drawers stacked neatly',
@@ -252,12 +190,6 @@ export const products: Product[] = [
       en: 'Multi-drawer cabinet for small items like accessories and spare parts.',
     },
     image: '/products/salami-multidrawer.png',
-    specs: [
-      { label: { id: 'Dimensi', en: 'Dimensions' }, value: { id: '100 × 50 × 180 cm', en: '100 × 50 × 180 cm' } },
-      { label: { id: 'Material', en: 'Material' }, value: { id: 'Rangka besi, laci kecil', en: 'Steel frame with small drawers' } },
-      { label: { id: 'Laci', en: 'Drawers' }, value: { id: '12 laci', en: '12 drawers' } },
-      { label: { id: 'Kapasitas', en: 'Capacity' }, value: { id: '±5 kg', en: '±5 kg' } },
-    ],
     alt: {
       id: 'Kabinet multi-drawer Salami dengan banyak laci kecil',
       en: 'Salami multi-drawer cabinet with many small drawers',
@@ -273,12 +205,6 @@ export const products: Product[] = [
       en: 'Wooden display shelf designed for fresh fruit and vegetable presentation.',
     },
     image: '/products/rak-display-sayur-buah.png',
-    specs: [
-      { label: { id: 'Dimensi', en: 'Dimensions' }, value: { id: '150 × 80 × 180 cm', en: '150 × 80 × 180 cm' } },
-      { label: { id: 'Material', en: 'Material' }, value: { id: 'Rangka besi, rak kayu', en: 'Steel frame with wooden shelves' } },
-      { label: { id: 'Tingkat', en: 'Tiers' }, value: { id: '3 tingkat', en: '3 tiers' } },
-      { label: { id: 'Kapasitas', en: 'Capacity' }, value: { id: '±40 kg', en: '±40 kg' } },
-    ],
     alt: {
       id: 'Rak display kayu untuk sayur dan buah',
       en: 'Wooden display shelf for fruit and vegetables',

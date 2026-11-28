@@ -5,13 +5,13 @@ import { categories } from '@/data/categories'
 import { products } from '@/data/products'
 
 describe('products data', () => {
-  it('has exactly 12 products', () => {
-    expect(products).toHaveLength(12)
+  it('has exactly 13 products', () => {
+    expect(products).toHaveLength(13)
   })
 
   it('has unique ids and slugs', () => {
-    expect(new Set(products.map((p) => p.id)).size).toBe(12)
-    expect(new Set(products.map((p) => p.slug)).size).toBe(12)
+    expect(new Set(products.map((p) => p.id)).size).toBe(13)
+    expect(new Set(products.map((p) => p.slug)).size).toBe(13)
   })
 
   it('assigns every product a valid category', () => {
@@ -34,18 +34,6 @@ describe('products data', () => {
         existsSync(join(process.cwd(), 'public', p.image)),
         `${p.image} missing`,
       ).toBe(true)
-    }
-  })
-
-  it('gives every product at least 3 spec rows with localized label and value', () => {
-    for (const p of products) {
-      expect(p.specs.length, p.slug).toBeGreaterThanOrEqual(3)
-      for (const s of p.specs) {
-        for (const key of ['label', 'value'] as const) {
-          expect(s[key].id.trim().length, `${p.slug}.spec.${key}.id`).toBeGreaterThan(0)
-          expect(s[key].en.trim().length, `${p.slug}.spec.${key}.en`).toBeGreaterThan(0)
-        }
-      }
     }
   })
 

@@ -5,7 +5,7 @@ import { products } from '@/data/products'
 describe('product detail routes', () => {
   it('generates one static route per product', async () => {
     const routes = await generateStaticParams()
-    expect(routes).toHaveLength(12)
+    expect(routes).toHaveLength(13)
     expect(routes.map((r) => r.slug).sort()).toEqual(products.map((p) => p.slug).sort())
   })
 

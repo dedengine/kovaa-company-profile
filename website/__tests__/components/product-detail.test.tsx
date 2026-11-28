@@ -24,15 +24,6 @@ describe('ProductDetail', () => {
     expect(screen.getByText(product.description.id)).toBeDefined()
   })
 
-  it('renders a spec table with all spec rows', () => {
-    renderDetail()
-    const table = screen.getByRole('table')
-    for (const spec of product.specs) {
-      expect(within(table).getByText(spec.label.id)).toBeDefined()
-      expect(within(table).getByText(spec.value.id)).toBeDefined()
-    }
-  })
-
   it('links back to the products section and home', () => {
     renderDetail()
     const backs = screen.getAllByRole('link', { name: 'Kembali ke Semua Produk' })

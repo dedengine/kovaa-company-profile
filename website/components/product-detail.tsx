@@ -59,24 +59,6 @@ export function ProductDetail({ product }: { product: Product }) {
           </h1>
           <p className="mt-4 text-neutral-700 dark:text-neutral-300">{product.description[lang]}</p>
 
-          <h2 className="mt-8 font-heading text-xl font-bold text-neutral-900 dark:text-white">
-            {t('detail.specsTitle')}
-          </h2>
-          <table className="mt-3 w-full overflow-hidden rounded-xl border border-neutral-200 text-sm dark:border-neutral-800">
-            <tbody>
-              {product.specs.map((spec) => (
-                <tr key={spec.label[lang]} className="border-b border-neutral-200 last:border-0 dark:border-neutral-800">
-                  <th
-                    scope="row"
-                    className="w-2/5 bg-neutral-50 px-4 py-3 text-left font-medium text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300"
-                  >
-                    {spec.label[lang]}
-                  </th>
-                  <td className="px-4 py-3 text-neutral-900 dark:text-neutral-100">{spec.value[lang]}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
 
           <div className="mt-8 hidden items-center gap-3 md:flex">
             <a
