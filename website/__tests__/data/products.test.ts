@@ -5,13 +5,13 @@ import { categories } from '@/data/categories'
 import { products } from '@/data/products'
 
 describe('products data', () => {
-  it('has exactly 13 products', () => {
-    expect(products).toHaveLength(13)
+  it('has exactly 18 products', () => {
+    expect(products).toHaveLength(18)
   })
 
   it('has unique ids and slugs', () => {
-    expect(new Set(products.map((p) => p.id)).size).toBe(13)
-    expect(new Set(products.map((p) => p.slug)).size).toBe(13)
+    expect(new Set(products.map((p) => p.id)).size).toBe(18)
+    expect(new Set(products.map((p) => p.slug)).size).toBe(18)
   })
 
   it('assigns every product a valid category', () => {
