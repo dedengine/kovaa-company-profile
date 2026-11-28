@@ -99,7 +99,7 @@ export function Products() {
                   alt={p.alt[lang]}
                   fill
                   sizes="(max-width: 640px) 72vw, 320px"
-                  className="object-cover transition-transform duration-300 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:transform-none"
+                  className="object-contain transition-transform duration-300 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:transform-none"
                 />
               </span>
               <span className="block border-t border-neutral-200 p-4 dark:border-neutral-800">

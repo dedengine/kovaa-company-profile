@@ -45,7 +45,7 @@ export function ProductDetail({ product }: { product: Product }) {
             alt={product.alt[lang]}
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover"
+            className="object-contain"
             priority
           />
         </div>
