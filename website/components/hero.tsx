@@ -8,10 +8,10 @@ import { useI18n } from '@/lib/i18n-provider'
 import { useHoverLift, useScrollReveal } from '@/lib/gsap-animations'
 
 const SLIDES = [
-  '/assets/hero-1.png',
-  '/assets/hero-2.png',
-  '/assets/hero-3.png',
-  '/assets/hero-4.png',
+  '/assets/hero-1.jpg',
+  '/assets/hero-2.jpg',
+  '/assets/hero-3.jpg',
+  '/assets/hero-4.jpg',
 ] as const
 
 const SLIDE_INTERVAL = 5000
@@ -58,14 +58,23 @@ export function Hero() {
       onFocusCapture={() => setPaused(true)}
       onBlurCapture={() => setPaused(false)}
     >
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 bg-kovaa-navy dark:bg-neutral-950">
+        <Image
+          key={`blur-${SLIDES[index]}`}
+          src={SLIDES[index]}
+          alt=""
+          fill
+          sizes="100vw"
+          aria-hidden="true"
+          className="scale-110 object-cover opacity-50 blur-2xl"
+        />
         <Image
           key={SLIDES[index]}
           src={SLIDES[index]}
           alt={t('hero.imageAlt')}
           fill
           sizes="100vw"
-          className="object-cover"
+          className="object-contain"
           priority={index === 0}
         />
       </div>
