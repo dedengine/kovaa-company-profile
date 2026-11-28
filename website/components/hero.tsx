@@ -74,7 +74,7 @@ export function Hero() {
           alt={t('hero.imageAlt')}
           fill
           sizes="100vw"
-          className="object-contain"
+          className="object-contain object-right"
           priority={index === 0}
         />
       </div>
