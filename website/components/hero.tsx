@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { PiArrowRight, PiCaretLeft, PiCaretRight } from 'react-icons/pi'
@@ -15,6 +15,32 @@ const SLIDES = [
 ] as const
 
 const SLIDE_INTERVAL = 5000
+const FADE_MS = 700
+
+function HeroSlide({ src, alt, priority }: { src: string; alt: string; priority: boolean }) {
+  return (
+    <>
+      <Image
+        key={`blur-${src}`}
+        src={src}
+        alt=""
+        fill
+        sizes="100vw"
+        aria-hidden="true"
+        className="scale-110 object-cover opacity-50 blur-2xl"
+      />
+      <Image
+        key={src}
+        src={src}
+        alt={alt}
+        width={1920}
+        height={1080}
+        className="hero-image absolute right-0 top-1/2 w-full max-w-none -translate-y-1/2 md:top-0 md:h-full md:w-auto md:translate-y-0"
+        priority={priority}
+      />
+    </>
+  )
+}
 
 export function Hero() {
   const { t } = useI18n()
@@ -22,6 +48,8 @@ export function Hero() {
   const ctaPrimary = useRef<HTMLAnchorElement>(null)
   const ctaSecondary = useRef<HTMLAnchorElement>(null)
   const [index, setIndex] = useState(0)
+  const [previous, setPrevious] = useState<number | null>(null)
+  const [fading, setFading] = useState(false)
   const [paused, setPaused] = useState(false)
   const [reduced, setReduced] = useState(
     () => typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches,
@@ -36,17 +64,32 @@ export function Hero() {
     return () => query.removeEventListener('change', onChange)
   }, [])
 
+  const goTo = useCallback(
+    (next: number) => {
+      setPrevious(index)
+      setIndex(next)
+      setFading(true)
+    },
+    [index],
+  )
+
   useEffect(() => {
     if (paused || reduced) return
-    const timer = window.setInterval(
-      () => setIndex((current) => (current + 1) % SLIDES.length),
-      SLIDE_INTERVAL,
-    )
+    const timer = window.setInterval(() => goTo((index + 1) % SLIDES.length), SLIDE_INTERVAL)
     return () => window.clearInterval(timer)
-  }, [paused, reduced])
+  }, [paused, reduced, goTo, index])
+
+  useEffect(() => {
+    if (!fading) return
+    const timer = window.setTimeout(() => {
+      setFading(false)
+      setPrevious(null)
+    }, FADE_MS)
+    return () => window.clearTimeout(timer)
+  }, [fading])
 
   function step(direction: 1 | -1) {
-    setIndex((current) => (current + direction + SLIDES.length) % SLIDES.length)
+    goTo((index + direction + SLIDES.length) % SLIDES.length)
   }
 
   return (
@@ -59,24 +102,21 @@ export function Hero() {
       onBlurCapture={() => setPaused(false)}
     >
       <div className="absolute inset-0 bg-kovaa-navy dark:bg-neutral-950">
-        <Image
-          key={`blur-${SLIDES[index]}`}
-          src={SLIDES[index]}
-          alt=""
-          fill
-          sizes="100vw"
-          aria-hidden="true"
-          className="scale-110 object-cover opacity-50 blur-2xl"
-        />
-        <Image
-          key={SLIDES[index]}
-          src={SLIDES[index]}
-          alt={t('hero.imageAlt')}
-          width={1920}
-          height={1080}
-          className="hero-image absolute right-0 top-1/2 w-full max-w-none -translate-y-1/2 md:top-0 md:h-full md:w-auto md:translate-y-0"
-          priority={index === 0}
-        />
+        {previous !== null && (
+          <div
+            key={`out-${previous}`}
+            aria-hidden="true"
+            className={`absolute inset-0 ${fading && !reduced ? 'hero-layer-out' : ''}`}
+          >
+            <HeroSlide src={SLIDES[previous]} alt={t('hero.imageAlt')} priority={false} />
+          </div>
+        )}
+        <div
+          key={`in-${index}`}
+          className={`absolute inset-0 ${fading && !reduced ? 'hero-layer-in' : ''}`}
+        >
+          <HeroSlide src={SLIDES[index]} alt={t('hero.imageAlt')} priority={index === 0} />
+        </div>
       </div>
 
       <button
