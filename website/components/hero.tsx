@@ -8,11 +8,10 @@ import { useI18n } from '@/lib/i18n-provider'
 import { useHoverLift, useScrollReveal } from '@/lib/gsap-animations'
 
 const SLIDES = [
-  '/assets/hero-1.jpeg',
-  '/assets/hero-2.jpeg',
-  '/assets/hero-3.jpeg',
-  '/assets/hero-4.jpeg',
-  '/assets/hero-5.png',
+  '/assets/hero-1.png',
+  '/assets/hero-2.png',
+  '/assets/hero-3.png',
+  '/assets/hero-4.png',
 ] as const
 
 const SLIDE_INTERVAL = 5000

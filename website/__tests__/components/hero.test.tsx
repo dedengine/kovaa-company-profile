@@ -62,30 +62,30 @@ function heroImageSrc() {
 }
 
 describe('Hero carousel', () => {
-  it('cycles the five images with the arrow buttons', async () => {
+  it('cycles the four images with the arrow buttons', async () => {
     const user = userEvent.setup()
     renderPage()
-    expect(heroImageSrc()).toContain('hero-1.jpeg')
+    expect(heroImageSrc()).toContain('hero-1.png')
 
     await user.click(screen.getByRole('button', { name: 'Gambar berikutnya' }))
-    expect(heroImageSrc()).toContain('hero-2.jpeg')
+    expect(heroImageSrc()).toContain('hero-2.png')
 
     await user.click(screen.getByRole('button', { name: 'Gambar sebelumnya' }))
-    expect(heroImageSrc()).toContain('hero-1.jpeg')
+    expect(heroImageSrc()).toContain('hero-1.png')
 
     await user.click(screen.getByRole('button', { name: 'Gambar sebelumnya' }))
-    expect(heroImageSrc()).toContain('hero-5.png')
+    expect(heroImageSrc()).toContain('hero-4.png')
   })
 
   it('advances to the next image every five seconds', () => {
     vi.useFakeTimers()
     try {
       renderPage()
-      expect(heroImageSrc()).toContain('hero-1.jpeg')
+      expect(heroImageSrc()).toContain('hero-1.png')
       act(() => {
         vi.advanceTimersByTime(5000)
       })
-      expect(heroImageSrc()).toContain('hero-2.jpeg')
+      expect(heroImageSrc()).toContain('hero-2.png')
     } finally {
       vi.useRealTimers()
     }
