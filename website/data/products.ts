@@ -21,13 +21,13 @@ export const products: Product[] = [
     category: 'rak-supermarket',
     name: { id: 'Commercial Interior & Fit-Out 1', en: 'Commercial Interior & Fit-Out 1' },
     description: {
-      id: 'Portofolio pengerjaan interior komersial dan fit-out oleh KOVAA.',
-      en: 'Commercial interior and fit-out project portfolio by KOVAA.',
+      id: 'Meja resepsionis dengan finishing biru-putih, laci penyimpanan, dan panel samping kokoh untuk area depan toko atau kantor.',
+      en: 'Reception desk with a blue-and-white finish, built-in drawers, and a solid side panel for a store or office front area.',
     },
     image: '/products/commercial-interior-fit-out-1.webp',
     alt: {
-      id: 'Dokumentasi proyek Commercial Interior & Fit-Out KOVAA 1',
-      en: 'KOVAA Commercial Interior & Fit-Out project documentation 1',
+      id: 'Meja resepsionis KOVAA dengan laci dan panel samping biru-putih',
+      en: 'KOVAA reception desk with drawers and a blue-and-white side panel',
     },
   },
   {
@@ -36,13 +36,13 @@ export const products: Product[] = [
     category: 'rak-supermarket',
     name: { id: 'Commercial Interior & Fit-Out 2', en: 'Commercial Interior & Fit-Out 2' },
     description: {
-      id: 'Portofolio pengerjaan interior komersial dan fit-out oleh KOVAA.',
-      en: 'Commercial interior and fit-out project portfolio by KOVAA.',
+      id: 'Kabinet gantung dengan pintu biru, ruang terbuka, dan kunci untuk area kerja yang rapi.',
+      en: 'Overhead cabinet with blue doors, open storage niches, and a lock for a tidy work area.',
     },
     image: '/products/commercial-interior-fit-out-2.webp',
     alt: {
-      id: 'Dokumentasi proyek Commercial Interior & Fit-Out KOVAA 2',
-      en: 'KOVAA Commercial Interior & Fit-Out project documentation 2',
+      id: 'Kabinet gantung KOVAA dengan pintu biru dan ruang terbuka',
+      en: 'KOVAA overhead cabinet with blue doors and open storage',
     },
   },
   {
@@ -51,13 +51,13 @@ export const products: Product[] = [
     category: 'rak-supermarket',
     name: { id: 'Commercial Interior & Fit-Out 3', en: 'Commercial Interior & Fit-Out 3' },
     description: {
-      id: 'Portofolio pengerjaan interior komersial dan fit-out oleh KOVAA.',
-      en: 'Commercial interior and fit-out project portfolio by KOVAA.',
+      id: 'Pengerjaan panel dinding kayu vertikal dan cermin dengan pencahayaan tersembunyi untuk ruangan yang rapi dan hangat.',
+      en: 'Timber slat wall panels and mirrors with concealed lighting for a neat, warm interior room.',
     },
     image: '/products/commercial-interior-fit-out-3.webp',
     alt: {
-      id: 'Dokumentasi proyek Commercial Interior & Fit-Out KOVAA 3',
-      en: 'KOVAA Commercial Interior & Fit-Out project documentation 3',
+      id: 'Panel dinding kayu dan cermin pada proyek interior komersial KOVAA',
+      en: 'Timber wall panels and mirrors in a KOVAA commercial interior project',
     },
   },
   {
@@ -66,13 +66,13 @@ export const products: Product[] = [
     category: 'rak-supermarket',
     name: { id: 'Commercial Interior & Fit-Out 4', en: 'Commercial Interior & Fit-Out 4' },
     description: {
-      id: 'Portofolio pengerjaan interior komersial dan fit-out oleh KOVAA.',
-      en: 'Commercial interior and fit-out project portfolio by KOVAA.',
+      id: 'Area kerja kolaboratif dengan bangku booth, meja kayu, dan plafon kayu yang nyaman untuk tim.',
+      en: 'Collaborative work area with banquette seating, wooden tables, and a timber ceiling for a comfortable team space.',
     },
     image: '/products/commercial-interior-fit-out-4.webp',
     alt: {
-      id: 'Dokumentasi proyek Commercial Interior & Fit-Out KOVAA 4',
-      en: 'KOVAA Commercial Interior & Fit-Out project documentation 4',
+      id: 'Area kerja dengan bangku booth hijau dan meja kayu oleh KOVAA',
+      en: 'Work area with green banquette seating and wooden tables by KOVAA',
     },
   },
   {
@@ -81,13 +81,13 @@ export const products: Product[] = [
     category: 'rak-supermarket',
     name: { id: 'Commercial Interior & Fit-Out 5', en: 'Commercial Interior & Fit-Out 5' },
     description: {
-      id: 'Portofolio pengerjaan interior komersial dan fit-out oleh KOVAA.',
-      en: 'Commercial interior and fit-out project portfolio by KOVAA.',
+      id: 'Proses pemasangan furnitur ritel berwarna hijau dan kuning oleh tim di lokasi proyek.',
+      en: 'On-site installation of a green-and-yellow retail fixture by the project team.',
     },
     image: '/products/commercial-interior-fit-out-5.webp',
     alt: {
-      id: 'Dokumentasi proyek Commercial Interior & Fit-Out KOVAA 5',
-      en: 'KOVAA Commercial Interior & Fit-Out project documentation 5',
+      id: 'Tim KOVAA memasang furnitur ritel hijau dan kuning di lokasi proyek',
+      en: 'KOVAA team installing green and yellow retail fixtures on site',
     },
   },
   {
@@ -96,13 +96,13 @@ export const products: Product[] = [
     category: 'rak-supermarket',
     name: { id: 'Commercial Interior & Fit-Out 6', en: 'Commercial Interior & Fit-Out 6' },
     description: {
-      id: 'Portofolio pengerjaan interior komersial dan fit-out oleh KOVAA.',
-      en: 'Commercial interior and fit-out project portfolio by KOVAA.',
+      id: 'Pemasangan partisi kaca berbingkai hitam dan penataan meja untuk ruang meeting yang terang.',
+      en: 'Installation of black-framed glass partitions and table setup for a bright meeting room.',
     },
     image: '/products/commercial-interior-fit-out-6.webp',
     alt: {
-      id: 'Dokumentasi proyek Commercial Interior & Fit-Out KOVAA 6',
-      en: 'KOVAA Commercial Interior & Fit-Out project documentation 6',
+      id: 'Partisi kaca berbingkai hitam dan meja ruang meeting oleh KOVAA',
+      en: 'Black-framed glass partitions and meeting tables by KOVAA',
     },
   },
   {
@@ -111,13 +111,13 @@ export const products: Product[] = [
     category: 'rak-supermarket',
     name: { id: 'Commercial Interior & Fit-Out 7', en: 'Commercial Interior & Fit-Out 7' },
     description: {
-      id: 'Portofolio pengerjaan interior komersial dan fit-out oleh KOVAA.',
-      en: 'Commercial interior and fit-out project portfolio by KOVAA.',
+      id: 'Fit-out area dapur komersial dengan meja stainless, backsplash ubin hitam, dan hood exhaust.',
+      en: 'Commercial kitchen fit-out with stainless counters, a black tile backsplash, and an exhaust hood.',
     },
     image: '/products/commercial-interior-fit-out-7.webp',
     alt: {
-      id: 'Dokumentasi proyek Commercial Interior & Fit-Out KOVAA 7',
-      en: 'KOVAA Commercial Interior & Fit-Out project documentation 7',
+      id: 'Dapur komersial dengan meja stainless dan hood exhaust oleh KOVAA',
+      en: 'Commercial kitchen with stainless counters and exhaust hood by KOVAA',
     },
   },
   {
