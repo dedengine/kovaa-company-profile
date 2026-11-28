@@ -72,9 +72,9 @@ export function Hero() {
           key={SLIDES[index]}
           src={SLIDES[index]}
           alt={t('hero.imageAlt')}
-          fill
-          sizes="100vw"
-          className="object-contain object-right"
+          width={1920}
+          height={1080}
+          className="hero-image absolute right-0 top-1/2 w-full max-w-none -translate-y-1/2 md:top-0 md:h-full md:w-auto md:translate-y-0"
           priority={index === 0}
         />
       </div>
